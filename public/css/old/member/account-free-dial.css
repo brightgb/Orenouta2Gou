@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+.contents {
+	margin: 10px 5px;
+	padding: 10px;
+	border:1px solid #999;
+	border-radius: 4px;
+}
+
+.ori {
+	margin: 10px 0;
+	text-align: center;
+	background: #F6F6F6;
+	border:1px dashed #666;
+}
+
+.settei_bar {
+	margin: 10px 5px 0;
+	padding: 5px 10px;
+	font-size: 1.1em;
+	font-weight: bold;
+	background: #EFEFEF;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	border-top: 1px solid #999;
+	border-radius: 4px 4px 0 0;
+}
+
+.settei_main {
+	margin: 0 5px 10px;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #999;
+	border-radius: 0 0 4px 4px;
+}
+
+input[type="submit"] {
+	width: 118px;
+	display: block;
+	margin: 15px auto 10px;
+	padding: 10px 0;
+	text-align: center;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: solid 1px #999;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.btn a {
+	display: block;
+	margin: 10px 10px 5px;
+	padding: 5px 10px;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	border: solid 1px #999;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	position: relative;
+}
+
+.btn a:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-left: 2px solid #666;
+	border-top: 2px solid #666;
+	transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+

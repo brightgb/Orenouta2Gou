@@ -1,0 +1,763 @@
+@charset "utf-8";
+
+/***** crea *****/
+
+html, body, div, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, img,
+i, dl, dt, dd, ol, ul, li,
+form, label, article, footer, header, section {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:16px;
+    line-height:1.4em;
+    vertical-align:baseline;
+    background:transparent;
+    color: #333;
+    white-space: normal;
+    word-break: break-all;
+}
+
+/***** header *****/
+#header_box {
+    width: 100%;
+    height: 51px;
+    padding: 8px 5px;
+    background: #000;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 9999;
+}
+
+#header_box > div {
+    width: 50px;
+    text-align: center;
+    position: absolute;
+}
+
+#header_box a {
+    display: block;
+    color: #FFF;
+    font-size: 10px;
+    text-decoration: none;
+    line-height: 1;
+    position: relative;
+}
+
+#header_box .header_logo {
+    width: initial;
+}
+
+#header_box .header_logo a {
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+    background-image: url(/img/old/menu/header_w_sp.png);
+    background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#header_box a span {
+    display: block;
+    margin: 0px auto 3px;
+    width: 22px;
+    height: 22px;
+    background-size: 110px;
+    background-repeat: no-repeat;
+    background-image: url(/img/old/menu/hd_sprite.png);
+}
+
+#header_box .header_link1 a span {  background-position: -66px 0px; }
+#header_box .header_link2 a span {  background-position:     0px 0px; }
+#header_box .header_link3 a span {  background-position: -22px 0px; }
+#header_box .header_link4 a span {  background-position: -88px 0px; }
+
+#header_box .header_link1 { right: 150px; }
+#header_box .header_link2 { right: 100px; }
+#header_box .header_link3 { right: 50px; }
+#header_box .header_link4 { right: 200px; }
+
+#header_box a p {
+    min-width: 19px;
+    padding: 0 3px;
+    color: #FFF;
+    font-size: 0.7rem;
+    background: #F00;
+    border: 2px solid #FFF;
+    border-radius: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: -5px;
+    right: 3px;
+}
+
+#header_box .menu_button {
+    color: #FFF;
+    font-size: 10px;
+    line-height: 1;
+    right: 0;
+}
+
+#header_box .menu_button > div {
+    display: block;
+    width: 20px;
+    height: 22px;
+    margin: 4px auto 0;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    box-sizing: border-box;
+}
+
+#header_box .menu_button span {
+    display: block;
+    width: 20px;
+    height: 4px;
+    margin-bottom: 2px;
+    border-radius: 1px;
+    background: #FFF;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    will-change: transform,opacity;
+}
+
+#header_box .menu_button.active > div {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#header_box .menu_button.active .menu_icon1 {
+    -webkit-transform: rotate(0) translateY(6px);
+    -moz-transform: rotate(0) translateY(6px);
+    transform: rotate(0) translateY(6px);
+}
+
+#header_box .menu_button.active .menu_icon2 {
+    opacity: 0;
+}
+
+#header_box .menu_button.active .menu_icon3 {
+    -webkit-transform: rotate(-90deg) translateX(5.5px);
+    -moz-transform: rotate(-90deg) translateX(5.5px);
+    transform: rotate(-90deg) translateX(5.5px);
+}
+
+/***** menu badge ****/
+
+#header_box .menu_button a {
+    padding-top: 1px;
+    display: block;
+    color: #FFF;
+    font-size: 10px;
+    text-decoration: none;
+    line-height: 1;
+    position: relative;
+}
+
+#header_box .menu_button a > div{
+    display: block;
+    width: 20px;
+    height: 22px;
+    margin: 4px auto 0;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    box-sizing: border-box;
+}
+
+#header_box .menu_button.active a > div {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/***** footer *****/
+#footer_box {
+    width: 100%;
+    height: 51px;
+    padding: 8px 5px;
+    background: #000;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#footer_box > a {
+    display: block;
+    width: 50px;
+    color: #FFF;
+    font-size: 10px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1;
+    position: absolute;
+}
+
+#footer_box > .footer_link01 { right:       8px; }  /*pKń*/
+#footer_box > .footer_link02 { right:    58px; }    /*żâ*/
+#footer_box > .footer_link03 { right: 108px; }  /*Ţď*/
+#footer_box > .footer_link04 { right: 158px; }  /*HOME*/
+#footer_box > .footer_link05 { right:   108px; }    /*lTOP*/
+
+#footer_box > .footer_link11 { left:     0px; } /*HOME*/
+#footer_box > .footer_link12 { right:  8px; }   /*¨âš*/
+
+#footer_box a span {
+    display: block;
+    margin: 0px auto 3px;
+    width: 22px;
+    height: 22px;
+    background-size: 110px;
+    background-image: url(/img/old/menu/hd_sprite.png);
+    background-repeat: no-repeat;
+}
+
+#footer_box > .footer_link01 span { background-position: -22px -44px; }
+#footer_box > .footer_link02 span { background-position: -44px -44px; }
+#footer_box > .footer_link03 span { background-position: -66px -44px; }
+#footer_box > .footer_link04 span { background-position: -88px -44px; }
+#footer_box > .footer_link05 span { background-position:     0px -66px; }
+
+#footer_box > .footer_link11 span { background-position: -88px -44px; }
+#footer_box > .footer_link12 span { background-position:     0px -44px; }
+
+/***** menu panel *****/
+.menuClose {
+    margin: 10px;
+    padding: 5px 10px;
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    background: #FFF;
+    border: 1px solid #CCC;
+}
+
+.menu_list {
+    display: none;
+    margin: 0;
+    padding: 0;
+    background: #DCDEE3;
+    position: absolute;
+    top: 51px;
+    right: 0;
+    z-index: 1000;
+}
+
+.menu_block {
+    width: 100%;
+    display: table;
+    border-top: 1px solid #FFF;
+    box-sizing: border-box;
+}
+
+.menu_block > div {
+    width: 25%;
+    display: table-cell;
+    background: #000;
+    border-right: 1px solid #FFF;
+}
+
+.menu_block > div:last-child {
+    border-right: none;
+}
+
+.menu_block a {
+    display: block;
+    padding-top: 5px;
+    color: #FFF;
+    font-size: 0.6rem;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+}
+
+.menu_block a span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    background-image: url(/img/old/menu/hd_sprite.png);
+    background-repeat: no-repeat;
+    background-size: 150px;
+}
+
+.menu_block a p{
+    min-width: 19px;
+    padding: 0 3px;
+    color: #FFF;
+    font-size: 0.7rem;
+    background: #F00;
+    border: 2px solid #FFF;
+    border-radius: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 2px;
+    margin-left: 50%;
+    left: 5px;
+}
+
+.menu_block01 div:nth-child(1) span { background-position:  -90px   0px; }
+.menu_block01 div:nth-child(2) span { background-position:      0px -30px; }
+.menu_block01 div:nth-child(3) span { background-position:  -30px -30px; }
+.menu_block01 div:nth-child(4) span { background-position:  -60px -30px; }
+.menu_block02 div:nth-child(1) span { background-position:  -30px   0px; }
+.menu_block02 div:nth-child(2) span { background-position:  -90px   -30px; }
+.menu_block02 div:nth-child(3) span { background-position: -120px   -30px; }
+/*.menu_block02 div:nth-child(4) span { background-position:        0px     0px; }  //Ť Ć*/
+.menu_block02 div:nth-child(4) span { background-position:  -30px -90px; }
+
+.menu_list_cast .menu_block02 div:nth-child(1) span { background-position: -60px 0px; }
+.menu_list_cast .menu_block02 div:nth-child(4) span { background-position: -60px -90px; }
+
+.menu_list ul {
+    margin-top: 5px;
+    list-style: none;
+}
+
+.menu_list ul + ul {
+    margin-top: 10px;
+}
+
+.menu_list li {
+    background: #FFF;
+}
+
+.menu_list ul li:not(:last-child) {
+    border-bottom: 1px solid #DCDEE3;
+}
+
+.menu_list li a {
+    display: block;
+    padding: 10px 18px 10px 30px;
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+}
+
+.menu_list li a:before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: url(/img/old/menu/menu_sprite.png);
+    background-size: 112px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    margin-top: -8px;
+}
+
+.m11 a:before { background-position: 0       0; }
+.m12 a:before { background-position: -16px 0; }
+.m13 a:before { background-position: -32px 0; }
+.m14 a:before { background-position: -48px 0; }
+.m15 a:before { background-position: -64px 0; }
+.m16 a:before { background-position: -80px 0; }
+
+.m21 a:before { background-position: 0       -16px; }
+.m22 a:before { background-position: -16px -16px; }
+.m23 a:before { background-position: -32px -16px; }
+.m24 a:before { background-position: -48px -16px; }
+.m25 a:before { background-position: -64px -16px; }
+.m26 a:before { background-position: -80px -16px; }
+.m27 a:before { background-position: -96px -16px; }
+
+.m31 a:before { background-position: 0       -32px; }
+.m32 a:before { background-position: -16px -32px; }
+.m33 a:before { background-position: -32px -32px; }
+.m34 a:before { background-position: -48px -32px; }
+.m35 a:before { background-position: -64px -32px; }
+.m36 a:before { background-position: -80px -32px; }
+.m37 a:before { background-position: -96px -32px; }
+
+.m41 a:before { background-position: 0       -48px; }
+.m42 a:before { background-position: -16px -48px; }
+.m43 a:before { background-position: -32px -48px; }
+.m44 a:before { background-position: -48px -48px; }
+.m45 a:before { background-position: -64px -48px; }
+.m46 a:before { background-position: -80px -48px; }
+.m47 a:before { background-position: -96px -48px;}
+
+.m51 a:before { background-position: 0       -64px; }
+.m52 a:before { background-position: -16px -64px; }
+.m53 a:before { background-position: -32px -64px; }
+.m54 a:before { background-position: -48px -64px; }
+.m55 a:before { background-position: -64px -64px; }
+.m56 a:before { background-position: -80px -64px; }
+
+.m61 a:before { background-position: 0       -80px; }
+.m62 a:before { background-position: -16px -80px; }
+.m63 a:before { background-position: -32px -80px; }
+.m64 a:before { background-position: -48px -80px; }
+.m65 a:before { background-position: -64px -80px; }
+
+.m71 a:before { background-position: 0       -96px; }
+.m72 a:before { background-position: -16px -96px; }
+.m73 a:before { background-position: -32px -96px; }
+.m74 a:before { background-position: -48px -96px; }
+.m75 a:before { background-position: -64px -96px; }
+.m76 a:before { background-position: -80px -96px; }
+
+.m81 a:before { background-position: 0       -112px; }
+.m82 a:before { background-position: -16px -112px; }
+.m83 a:before { background-position: -32px -112px; }
+.m84 a:before { background-position: -48px -112px; }
+.m85 a:before { background-position: -64px -112px; }
+.m86 a:before { background-position: -80px -112px; }
+.m87 a:before { background-position: -96px -112px; }
+
+.m91 a:before { background-position: 0       -128px; }
+.m92 a:before { background-position: -16px -128px; }
+.m93 a:before { background-position: -32px -128px; }
+.m94 a:before { background-position: -48px -128px; }
+.m95 a:before { background-position: -64px -128px; }
+.m96 a:before { background-position: -80px -128px; }
+.m97 a:before { background-position: -96px -128px; }
+
+.m101 a:before { background-position: 0         -144px; }
+.m102 a:before { background-position: -16px -144px; }
+.m103 a:before { background-position: -32px -144px; }
+.m104 a:before { background-position: -48px -144px; }
+.m105 a:before { background-position: -64px -144px; }
+.m106 a:before { background-position: -80px -144px; }
+
+.menu_list li a:after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    color: #999;
+    border-top: solid 2px #666;
+    border-right: solid 2px #666;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -4px;
+}
+
+.menu_detail {
+    display: none;
+    margin: 0;
+    padding: 0;
+    background: #DCDEE3;
+    position: absolute;
+    top: 51px;
+    right: 0;
+    z-index: 1000;
+}
+
+.menu_detail dl {
+    margin: 0;
+    border-bottom: 1px solid #EEE;
+}
+
+.menu_detail dt {
+    padding: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    background: #EEE;
+    position: relative;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.menu_detail dt span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    color: #999;
+    border-top: solid 2px #666;
+    border-right: solid 2px #666;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+    left: 15px;
+}
+
+.menu_detail .back_active span {
+    border-top: solid 2px #CCC;
+    border-right: solid 2px #CCC;
+}
+
+.menu_detail dd {
+    margin: 0;
+    background: #FFF;
+}
+
+.menu_detail dd:not(:last-child) {
+    border-bottom: 1px solid #DCDEE3;
+}
+
+.menu_detail dd a {
+    display: block;
+    padding: 10px 18px 10px 30px;
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+}
+
+.menu_detail dd a:before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-image: url(/img/old/menu/menu_sprite.png);
+    background-size: 112px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    margin-top: -8px;
+}
+
+.menu_detail dd a:after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    color: #999;
+    border-top: solid 2px #666;
+    border-right: solid 2px #666;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -4px;
+}
+
+.menu_detail dd a p{
+    min-width: 19px;
+    padding: 0 3px;
+    color: #FFF;
+    font-size: 0.7rem;
+    background: #F00;
+    border: 2px solid #FFF;
+    border-radius: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top : 0px;
+    left: 3px;
+    text-align: center;
+    font-weight: normal;
+}
+
+#dummyContent00 {
+    width: 100%;
+    height: 200%;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+/***** nonusertop header *****/
+#header_nonusertop_box {
+    width: 100%;
+    height: 51px;
+    padding: 8px 5px;
+    background: #000;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 9999;
+}
+
+#header_nonusertop_box > div {
+    width: 50px;
+    text-align: center;
+    position: absolute;
+}
+
+#header_nonusertop_box a {
+    display: block;
+    color: #FFF;
+    font-size: 10px;
+    text-decoration: none;
+    line-height: 1;
+    position: relative;
+}
+
+#header_nonusertop_box .header_logo {
+    width: initial;
+}
+
+#header_nonusertop_box .header_logo a {
+    width: 100px;
+    height: 35px;
+    background-image: url(/img/old/menu/header_logo.png);
+    background-size: auto 35px;
+    -webkit-background-size: auto 35px;
+    -moz-background-size: auto 35px;
+    background-repeat: no-repeat;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#header_nonusertop_box a span {
+    display: block;
+    margin: 0px auto 3px;
+    width: 22px;
+    height: 22px;
+    background-size: 110px;
+    background-repeat: no-repeat;
+    background-image: url(/img/old/menu/nonusertop_sprite.png);
+}
+
+#header_nonusertop_box .header_link1 a span {   background-position:     0px 0px; }
+#header_nonusertop_box .header_link2 a span {   background-position: -22px 0px; }
+
+#header_nonusertop_box .header_link1 { right:   50px; }
+#header_nonusertop_box .header_link2 { right:    0px; }
+
+/***** xmas *****/
+.header_xmas #header_box,
+.header_xmas #header_nonusertop_box {
+    background-image: url(/img/old/menu/header_bg_xmas2.png), url(/img/old/menu/header_bg_xmas.png);
+    background-size: auto 51px;
+    -webkit-background-size: auto 51px;
+    -moz-background-size: auto 51px;
+    background-position: right, 0;
+    background-repeat: no-repeat;
+}
+
+.header_xmas #header_box .header_logo a {
+    width: 45px;
+    height: 45px;
+    margin-top: -5px;
+    background-image: url(/img/old/menu/headericon_xmas.png);
+}
+
+.header_xmas #header_nonusertop_box .header_logo a {
+    background-image: url(/img/old/menu/header_nonusertop_xmas.png);
+}
+
+.header_xmas #header_box a,
+.header_xmas #header_box .menu_button,
+.header_xmas #header_nonusertop_box a,
+.header_xmas #header_nonusertop_box .menu_button  {
+    text-shadow: 1px 1px 1px #000;
+}
+
+.header_xmas #header_box a p {
+    text-shadow: none;
+}
+
+/***** newyear *****/
+.header_newyear #header_box {
+    background: url(/img/old/menu/header_bg_newyear01.png) left top no-repeat,
+                url(/img/old/menu/header_bg_newyear02.png) right top no-repeat,
+                #000;
+    background-size: auto 51px;
+    -webkit-background-size: auto 51px;
+    -moz-background-size: auto 51px;
+}
+
+.header_newyear #header_nonusertop_box {
+    background: url(/img/old/menu/header_bg_newyear03.png) left top no-repeat,
+                url(/img/old/menu/header_bg_newyear04.png) right top no-repeat,
+                #000;
+    background-size: auto 51px;
+    -webkit-background-size: auto 51px;
+    -moz-background-size: auto 51px;
+}
+
+.header_newyear #header_box a,
+.header_newyear #header_box .menu_button,
+.header_newyear #header_nonusertop_box a,
+.header_newyear #header_nonusertop_box .menu_button  {
+    text-shadow: 1px 1px 1px #000;
+}
+
+.header_newyear #header_box a p {
+    text-shadow: none;
+}
+
+
+/***** halloween *****/
+.header_halloween #header_box .header_logo a {
+    width: 45px;
+    height: 45px;
+    margin-top: -5px;
+    background-image: url(/img/old/menu/headericon_halloween.png);
+}
+
+.header_halloween #header_box {
+    background: url(/img/old/menu/header_bg_halloween02.png) right top no-repeat,
+                url(/img/old/menu/header_bg_halloween01.png) left top no-repeat,
+                url(/img/old/menu/header_bg_halloween03.png) left top repeat-x;
+    background-size: auto 51px;
+    -webkit-background-size: auto 51px;
+    -moz-background-size: auto 51px;
+}
+
+.header_halloween #header_nonusertop_box {
+    background: url(/img/old/menu/header_bg_halloween02.png) right top no-repeat,
+                url(/img/old/menu/header_bg_halloween01.png) left top no-repeat,
+                url(/img/old/menu/header_bg_halloween03.png) left top repeat-x;
+    background-size: auto 51px;
+    -webkit-background-size: auto 51px;
+    -moz-background-size: auto 51px;
+}
+
+.header_halloween #header_box a,
+.header_halloween #header_box .menu_button,
+.header_halloween #header_nonusertop_box a,
+.header_halloween #header_nonusertop_box .menu_button  {
+    text-shadow: 1px 1px 1px #000;
+}
+
+.header_halloween #header_box a p {
+    text-shadow: none;
+}
+
+/***** valentine *****/
+.header_valentine #header_box {
+    background: url(/img/old/menu/header_bg_valentine02.png) right top no-repeat,
+                url(/img/old/menu/header_bg_valentine01.png) left top no-repeat,
+                url(/img/old/menu/header_bg_valentine03.png) left top repeat-x;
+    background-size: auto 51px;
+    -webkit-background-size: auto 51px;
+    -moz-background-size: auto 51px;
+}
+
+.header_valentine #header_nonusertop_box {
+    background: url(/img/old/menu/header_bg_valentine02.png) right top no-repeat,
+                url(/img/old/menu/header_bg_valentine01.png) left top no-repeat,
+                url(/img/old/menu/header_bg_valentine03.png) left top repeat-x;
+    background-size: auto 51px;
+    -webkit-background-size: auto 51px;
+    -moz-background-size: auto 51px;
+}
+
+.header_valentine #header_box a,
+.header_valentine #header_box .menu_button,
+.header_valentine #header_nonusertop_box a,
+.header_valentine #header_nonusertop_box .menu_button  {
+    text-shadow: 1px 1px 1px #000;
+}
+
+.header_valentine #header_box a p {
+    text-shadow: none;
+}

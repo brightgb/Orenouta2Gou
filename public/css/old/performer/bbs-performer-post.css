@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+.title {
+	margin-top: 2px;
+	padding: 8px;
+	font-size: 1.1em;
+	font-weight: bold;
+	border-top: solid 3px #FF398A;
+	border-bottom: solid 1px #CCC;
+	background: #EFF1F0;
+	background:   linear-gradient(to bottom, #FDFEF9, #EFF1F0);
+	background: -webkit-linear-gradient(top, #FDFEF9, #EFF1F0);
+	background:    -moz-linear-gradient(top, #FDFEF9, #EFF1F0);
+}
+
+.contents {
+	margin: 10px 10px 20px;
+	padding: 10px;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+input[type="text"], textarea {
+	width: 100%;
+	border: 2px solid #999;
+	margin-bottom: 10px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+input[type="text"] {
+	height: 30px;
+}
+
+input[type="submit"] {
+	display: block;
+	width: 118px;
+	margin: 0 auto 30px;
+	padding: 10px 0;
+	border-radius: 4px;
+}
+
+.bbs_btn input {
+	color: #333;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: solid 1px #999;
+}
+
+.bbs_ng_btn input {
+	color: #BBB;
+	background: #DDD;
+	border: solid 1px #BBB;
+}
+
+.setting_list a {
+	display: block;
+	padding: 10px;
+	color: #333;
+	text-decoration: none;
+	background: #F8F8F8;
+	border-top: 1px solid #CCC;
+	position: relative;
+}
+
+.setting_list a:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-top: solid 2px #999;
+	border-right: solid 2px #999;
+	transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}

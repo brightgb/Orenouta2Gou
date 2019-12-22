@@ -1,0 +1,308 @@
+@charset "utf-8";
+
+#title a {
+	display: block;
+	width: 24px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -12px;
+}
+
+#title a img {
+	width: 100%;
+}
+
+
+.mainbox_area {
+	margin: 5px auto 20px;
+}
+
+.status_area {
+	width: 247px;
+	margin: 10px auto 0;
+	position: relative;
+}
+
+.status {
+	display: inline-block;
+	width: 100px;
+	padding: 2px 0;
+	text-align: center;
+	vertical-align: top;
+	color: #FFF;
+	font-size: 0.7em;
+	border-radius: 4px;
+}
+
+.status1 {	background: #FF1B8D; }	/*公開中*/
+.status2 {	background: #999; }		/*審査待ち*/
+
+.date {
+	font-size: 0.8em;
+	color: #999;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.pic_img {
+	margin: 0 10px 10px;
+	text-align: center;
+}
+
+.pic_img > div {
+	display: inline-block;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.view_btn {
+	display: table;
+	width: 247px;
+	margin: 10px auto 5px;
+}
+
+.view_btn > div {
+	display: table-cell;
+	width: 50%;
+}
+
+.view_btn a {
+	display: block;
+	margin: 0 auto;
+	padding: 5px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	position: relative;
+}
+
+.view_btn div:first-child a {
+	margin-right: 5px;
+}
+
+.view_btn div:last-child a {
+	margin-left: 5px;
+}
+
+.view_btn a:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-size: 20px;
+	background-position: 0px 0px;
+	vertical-align: -5px;
+	margin-right: 10px;
+}
+
+.view_btn div:first-child a:before {
+	background-image: url(/img/old/icon/emoji_mail.png);
+}
+
+.view_btn div:last-child a:before {
+	background-image: url(/img/old/icon/emoji_write.png);
+}
+
+.mail_btn a {
+	display: block;
+	width: 70%;
+	margin: 20px auto;
+	padding: 5px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	position: relative;
+}
+
+.mail_btn a:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-size: 20px;
+	background-position: 0px 0px;
+	background-image: url(/img/old/icon/emoji_mail.png);
+	vertical-align: -5px;
+	margin-right: 5px;
+}
+
+.no_data {
+	margin: 20px 10px;
+	padding: 20px 10px;
+	font-size: 0.9em;
+	text-align: center;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.upload-area {
+	width: 100%;
+	display: table;
+	margin: 10px 0;
+	padding: 0 5px;
+	background: #FFF;
+	box-sizing: border-box;
+}
+
+.upload-area > div {
+	display: table-cell;
+	padding: 0 5px;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+
+.upload-area .upload {
+	margin: 20px auto;
+}
+
+.upload-area .upload button {
+	width: 100%;
+    display: inline-block;
+    padding: 10px 0;
+    color: #00F;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+	background: #FFF;
+    border: 2px solid #00F;
+    border-radius: 50px;;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.upload-area .upload button:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	background-image: url(/img/old/icon/album_sprite.png);
+	background-size: 120px auto;
+	-webkit-background-size: 120px auto;
+	background-repeat: no-repeat;
+	background-position: -60px -20px;
+	vertical-align: -6px;
+}
+
+.upload-area .rotate {
+	width: 70px;
+}
+
+.upload-area .rotate button {
+	width: 100%;
+	display: block;
+	padding: 5px 0;
+	font-size: 0.7em;
+	text-align: center;
+	line-height: 11px;
+	background: #FEFEFE;
+	background: linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background: -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+
+.upload-area  span {
+	display: block;
+	margin: 0 auto 2px;
+	width: 20px;
+	height: 20px;
+	background-image: url(/img/old/icon/album_sprite.png);
+	background-size: 120px auto;
+	-webkit-background-size: 120px auto;
+	background-repeat: no-repeat;
+}
+
+.upload-area .rotate   span { background-position: -20px 0; }
+.upload-area .imgcheck span { background-position: 0 -20px; }
+
+input[type=file] { display: none; }
+
+.event_btn a {
+	display: block;
+	width: 200px;
+	height: 50px;
+	margin: 30px auto;
+	color: rgba(255, 255, 255, 0);
+	background-size: contain;
+	-webkit-background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.xmas_btn   a {	background-image: url(/img/old/performer/xmas_toukou_btn.png); }
+.xmas_btn02 a {	background-image: url(/img/old/performer/xmas_toukou02_btn.png); }
+
+.mizugi_btn   a {
+	width: 228px;
+	height: 61px;
+	background-image: url(/img/old/performer/mizugi_toukou_btn.png);
+}
+.mizugi_btn02 a {
+	width: 228px;
+	height: 61px;
+	background-image: url(/img/old/performer/mizugi_toukou02_btn.png);
+}
+
+.halloween_btn   a { background-image: url(/img/old/performer/halloween_toukou_btn.png); }
+.halloween_btn02 a { background-image: url(/img/old/performer/halloween_toukou02_btn.png); }
+
+.modal-confirm {
+	display: none;
+	width: 80%;
+	height: auto;
+	margin: 0;
+	padding: 10px;
+	background: #FFF;
+	position: absolute;
+	border: 2px solid #AAA;
+	border-radius: 4px;
+	z-index: 99999;
+}
+
+.modal-confirm .modal-confirm-area img {
+	width: 100%;
+	max-width: 100%;
+	vertical-align: bottom;
+}
+
+.modal-confirm .modal-confirm-submit {
+	display: block;
+	margin: 10px;
+	padding: 5px 20px;
+	color: #333;
+	font-size: 0.9rem;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	cursor: pointer;
+}
+
+.modal-confirm .modal-confirm-form {
+	display: none;
+}

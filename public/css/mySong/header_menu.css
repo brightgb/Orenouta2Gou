@@ -1,0 +1,186 @@
+/* ヘッダーバー */
+.top_menu {
+    width: 100%;
+    height: 40px;
+    background: black;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 9999;
+}
+.left {
+    float: left;
+    padding-left: 10px;
+    text-align: center;
+}
+.left .top_icon {
+    height: 70%;
+    position: relative;
+}
+.left .top_text {
+    font-size: x-small;
+    color: white;
+    position: relative; top: -17px;
+}
+.right div {
+    float: right;
+    padding-right: 10px;
+}
+.right .top_icon {
+    height: 65%;
+    position: absolute;
+    top: 3%;
+    right: 100px;
+}
+.right .top_text {
+    font-size: x-small;
+    color: white;
+    float: right;
+    position: relative; top: 4px; right: 92px;
+}
+.hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px; /* クリックしやすいようにちゃんと幅を指定する */
+    height: 40px; /* クリックしやすいようにちゃんと高さを指定する */
+    cursor: pointer;
+    z-index: 9999;
+}
+.hamburger__line {
+    position: absolute;
+    left: 11px;
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    transition: all .5s;
+}
+.hamburger__line--1 {
+    top: 5px;
+}
+.hamburger__line--2 {
+    top: 13px;
+}
+.hamburger__line--3 {
+    top: 21px;
+}
+.menu_text {
+    color: white;
+    position: absolute; left: 9px; top: 25px;
+    font-size: x-small;
+}
+.black-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9997;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+/* メインメニュー */
+.global-nav {
+    position: fixed;
+    right: -320px; /* これで隠れる */
+    top: 0;
+    width: 300px; /* スマホに収まるくらい */
+    height: 100vh;
+    z-index: 9998;
+    padding-top: 40px;
+    background-color: #fff;
+    transition: all .6s;
+    overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+}
+.global-nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.global-nav__item {
+    text-align: left;
+    padding: 0 15px;
+}
+.global-nav__item a {
+    display: block;
+    padding: 20px 15px;
+    border-bottom: 1px solid gray;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.global-nav__item a:hover {
+    background-color: silver;
+}
+.global-nav-sub__item {
+    text-align: left;
+    padding: 0 15px;
+}
+.global-nav-sub__item a {
+    display: block;
+    padding: 20px 15px 20px 75px;
+    border-bottom: 1px solid gray;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.global-nav-sub__item a:hover {
+    background-color: silver;
+}
+
+/* サブメニュー */
+#acordion {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.show {
+    opacity: 1;
+}
+.hide {
+    display: none;
+}
+.omake1 {
+    position: absolute;
+    transform: rotate(90deg);
+}
+.omake2 {
+    position: absolute;
+    padding-bottom: -5px;
+    transform: rotate(-90deg);
+}
+.yohaku {
+    margin-bottom: 50px;
+}
+
+/* 表示された時用のCSS */
+.nav-open .global-nav {
+    right: 0;
+}
+.nav-open .black-bg {
+    opacity: .8;
+    visibility: visible;
+}
+.nav-open .hamburger__line--1 {
+    transform: rotate(45deg);
+    top: 20px;
+    left: -10px;
+    background-color: black;
+}
+.nav-open .hamburger__line--2 {
+    width: 0;
+}
+.nav-open .hamburger__line--3 {
+    transform: rotate(-45deg);
+    top: 20px;
+    left: -10px;
+    background-color: black;
+}
+.nav-open .menu_text {
+    display: none;
+}

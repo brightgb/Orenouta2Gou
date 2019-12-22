@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+.listbox_area {
+	margin: 8px 0;
+	padding: 5px;
+	background: #DCDEE3;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+
+.listbox {
+	margin-bottom: 5px;
+	padding: 10px;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.listbox_area > div.listbox:last-child {
+	margin-bottom: 0;
+}
+
+.cast_prof {
+	display: table;
+	width: 100%;
+	box-sizing: border-box;
+	text-decoration: none;
+	padding-bottom: 20px;
+}
+
+.prof_link {
+	padding: 0 5px;
+	font-size: 0.8rem;
+	color: #FFF;
+	text-decoration: none;
+	background: #666;
+	border-radius: 4px;
+	position: absolute;
+	right: 0;
+	top: 21px;
+}
+
+.prof_link:after {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-image: url(/img/old/icon/icon_ya.png);
+	background-size: 15px;
+	margin-left: 5px;
+	vertical-align: -3px;
+}
+
+.cast_prof > div {
+	display: table-cell;
+}
+
+.cast_prof > .cast_img {
+	width: 60px;
+	text-align: center;
+}
+
+.cast_prof > .cast_img img {
+	width: 100%;
+	border-radius: 50%;
+	vertical-align: bottom;
+}
+
+.cast_prof .date {
+	font-size: 0.9em;
+	color: #999;
+}
+
+.cast_prof > .cast_name {
+	vertical-align: top;
+	padding-left: 10px;
+	position: relative;
+}
+
+.cast_hn {
+	padding-right: 60px;
+	font-size: 0.9em;
+}
+
+.status {
+	width: 70px;
+	margin-bottom: 3px;
+	padding: 2px 0;
+	text-align: center;
+	color: #FFF;
+	font-size: 0.7em;
+	border-radius: 4px;
+}
+
+.status-offline { background: #999; }	 	/*オフライン*/
+.status-online  { background: #FF1B8D; } 	/*ログイン中*/
+.status-talking { background: #F00; }	 	/*通話中*/
+.status-waiting { background: #00F; }	 	/*待機中*/
+
+.no_data {
+	margin: 20px 10px;
+	padding: 20px 10px;
+	text-align: center;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+/* memo */
+.memobox {
+	margin: 0px;
+	background-image: url(/img/old/noteline.png);
+	background-position: 0px 0px;
+	background-size: 1px 17px;
+}
+
+.memobox .memobar {
+	padding: 0 5px;
+	font-size: 0.8rem;
+	color: #999;
+	position: relative;
+}
+
+.memobox .memo_date {
+	color: #999;
+	font-size: 0.8rem;
+	position: absolute;
+	right: 5px;
+	bottom: 0;
+}
+
+.memobox .memotxt {
+	padding: 0 5px 1px;
+	font-size: 0.8rem;
+	position: relative;
+}
+
+.memobox .memotxt a {
+	display: block;
+	color: #F00;
+	text-align: right;
+	font-size: 0.8rem;
+	text-decoration: none;
+}
+
+.memobox .memotxt a img {
+	width: 16px;
+	margin-right: 3px;
+	vertical-align: -2px;
+}

@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+.login_area {
+	margin: 30px 20px;
+}
+
+.login_area input[name="login_id"],
+.login_area input[name="password"] {
+	width: 100%;
+	height: 30px;
+	margin-bottom: 10px;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 3px 0 #D1D2D3;
+	box-sizing: border-box;
+}
+
+.login_btn input {
+	width: 100%;
+	display: block;
+	margin: 15px auto 0;
+	padding: 10px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #999;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+}
+
+.event_img {
+	width: 35%;
+	margin: 10px auto;
+}
+
+.event_img img {
+	width: 100%;
+}
+
+.ear {
+	position: relative;
+}
+
+.ear:before {
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 3px;
+	background-image: url(/img/old/icon/emoji_ear.png);
+	background-size: contain;
+	vertical-align: -2px;
+}
+
+.shinki_btn {
+	padding: 15px 0;
+	border-top: 1px solid #CCC;
+}
+
+.shinki_btn a {
+	display: block;
+	width: 60%;
+	margin: 0 auto;
+	padding: 10px 0;
+	color: #00F;
+	font-size: 0.9em;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid #00F;
+	border-radius: 35px;
+}

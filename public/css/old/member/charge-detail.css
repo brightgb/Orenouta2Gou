@@ -1,0 +1,254 @@
+@charset "utf-8";
+
+.pay_title {
+	display: flex;
+	margin: 10px 10px 20px;
+}
+
+.pay_title > div {
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+.pay_title .logo {
+	flex: 0 0 80px;
+	display: flex;
+	height: 80px;
+	margin-right: 10px;
+	padding: 4px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+	box-sizing: border-box;
+	align-items: center;
+}
+
+.pay_title .logo img {
+	width: 100%;
+	max-height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.pay_num {
+	margin: 10px;
+	padding: 15px 10px;
+	background: #C4E5FF;
+}
+
+.pay_num > p, .pay_num > span {
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+.pay_btn {
+	margin: 20px 0 10px;
+}
+
+.pay_btn a, .pay_btn input {
+	display: block;
+	width: 170px;
+	margin: 0 auto;
+	padding: 10px 0;
+	color: #333;
+	font-weight: normal;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.point_bar {
+	margin: 15px 0 10px;
+	padding: 3px 0;
+	color: #666;
+	font-size: 0.9em;
+	font-weight: bold;
+	text-align: center;
+	background: #FDFEF9;
+	background:   linear-gradient(to bottom, #FDFEF9, #EFF1F0);
+	background: -webkit-linear-gradient(top, #FDFEF9, #EFF1F0);
+	background:    -moz-linear-gradient(top, #FDFEF9, #EFF1F0);
+	border-top:    1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+
+.point_table {
+	margin: 15px 10px;
+}
+
+.point_table td {
+	padding: 3px 10px;
+	font-size: 0.9em;
+	border: 1px solid #999;
+}
+
+.point_table th {
+	padding: 3px 10px;
+	font-size: 0.9em;
+	font-weight: normal;
+	background: #EFF1F0;
+	border: 1px solid #999;
+}
+
+ul.caution {
+	margin-top: 10px;
+	padding-bottom: 10px;
+	list-style: none;
+	background: #FFF5F7;
+}
+
+ul.caution li {
+	margin: 5px 10px 0px;
+}
+
+ul.caution li:first-child {
+	margin: 0 0 0 -10px;
+	padding: 5px 0;
+	color: #FFF;
+	font-weight: bold;
+	text-align: center;
+	background: #E60012;
+}
+
+ul.caution li:not(:first-child):before {
+	content: "●";
+}
+
+.notes {
+	margin: 10px 0;
+	list-style: none;
+}
+
+.notes > li {
+	margin: 5px 10px 0px;
+}
+
+.notes > li.mark:before {
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 3px;
+	vertical-align: -2px;
+	background-image: url(/img/old/icon/emoji_ihan.png);
+	background-size: contain;
+}
+
+/* docomo */
+.soukin {
+	margin: 15px auto;
+	font-weight: bold;
+	text-align: center;
+	border-top: 1px dashed #999;
+	border-bottom: 1px dashed #999;
+}
+
+.soukin dt {
+	margin: 5px;
+}
+
+.soukin dd {
+	margin: 5px;
+}
+
+.soukin dd + dt {
+	padding-top: 5px;
+	border-top: 1px dashed #999;
+}
+
+.soukin input {
+	width: 170px;
+	margin-bottom: 5px;
+	padding: 2px;
+}
+/* bank */
+.howto .tel_num {
+	width: 170px;
+	margin: 15px auto;
+}
+
+.howto .tel_num div:first-child {
+	padding: 5px 10px;
+	text-align: center;
+	background: #EFF1F0;
+	border: 1px solid #999;
+	border-radius: 4px 4px 0 0;
+}
+
+.howto .tel_num div:last-child {
+	padding: 5px 10px;
+	text-align: center;
+	border-left:   1px solid #999;
+	border-right:  1px solid #999;
+	border-bottom: 1px solid #999;
+	border-radius: 0 0 4px 4px;
+}
+
+.pay_num .tel_num table {
+	width: 285px;
+	margin: 5px auto 15px;
+	text-align: center;
+}
+
+.pay_num .tel_num td {
+	padding: 5px 10px;
+	font-size: 0.9em;
+	font-weight: normal;
+	background: #FFF;
+	border: 1px solid #999;
+}
+
+.pay_num .tel_num tr:last-child td {
+	font-weight: bold;
+}
+
+.pay_num .tel_num tr:first-child td {
+	color: #00F;
+}
+
+.kouza table {
+	width: 285px;
+	margin: 5px auto;
+	text-align: center;
+}
+
+.kouza td {
+	padding: 5px 10px;
+	font-size: 0.9em;
+	font-weight: normal;
+	text-align: left;
+	background: #FFF;
+	border: 1px solid #999;
+}
+
+/* BitCach */
+
+.code_box {
+	margin-top: 5px;
+	text-align: center;
+}
+
+.code_box input {
+	width: 50%;
+	height: 26px;
+	line-height: 26px;
+	margin-top: 5px;
+	font-size: 0.9rem;
+	box-sizing: border-box;
+}
+
+/* edy */
+.pay_title .logo.edy {
+	/* flex: 0 0 80px;
+	height: 80px;
+	margin-right: 10px; */
+	padding: 0px;
+    border: 0px solid #CCC;
+    /* border-radius: 4px; */
+	/* box-sizing: border-box;
+	align-items: center; */
+}

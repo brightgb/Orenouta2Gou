@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+.contents_bg {
+	padding-bottom: 10px;
+	background: #F8F3EC;
+}
+
+.sub_title {
+	padding: 10px 0;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+}
+
+.sub_title span {
+	color: #F00;
+}
+
+.sub_title:after {
+	content: "";
+	width: 30px;
+	height: 30px;
+	background-image: url(/img/old/icon/subtitle_sprite.png);
+	background-repeat: no-repeat;
+	background-size: auto 30px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -15px;
+}
+
+.sub_title01:after { background-position: 0 0; }
+
+.contents {
+	margin: 10px;
+	padding: 0 10px 10px;
+	background: #FFF;
+	border: 2px solid #CCC;
+}
+
+.contents + .contents {
+	margin-bottom: 0;
+}
+
+.work {
+	margin-top: 10px;
+	font-size: 0.9rem;
+}
+
+.work div {
+	font-size: 0.9rem;
+}
+
+.work_txt  {
+	padding: 10px;
+	border: 2px solid #FD6E89;
+}
+
+.work_txt span {
+	color: #F00;
+	font-weight: bold;
+}
+
+.work font {
+	font-size: 0.9rem;
+}
+
+
+input[type="text"] {
+	height: 30px;
+	width: 100%;
+	margin-bottom: 5px;
+    padding: 0 2px;
+	border: 2px solid #999;
+	box-sizing: border-box;
+}
+
+select {
+	margin-bottom: 5px;
+}
+
+.name, .kana {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.name input, .kana input {
+	width: 49%;
+}
+
+.label {
+	margin-top: 20px;
+	width: 100%;
+}
+
+textarea {
+	width: 100%;
+	border: 2px solid #999;
+	box-sizing: border-box;
+}
+
+/***** touroku_btn *****/
+.touroku_btn {
+	margin: 30px 0;
+}
+
+.touroku_btn input {
+	display: block;
+	width: 100%;
+	padding: 15px 0;
+	color: #FFF;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	background: #FD6E89;
+	border: none;
+	position: relative;
+}
+
+/***** notice *****/
+.notice {
+	margin-bottom: 5px;
+	position: relative;
+}
+
+.notice:before {
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+	vertical-align: -3px;
+	background-image: url(/img/old/icon/emoji_ihan.png);
+	background-repeat: no-repeat;
+	background-size: auto 16px;
+}
+
+/***** shitei *****/
+.shitei {
+	margin: 10px 10px 0;
+	padding: 5px 10px;
+	color: #FFF;
+	background: #999;
+}
+
+.shitei_link a {
+	display: block;
+	margin: 0 10px;
+	padding: 5px 10px;
+	color: #333;
+	text-decoration: none;
+	border-bottom: 2px solid #999;
+	border-left: 2px solid #999;
+	border-right: 2px solid #999;
+	position: relative;
+}
+
+.shitei_link a:after {
+	content: "";
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	border-top: solid 2px #666;
+	border-right: solid 2px #666;
+	transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	margin-top: 6px;
+}

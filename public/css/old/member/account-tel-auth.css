@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+img {
+	vertical-align: bottom;
+}
+
+.ad {
+	margin: 10px;
+}
+
+.ad li {
+	font-size: 0.9rem;
+}
+
+.ad .disc {
+	margin: 3px 7px 3px 20px;
+	list-style: disc;
+}
+
+.contents {
+	border: 1px solid #999;
+	border-radius: 4px;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+}
+
+.btn a {
+	display: block;
+	width: 60%;
+	margin: 15px auto;
+	padding: 5px 10px;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	border: solid 1px #999;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	position: relative;
+}
+
+.btn a:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-left: 2px solid #666;
+	border-top: 2px solid #666;
+	transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+.ya {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.tel_btn {
+	margin: 5px 10px 10px;
+	text-align: center;
+	background: #FB2974;
+	border-radius: 4px;
+}
+
+.tel_btn img {
+	width: 100%;
+	margin: 20px auto 0;
+}
+
+.tel_btn a {
+	display: inline-block;
+	margin: 20px 0 20px;;
+	padding: 5px 20px;
+	color: #FB2974;
+	font-size: 0.9em;
+	font-weight: bold;
+	text-decoration: none;
+	background: #FFF;
+	border-radius: 4px;
+}
+
+.tel_btn a:before {
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url(/img/old/member/account/tel/emoji_phone.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: -3px;
+	margin-right: 3px;
+}
+
+.chuui {
+	padding: 0 10px;
+}
+
+.chuui img {
+	width: 16px;
+	vertical-align: -2px;
+	margin-right: 3px;
+}
+
+.back_btn a {
+	display: block;
+	margin: 10px 20px;
+	padding: 5px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	position: relative;
+}
+
+.back_btn a:before {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-left: 2px solid #666;
+	border-top: 2px solid #666;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	margin-top: -4px;
+}

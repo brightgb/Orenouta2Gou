@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+.contents {
+	margin: 10px 10px 20px;
+	padding: 10px;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.error {
+	padding: 0 10px;
+	margin-bottom: 10px;
+}
+
+.error > p {
+	color: red;
+}
+
+input[name="title"], textarea[name="text"] {
+	width: 100%;
+	border: 2px solid #999;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+}
+
+input[name="title"] {
+	height: 30px;
+}
+
+input[type="submit"] {
+	display: block;
+	width: 118px;
+	margin: 10px auto 30px;
+	padding: 10px 0;
+	border-radius: 4px;
+}
+
+.bbs_btn input {
+	color: #333;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: solid 1px #999;
+}
+
+.bbs_ng_btn input {
+	color: #BBB;
+	background: #DDD;
+	border: solid 1px #BBB;
+}

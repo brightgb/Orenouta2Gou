@@ -1,0 +1,197 @@
+@charset "utf-8";
+
+main {
+	background: #DCDEE3;
+	overflow: overlay;
+}
+
+#title a {
+	display: block;
+	width: 24px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -12px;
+}
+
+.taiki_box {
+	margin: 15px 10px;
+}
+
+.taiki_title {
+	padding: 5px 10px;
+	font-weight: bold;
+	background: #EFEFEF;
+	border-top: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	border-radius: 4px 4px 0 0;
+	position: relative;
+}
+
+.taiki_title a.app_setting {
+	padding: 0 5px;
+	color: #666;
+	font-size: 0.8em;
+	font-weight: normal;
+	text-decoration: none;
+	border: 1px solid #999;
+	border-radius: 4px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -12px;
+}
+
+.taiki_title a.question {
+	display: block;
+	width: 24px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -12px;
+}
+
+.taiki_title a.question img {
+	width: 100%;
+}
+
+.taiki_doc {
+	padding: 10px;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 0 0 4px 4px;
+}
+
+select[name="call_type"] {
+	margin-top: 10px;
+}
+
+textarea {
+	width: 100%;
+	border: 2px solid #999;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.tell_btn input {
+	width: 118px;
+	display: block;
+	margin: 20px auto;
+	padding: 10px 0;
+	text-align: center;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: solid 1px #999;
+	border-radius: 4px;
+}
+
+.dummy_btn {
+	text-align: center;
+}
+
+.dummy_btn input {
+	margin: 20px auto 10px;
+	padding: 10px 30px;
+	text-align: center;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: solid 1px #999;
+	border-radius: 4px;
+}
+
+.notes {
+	margin-top: 10px;
+	color: #F00;
+}
+
+.notes img {
+	width: 16px;
+	margin-right: 3px;
+	vertical-align: -3px;
+}
+
+.chuui {
+	margin: 15px 0;
+	padding: 5px 10px;
+	border: 2px solid #F00;
+}
+
+.chuui a {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-decoration: none;
+	border-bottom: 2px solid;
+}
+
+.chuui > div:last-child {
+	margin-top: 5px;
+	color: #F00;
+	font-size: 0.9em;
+}
+
+.modal-app-popup {
+	display: none;
+	width: 80%;
+	margin: 0;
+	padding: 10px;
+	background: #FFF;
+	position: fixed;
+	border: 2px solid #AAA;
+	border-radius: 4px;
+	z-index: 99999;
+}
+
+.modal-app-popup .mailadd_img img {
+	width: 100%;
+}
+
+.modal-app-popup .mailadd_btn {
+	display: block;
+	margin: 10px;
+	padding: 5px 20px;
+	color: #333;
+	font-size: 0.9rem;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	cursor: pointer;
+}
+
+.modal-app-popup label {
+	display: block;
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+a.modal-close {
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+	background: url(/img/old/icon/close.png) no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: -8px;
+	right: -8px;;
+}
+
+#modal-overlay {
+	display: none;
+	width: 100%;
+	height: 120%;
+	background-color: rgba( 0,0,0, 0.6 );
+	z-index: 10000;
+	position: fixed;
+	top: 0;
+	left: 0;
+}

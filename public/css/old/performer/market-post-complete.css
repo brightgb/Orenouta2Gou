@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+.ListBlock {
+    margin-top: 0;
+    display: table;
+    width: 100%;
+    margin: 1px 0;
+    box-sizing: border-box;
+}
+
+.ListBlock > div {
+    display: table-cell;
+    width: 20%;
+    background: #666;
+    border-right: 1px solid #FFF;
+}
+
+.ListBlock > div:first-child {
+    border-left: none;
+}
+
+.ListBlock > div:last-child {
+    border-right: none;
+}
+
+.ListBlock a {
+    display: block;
+    padding-top: 5px;
+    color: #FFF;
+    font-size: 0.6rem;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+}
+
+.ListBlock a span {
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin: 0 auto;
+    background-image: url(/img/old/icon/furima_listblock_sprite.png);
+    background-repeat: no-repeat;
+    background-size: 132px auto;
+    -webkit-background-size: 132px auto;
+}
+
+.ListBlock .b01 span { background-position: 0px 0px; }
+.ListBlock .b11 span { background-position: -22px 0px; }
+.ListBlock .b02 span { background-position: -44px 0px; }
+.ListBlock .b03 span { background-position: -66px 0px; }
+.ListBlock .b04 span { background-position: -88px 0px; }
+.ListBlock .b05 span { background-position: -110px 0px; }

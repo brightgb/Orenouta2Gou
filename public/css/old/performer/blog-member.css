@@ -1,0 +1,196 @@
+@charset "utf-8";
+
+#title a {
+	display: block;
+	width: 32px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -16px;
+}
+
+#title a img {
+	width: 100%;
+}
+
+.current_member {
+	display: block;
+	padding: 5px 0;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+}
+
+.current_member > div {
+	color: #333;
+	position: absolute;
+	left: 50px;
+	top: 3px;
+}
+
+.current_member > div > p {
+	font-size: 0.8rem;
+}
+
+.current_member img {
+	width: 30px;
+	max-height: 30px;
+	object-fit: contain;
+}
+
+.current_member:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-top: solid 2px #999;
+	border-right: solid 2px #999;
+	transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+#from_to_count {
+	margin-top: 8px;
+}
+
+.TopBtn #pagerBtn + hr {
+	margin-bottom: 0;
+}
+
+.BtmBtn {
+	margin-bottom: 8px;
+}
+
+.BtmBtn > hr {
+	display: none;
+}
+
+.data_area {
+	margin-bottom: 8px;
+}
+
+.data_box {
+	border-bottom: 1px solid #CCC;
+	position: relative;
+}
+
+.data_box:nth-child(even) {
+	background: #EEE;
+}
+
+.data_box > a {
+	display: block;
+	padding: 5px 0;
+	text-decoration: none;
+	position: relative;
+}
+
+.data_box > a:after {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-top: solid 2px #666;
+	border-right: solid 2px #666;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+.diary {
+	width: 100%;
+	display: table;
+	padding: 10px 20px 5px 10px;
+	box-sizing: border-box;
+}
+
+.diary > div {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.diary_title {
+	color: #E50065;
+	font-weight: bold;
+}
+
+.diary_doc {
+	font-size: 0.8rem;
+}
+
+.diary_img {
+	width: 70px;
+	height: 70px;
+}
+
+.diary_img img {
+	width: 100%;
+	max-height: 70px;
+	object-fit: contain;
+}
+
+.man_prof {
+	width: 100%;
+	display: table;
+}
+
+.man_prof > div {
+	display: table-cell;
+	padding-left: 10px;
+	vertical-align: top;
+}
+
+.man_prof .prof_img {
+	width: 38px;
+	vertical-align: middle;
+}
+
+.man_prof .prof_img img {
+	width: 100%;
+	max-height: 38px;
+	object-fit: contain;
+}
+
+.man_prof .prof_txt {
+	padding: 0 10px;
+	position: relative;
+}
+
+.man_prof .prof_txt > div {
+	color: #333;
+	font-size: 0.8rem;
+}
+
+.man_prof .prof_txt > .diary_date {
+	color: #666;
+	position: absolute;
+	top: 0;
+	right: 10px;
+}
+
+.man_prof .diary_date img {
+	width: 16px;
+	vertical-align: -3px;
+}
+
+.status {
+	display: inline-block;
+	width: 70px;
+	margin-bottom: 3px;
+	padding: 2px 0;
+	text-align: center;
+	color: #FFF;
+	font-size: 0.7em;
+	border-radius: 4px;
+}
+
+.status1 {	background: #FF1B8D; }	/*ログイン中*/
+.status2 {	background: #999; }		/*オフライン*/
+.status3 {	background: #F00; }		/*通話中*/
+.status4 {	background: #00F; }		/*待機中*/

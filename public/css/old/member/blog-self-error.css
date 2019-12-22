@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+.contents_box {
+	margin: 15px 10px;
+	padding: 10px;
+	border: 2px solid #999;
+	border-radius: 8px;
+}
+
+.mail {
+	text-align: center;
+	margin: 15px auto;
+	width: 90%;
+}
+
+.mail a {
+	width: 100%;
+	display: block;
+	padding: 5px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: solid 1px #999;
+	border-radius: 4px;
+}
+
+.point-charge a {
+	display: block;
+	width: 60%;
+	margin: 20px auto;
+	padding: 5px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-align: center;
+	text-decoration: none;
+	background: #EAEAEA;
+	background: 	linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: 	 -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #BBB;
+	border-radius: 4px;
+}
+
+.point-charge a:before {
+	content: "";
+	display: inline-block;
+	margin-right: 3px;
+	width: 16px;
+	height: 16px;
+	background-image: url(/img/old/icon/emoji_point.png);
+	background-size: contain;
+	vertical-align: -3px;
+}

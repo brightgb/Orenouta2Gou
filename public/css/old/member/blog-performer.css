@@ -1,0 +1,228 @@
+@charset "utf-8";
+/***** reload *****/
+.hd_reload {
+	width: 28px;
+	height: 28px;
+	padding: 2px;
+	border: solid 1px #FFF;
+	border-radius: 4px;
+	box-sizing: border-box;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -14px;
+}
+
+.hd_reload a {
+	display: block;
+	width: 22px;
+	height: 22px;
+	background-image: url(/img/old/icon/reload_w.png);
+	background-size: cover;
+	cursor: pointer;
+}
+
+.performer-info {
+	display: block;
+	padding: 5px 0;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+}
+
+.performer-info img {
+	width: 30px;
+	height: 30px;
+	margin: 0 10px;
+	border-radius: 50%;
+	vertical-align: bottom;
+}
+
+.performer-info div {
+	position: absolute;
+	left: 50px;
+	top: 3px;
+	color: #333;
+}
+
+.performer-info div p {
+	font-size: 0.8rem;
+}
+
+.performer-info:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-top: solid 2px #999;
+	border-right: solid 2px #999;
+	transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+
+/***** ランキングへのリンク *****/
+.switch_navi {
+	display: table;
+	width: 90%;
+	margin: 10px auto;
+}
+
+.switch_navi > div {
+	display: table-cell;
+	width: 33%;
+	font-size: 0.9em;
+	text-align: center;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+}
+
+.switch_navi > div:first-child {
+	border-radius: 4px 0 0 4px;
+}
+
+.switch_navi > div:last-child {
+	border-right: 1px solid #999;
+	border-radius: 0 4px 4px 0;
+}
+
+.switch_navi > div:first-child a {
+	border-radius: 4px 0 0 4px;
+}
+
+.switch_navi > div:last-child a {
+	border-radius: 0 4px 4px 0;
+}
+
+.switch_navi a {
+	display: block;
+	padding: 2px 0;
+	color: #333;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FFF, #DDD);
+	background: -webkit-linear-gradient(top, #FFF, #DDD);
+	background:    -moz-linear-gradient(top, #FFF, #DDD);
+}
+
+.data_area {
+	margin-bottom: 8px;
+}
+
+.data_area > div:first-child.data_box {
+	margin-top: -8px;
+}
+.data_area > div:last-child.data_box {
+	margin-bottom: 8px;
+}
+
+.data_box {
+	border-bottom: 1px solid #CCC;
+	position: relative;
+}
+
+.data_box:nth-child(even) {
+	background: #EEE;
+}
+
+.data_box > a {
+	display: block;
+	padding: 5px 0;
+	text-decoration: none;
+	position: relative;
+}
+
+.data_box > a:after {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-top: solid 2px #666;
+	border-right: solid 2px #666;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+.cast_prof {
+	width: 100%;
+	display: table;
+	position: relative;
+}
+
+.cast_prof div {
+	display: table-cell;
+	padding-left: 10px;
+	color: #333;
+	vertical-align: top;
+}
+
+.cast_prof .prof_img {
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+}
+
+.cast_prof .prof_img img {
+	width: 100%;
+	border-radius: 50%;
+	vertical-align: bottom;
+}
+
+.cast_prof .diary_date {
+	padding-right: 10px;
+	color: #666;
+	font-size: 0.8rem;
+	text-align: right;
+}
+
+.cast_prof .diary_date img {
+	width: 16px;
+	vertical-align: -3px;
+}
+
+.diary_doc {
+	width: 100%;
+	display: table;
+	padding: 10px 20px 5px 10px;
+	box-sizing: border-box;
+}
+
+.diary_doc > div {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.diary_title {
+	color: #E50065;
+	font-weight: bold;
+}
+
+.diary_txt {
+	font-size: 0.8rem;
+}
+
+.diary_img {
+	width: 70px;
+	height: 70px;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container img {
+	max-width: 100%;
+	max-height: 100%;
+}

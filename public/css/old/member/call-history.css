@@ -1,0 +1,112 @@
+@charset "utf-8";
+#title + .listbox_area {
+	margin: 0;
+	border: none;
+}
+
+.listbox_area {
+	margin: 8px 0;
+	padding: 5px;
+	background: #DCDEE3;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+
+.listbox {
+	margin-bottom: 5px;
+	padding: 10px;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.listbox_area > div.listbox:last-child {
+	margin-bottom: 0;
+}
+
+.cast_prof {
+	display: table;
+	width: 100%;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.cast_prof > div {
+	display: table-cell;
+}
+
+.cast_prof > .cast_img {
+	width: 60px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.cast_prof > .cast_img img {
+	width: 100%;
+	border-radius: 50%;
+}
+
+.cast_prof > .cast_name {
+	vertical-align: top;
+	padding-left: 10px;
+	position: relative;
+}
+
+.cast_name .cast_hn {
+	font-size: 0.9em;
+}
+
+.cast_name .cast_hn .area {
+	color: #F60;
+	font-size: 0.7rem;
+}
+
+.cast_prof .status {
+	width: 70px;
+	margin-bottom: 3px;
+	padding: 2px 0;
+	color: #FFF;
+	font-size: 0.7em;
+	text-align: center;
+	border-radius: 4px;
+}
+
+.status-offline { background: #999; }	 	/*オフライン*/
+.status-online  { background: #FF1B8D; } 	/*ログイン中*/
+.status-talking { background: #F00; }	 	/*通話中*/
+.status-waiting { background: #00F; }	 	/*待機中*/
+
+.prof_link {
+	padding: 0 5px;
+	color: #FFF;
+	font-size: 0.8rem;
+	text-decoration: none;
+	background: #666;
+	border-radius: 4px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.prof_link:after {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-image: url(/img/old/icon/icon_ya.png);
+	background-size: 15px;
+	margin-left: 5px;
+	vertical-align: -3px;
+}
+
+.no_data {
+	margin: 20px 10px;
+	padding: 20px 10px;
+	text-align: center;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+
+

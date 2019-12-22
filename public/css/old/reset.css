@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+html, body, div, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, img,
+i, dl, dt, dd, ol, ul, li,
+form, label, article, footer, header, section {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:16px;
+	line-height:1.4em;
+	vertical-align:baseline;
+	background:transparent;
+	color: #333;
+	white-space: normal;
+	word-break: break-all;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+font { font-size: 16px; }
+font[size="-1"] { font-size: 16px; }
+
+table, tbody, tr, th, td {
+    margin:0;
+    padding:0;
+    font-size:16px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+header, article, footer, section {
+	display:block;
+	clear: both;
+}
+
+ul { list-style:none; }
+
+hr {
+	border-width: 1px 0 0;
+	padding:0;
+	clear: both;
+}
+
+input, button, select {
+	margin:0;
+	padding:0;
+	vertical-align:baseline;
+	font-size: 0.9em;
+}
+
+input[type="text"] { font-size: 0.9em; }
+input[type="submit"] { padding: 0.3em 0.9em; }
+
+
+button { cursor: pointer; }
+button, li, p, span, h1, h2, h3, h4, h5, h6, font {
+	-webkit-text-size-adjust: none !important;
+}

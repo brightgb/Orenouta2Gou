@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+#ListInfoMailBox .title + #from_to_count {
+	margin-top: 8px;
+}
+
+#ListInfoMailBox #title + #from_to_count {
+	margin-top: 8px;
+}
+
+#ListInfoMailBox a[name="up"] + #pagerBtn + hr {
+	margin-bottom: 0;
+}
+
+#ListInfoMailBox .hr_none {
+	margin-top: 8px;
+}
+
+#ListInfoMailBox .hr_none #from_to_count + hr {
+	display: none;
+}
+
+#ListInfoMailBox .no_data {
+	margin: 20px 10px;
+	padding: 20px 10px;
+	text-align: center;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+#ListInfoMailBox .date {
+	font-size: 0.8em;
+	color: #999;
+}
+
+#ListInfoMailBox .infomail {
+	display: block;
+	padding: 5px 20px 5px 10px;
+	text-decoration: none;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+}
+
+#ListInfoMailBox .infomail:after {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+	border-top: solid 2px #666;
+	border-right: solid 2px #666;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+#ListInfoMailBox .mail_sub {
+	position: relative;
+}
+
+#ListInfoMailBox .mail_sub .unread {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	color: #FFF;
+	font-size: 0.9rem;
+	text-align: center;
+	background: #F00;
+	border-radius: 45px;
+	vertical-align: 1px;
+}

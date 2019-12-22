@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+.bbs_area {
+	padding: 5px;
+	background: #DCDEE3;
+}
+
+.bbs_box {
+	padding: 10px 0 0;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.bbs_header {
+	width: 100%;
+	display: table;
+}
+
+.bbs_header > div {
+	display: table-cell;
+	padding-right: 10px;
+}
+
+.bbs_title {
+	padding-left: 10px;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.bbs_date {
+	color: #999;
+	font-size: 0.9em;
+	text-align: right;
+	white-space: nowrap;
+}
+
+.bbs_doc {
+	padding: 5px 10px 10px;
+	font-size: 0.9em;
+}
+
+.bbs_doc + br {
+	display: none;
+}
+
+.man_hn {
+	padding: 0 10px 10px;
+	font-size: 0.9em;
+}
+
+.man_prof {
+	background: #EEE;
+	border-top: 1px solid #CCC;
+	border-radius: 0 0 4px 4px;
+}
+
+.prof_link {
+	display: inline-block;
+	padding-left: 10px;
+	color: #666;
+	font-size: 0.8rem;
+	text-decoration: none;
+}
+
+.prof_link:before {
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url(/img/old/icon/profile.png);
+	background-size: 16px;
+	background-position: 0px 0px;
+	vertical-align: -3px;
+	margin-right: 3px;
+}
+
+.mail_btn {
+	display: inline-block;
+	padding-left: 10px;
+}
+
+.mail_btn a {
+	font-size: 0.8rem;
+	color: #666;
+	text-decoration: none;
+}
+
+.mail_btn a:before {
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url(/img/old/icon/mail.png);
+	background-size: 16px;
+	background-position: 0px 0px;
+	vertical-align: -3px;
+	margin-right: 3px;
+}
+
+.status {
+	display: inline-block;
+	width: 70px;
+	padding: 2px 0;
+	color: #FFF;
+	font-size: 0.7em;
+	text-align: center;
+	border-radius: 4px;
+	vertical-align: 1px;
+}
+
+.status1 {	background: #FF1B8D; }	/*ログイン中*/
+.status2 {	background: #999; }		/*オフライン*/
+.status3 {	background: #F00; }		/*待機中*/
+.status4 {	background: #00F; }		/*通話中*/
+

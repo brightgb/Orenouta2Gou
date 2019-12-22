@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+.contents {
+	margin: 15px 10px;
+	padding: 10px;
+	font-size: 0.9em;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+.chuui p{
+	color: #999;
+	font-size: 0.9em;
+}
+
+.contents img, .chuui img {
+	width: 16px;
+	margin-right: 3px;
+	vertical-align: -3px;
+}
+
+.error {
+	margin-bottom: 15px;
+}
+
+.error p{
+	color: #F00;
+}
+
+.yuucho_btn {
+	width: 70%;
+	margin: 15px auto;
+}
+
+.yuucho_btn a {
+	display: block;
+	padding: 5px 10px;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+	position: relative;
+}
+
+.yuucho_btn a:after {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-top: 2px solid #666;
+	border-right: 2px solid #666;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+.touroku_btn input {
+	width: 118px;
+	display: block;
+	margin: 10px auto 20px;
+	padding: 10px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+input[type="text"], input[type="tel"] {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 15px;
+	border: 2px solid #999;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+input[type="radio"] {
+	margin-bottom: 15px;
+}
+
+

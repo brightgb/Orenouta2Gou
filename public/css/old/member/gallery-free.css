@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+#title a {
+	width: 28px;
+	height: 28px;
+	padding: 2px;
+	border: solid 1px #FFF;
+	border-radius: 4px;
+	box-sizing: border-box;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -14px;
+}
+
+#title span {
+	display: block;
+	width: 22px;
+	height: 22px;
+	background-image: url(/img/old/icon/usertop02_sprite.png);
+	background-repeat: no-repeat;
+	background-position: -22px -44px;
+	background-size: 110px;
+	cursor: pointer;
+}
+
+.no_data {
+	margin: 20px 10px;
+	padding: 20px 10px;
+	text-align: center;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+.profilePic {
+	padding-left: 3px;
+	overflow: hidden;
+}
+
+.profilePic li {
+	width: 33.3%;
+	text-align: center;
+	float: left;
+	border-right: 3px solid #FFF;
+	border-bottom: 3px solid #FFF;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+}
+
+.profilePic li a {
+	display: block;
+	color: #333;
+	text-decoration: none;
+	position: relative;
+}
+
+.profilePic li .prof_status {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	right: 0;
+}
+
+.profilePic .status {
+	width: 70px;
+	margin: 0 auto;
+	padding: 2px 0;
+	color: #FFF;
+	font-size: 0.7em;
+	text-align: center;
+	border-radius: 4px;
+}
+
+.profilePic .status-offline {	background: #999; }
+.profilePic .status-online {	background: #FF1B8D; }
+.profilePic .status-waiting {	background: #00F; }
+.profilePic .status-talking {	background: #F00; }
+
+.profilePic li .prof_age {
+	color: #FFF;
+	font-size: 0.7em;
+	line-height: 20px;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.profilePic li .prof_age img {
+	vertical-align: -2px;
+}
+
+.profilePic .thumbnail {
+	width: 100%;
+	vertical-align: bottom;
+}
+
+/***** modal *****/
+.modal-close:after {
+	content: "";
+	display: block;
+	width: 26px;
+	height: 26px;
+	background-color: #999;
+	background-image: url(/img/old/icon/close_w.png);
+	background-size: contain;
+	border-radius: 1em;
+	border: 2px solid #DDD;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+	box-shadow: 0 1px 3px rgba(0,0,0,.15);
+	position: absolute;
+	top: -16px;
+	right: -13px;
+	z-index: 10000;
+}
+
+#modal-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 120%;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 10000;
+}
+
+.modal-search {
+	display: none ;
+	width: 90%;
+	color: #333;
+	background: #FFF ;
+	border: 2px solid #CCC;
+	border-radius: 5px;
+	position: fixed;
+	box-sizing: border-box;
+	z-index: 10001;
+}
+
+.modal-search .modal-title {
+	padding: 5px 10px;
+	font-weight: bold;
+	text-align: center;
+	background: #F4F4F4;
+	border-bottom: 1px solid #CCC;
+}
+
+.modal-search .modal-content {
+	padding: 10px;
+}
+.modal-search .modal-content > div {
+	padding: 0px 4px;
+}
+
+.modal-search input[type="submit"] {
+	width: 118px;
+	margin: 5px 0 15px;
+	padding: 10px 0;
+	color: #333;
+	background: #FEFEFE;
+	background: linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background: -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.modal-search input[name=nickname] {
+	width: 70%;
+	height: 30px;
+	margin-right: 5px;
+	border: 1px solid #333;
+}
+
+.modal-search hr {
+	margin: 5px 10%;
+	height: 15px;
+	border: 0;
+	background-image: url(/img/old/line01.gif);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+

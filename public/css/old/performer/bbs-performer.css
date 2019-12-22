@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+#title a {
+	display: block;
+	width: 24px;
+	position: absolute;
+	right: 13px;
+	top: 50%;
+	margin-top: -12px;
+}
+
+#title a img {
+	width: 100%;
+}
+
+.TopBtn {
+	margin-top: 8px;
+}
+
+.TopBtn hr {
+	margin-bottom: 0;
+}
+
+.BtmBtn #pagerBtn {
+	margin-bottom: 8px;
+}
+
+.BtmBtn > hr:last-of-type {
+	display: none;
+}
+
+.BtmBtn > hr:first-of-type {
+	display: block;
+}
+
+.data_box {
+	padding: 10px;
+	background: #FFF;
+	box-sizing: border-box;
+}
+
+.data_box +.data_box {
+	border-top: 1px solid #CCC;
+}
+
+.data_date {
+	margin-bottom: 5px;
+	color: #666;
+	font-size: 0.8em;
+}
+
+.data_date img {
+	width: 16px;
+	margin-right: 3px;
+	vertical-align: -3px;
+}
+
+.data_title {
+	color: #E50065;
+	font-weight: bold;
+}
+
+.data_btm {
+	display: table;
+	margin-top: 20px;
+	box-sizing: border-box;
+}
+
+.data_btm > div {
+	display: table-cell;
+	width: 120px;
+	color: #666;
+	font-size: 0.75em;
+}
+
+.data_btm > div.del {
+	width: 70px;
+}
+
+.data_btm a {
+	color: #666;
+	text-decoration: none;
+}
+
+.data_btm img {
+	width: 16px;
+	vertical-align: -3px;
+	margin-right: 2px;
+}
+
+.data_no {
+	margin: 20px 10px;
+	padding: 10px;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+

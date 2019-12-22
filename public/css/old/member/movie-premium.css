@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+a[name="up"] + #pagerBtn + hr {
+	display: none;
+}
+
+.hr_none #from_to_count + hr {
+	display: none;
+}
+
+.sort_area {
+	margin: 15px 10px;
+	padding: 10px 0;
+	text-align: center;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.sort_area input {
+	display: inline-block;
+	margin-left: 10px;
+	padding: 10px;
+	text-align: center;
+	color: #333;
+	text-decoration: none;
+	font-size: 0.9em;
+	border: 1px solid #999;
+	border-radius: 3px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+}
+
+.sort_area br {
+	display: none;
+}
+
+.no_data {
+	margin: 20px 10px;
+	padding: 20px 10px;
+	text-align: center;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+.contents {
+	margin: 20px 10px;
+	padding: 10px;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+.used_btn {
+	width: 60%;
+	margin: 0 auto 20px;
+}
+
+.used_btn a {
+	display: block;
+	padding: 5px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	position: relative;
+}
+
+.listbox_area {
+	margin: 8px 0;
+	padding: 5px;
+	background: #DCDEE3;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+
+.used_btn + .listbox_area {
+	margin: 0;
+	border-bottom: none;
+}
+
+.listbox {
+	margin-bottom: 5px;
+	padding: 10px;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 4px;
+	position: relative;
+}
+
+.listbox_area > div.listbox:last-child {
+	margin-bottom: 0;
+}
+
+.cast_prof {
+	display: table;
+	width: 100%;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px dashed #CCC;
+}
+
+.cast_prof > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.cast_prof .prof_img {
+	width: 60px;
+}
+
+.cast_prof .prof_img img {
+	width: 100%;
+	border-radius: 50%;
+	vertical-align: bottom;
+}
+
+.cast_prof .dl_flag img  {
+	border: 2px solid #E23668;
+}
+
+.cast_prof .cast_name {
+	padding-left: 10px;
+}
+
+.data_main {
+	position: relative;
+}
+
+.listbox .date {
+	color: #999;
+	font-size: 0.8em;
+	position: absolute;
+	top: 3px;
+	right: 0;
+}
+
+.listbox .date img {
+	width: 16px;
+	margin-right: 3px;
+	vertical-align: -3px;
+}
+
+.category {
+	display: inline-block;
+	margin-bottom: 8px;
+	padding: 2px 5px;
+	color: #FF1B8D;
+	font-size: 0.8em;
+	text-align: center;
+	border: 1px solid #FF1B8D;
+	border-radius: 4px;
+}
+
+.movie_link {
+	margin-top: 5px;
+}
+
+.movie_link a.thumbnail {
+	display: block;
+	width: 100%;
+	position: relative;
+}
+
+.movie_link a.thumbnail:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.movie_link a.thumbnail:after {
+	content: "";
+	width: 60px;
+	height: 60px;
+	background-image: url(/img/old/icon/play_L.png);
+	background-size: contain;
+	-webkit-background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -30px;
+	margin-left: -30px;
+	z-index: 9;
+}
+
+.movie_link a.thumbnail .container {
+	position: absolute;
+    top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.movie_link a.thumbnail .container img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.cast_cmt {
+	margin-top: 10px;
+	background: #FFF;
+	background:   linear-gradient(to bottom, #FFF, #FFE6FF);
+	background: -webkit-linear-gradient(top, #FFF, #FFE6FF);
+	background:    -moz-linear-gradient(top, #FFF, #FFE6FF);
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.cast_cmt .acdHead {
+	margin: 0;
+}
+
+.cast_cmt .acdHead a {
+	display: block;
+	padding: 6px 10px 2px;
+	color: #F00;
+	font-size: 0.8rem;
+	font-weight: bold;
+	text-decoration: none;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.cast_cmt .acdHead a:after {
+	content: "閉じる";
+	color: #333;
+	font-weight: normal;
+	font-size: 0.7rem;
+	background-image: url(/img/old/icon/emoji_close.png);
+	background-repeat: no-repeat;
+	background-size: 12px 12px;
+	background-position: 0 4px;
+	padding-left: 14px;
+	position: absolute;
+	right: 10px;
+	bottom: 0px;
+}
+
+.cast_cmt .acdClosed a:after {
+	content: "続きを読む";
+	background-image: url(/img/old/icon/emoji_open.png);
+	bottom: 3px;
+}
+
+.cast_cmt .acdClosed a {
+	height: 30px;
+	padding-right: 80px;
+}
+
+.cast_cmt .acdBody {
+	padding: 0 10px 20px;
+	font-size: 0.75rem;
+}

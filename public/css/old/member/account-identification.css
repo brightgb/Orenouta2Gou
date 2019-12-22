@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+.touroku dl {
+	padding: 10px;
+	border-bottom: 1px solid #999;
+	position: relative;
+}
+
+.touroku dt {
+	font-weight: bold;
+}
+
+.touroku dd {
+	margin-top: 10px;
+}
+
+.touroku dt a {
+	display: block;
+	padding: 5px 10px;
+	color: #333;
+	font-size: 0.9em;
+	font-weight: normal;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.touroku .touroku_btn {
+	margin: 10px auto 5px;
+}
+
+.touroku .touroku_btn a {
+	display: block;
+	width: 80%;
+	margin: 10px auto 5px;
+	padding: 5px 10px;
+	color: #333;
+	font-size: 0.9em;
+	font-weight: normal;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.chuui {
+	margin: 10px;
+}
+
+.chuui img {
+	width: 20px;
+	margin-right: 3px;
+	vertical-align: -4px;
+}
+
+.bank {
+	margin: 15px 10px;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.bank > div {
+	padding: 15px 10px;
+	font-weight: bold;
+	background: #EEE;
+	border-bottom: 1px solid #999;
+	border-radius: 4px 4px 0 0;
+	position: relative;
+}
+
+.bank > div a {
+	display: block;
+	padding: 5px 10px;
+	color: #333;
+	font-size: 0.9em;
+	font-weight: normal;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -17px;
+}
+
+.bank dl:last-child {
+	border-bottom: none;
+}
+
+
+

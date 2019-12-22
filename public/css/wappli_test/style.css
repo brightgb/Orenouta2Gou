@@ -1,0 +1,184 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+html {
+  display: table;
+}
+body {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.voice_btn{
+	list-style:none;
+	margin: 0px;
+	padding: 0 20px;
+}
+.voice_btn li{
+    display:inline-block;
+    background: -moz-linear-gradient(top, gray, black);
+    width:40%;
+    background: linear-gradient(to bottom, gray, black);
+}
+
+.voice_btn li:first-child{
+    border-right: 3px solid gray;
+}
+
+.voice_btn a{
+    display:block;
+}
+
+.voice_btn .mc_icon {
+    vertical-align: middle;
+    width: 25px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    display: inline-block;
+    text-indent: -9999px;
+     
+    /* 位置合わせ用 */
+    vertical-align: middle;
+}
+.mc_on{
+    background-image: url('/img/wappli_test/icon_micro_small@2x.png');  
+}
+.mc_off{
+    background-image: url('/img/wappli_test/icon_micro_small_off@2x.png');
+}
+.mc{
+}
+
+.voice_btn .sp_icon {
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    display: inline-block;
+    text-indent: -9999px;
+     
+    /* 位置合わせ用 */
+    vertical-align: middle;
+}
+.sp_on{
+    background-image: url('/img/wappli_test/icon_speaker@2x.png');
+}
+.sp_off{
+    background-image: url('/img/wappli_test/icon_speaker_off@2x.png');
+}
+
+
+.btn {
+  width: 90%;   
+  height: 50px;
+  display:inline-block;
+  box-sizing: border-box;
+  margin: 5px;
+  text-align: center;
+  line-height: 50px;
+  color: #FFF;
+  border-radius: 8px;
+  vertical-align: middle;
+  
+  /* その他 */
+  text-decoration: none;
+  font-size: 24px;
+}
+.btn2{
+  display:block;
+  margin: 30px auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.btn_answer {
+  background: #27ae60;
+}
+.btn_reject {
+  background: #e74c3c;
+}
+a span.phone_icon {
+    width: 30px;
+    height: 30px;
+    background-image: url('/img/wappli_test/reject_call@2x.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    display: inline-block;
+    text-indent: -9999px;
+     
+    /* 位置合わせ用 */
+    vertical-align: middle;
+}
+.reject_icon {
+    margin: 0 10px 5px 0;
+}
+.btn2 .reject_icon{
+  margin:15px;
+}
+
+.answer_icon {
+  margin: 4px 10px 5px 0;
+    
+  transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+}
+
+.btn-area {
+  display: table;
+  text-align: center;
+  width: 100%;
+}
+.text-center {
+  text-align: center;
+}
+
+.circle {
+    border-radius:50%;
+}
+
+.name {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.thumbnail {
+    float:left;
+    width: 30%;
+}
+
+.status_detail_voice{
+    
+}
+
+.status_detail{
+    padding-left: 5%;
+    width: 65%;
+    float: left;
+}
+
+@media screen and (min-height:200px) and (max-device-height:480px){
+    body{
+        padding-bottom: 100px;
+    }
+}

@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+.touroku {
+	margin: 20px 10px;
+	padding: 10px;
+	border: 1px solid #CCC;
+	border-radius: 8px;
+}
+
+.touroku .btn a {
+	display: block;
+	width: 90%;
+	margin: 15px auto 5px;
+	padding: 8px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.mail_settei {
+	margin: 20px 10px;
+	padding: 10px;
+	border: 1px solid #CCC;
+	border-radius: 8px;
+}
+
+.mail_settei > div {
+	padding-left: 1em;
+	text-indent: -1em;
+}
+
+.mail_settei .settei {
+	width: 65%;
+	margin: 10px auto;
+	padding: 0;
+	text-indent: 0;
+	border: 1px solid #999;
+	border-radius: 4px;
+	position: relative;
+}
+
+.mail_settei .settei a {
+	display: block;
+	padding: 8px 10px;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border-top: 1px solid #999;
+}
+
+.mail_settei .settei a:nth-child(1) {
+	border-radius: 4px 4px 0 0;
+	border-top: none;
+}
+
+.mail_settei .settei a:nth-child(3) {
+	border-radius: 0 0 4px 4px;
+}
+
+.mail_settei .settei a:after {
+	content: "";
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	border-left: 2px solid #333;
+	border-top: 2px solid #333;
+	transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	position: absolute;
+	right: 15px;
+	margin-top: 6px;
+}
+
+.chuui {
+	margin-top: 10px;
+	padding: 5px 10px 10px;
+	text-align: center;
+	background: #FFF0F0;
+	border: 3px solid #E87A7A;
+}
+
+.contents div.chuui_header {
+	color: #F00;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.orikaeshi {
+	margin-top: 5px;
+	color: #999;
+	text-align: left;
+}
+
+.orikaeshi span {
+	color: #FF8080;
+}
+
+.contents > .chuui > div.mailadd span {
+	color: #F00;
+	font-size: 1.1rem;
+}
+
+.acdArea {
+	margin: 10px 0;
+	padding: 0 10px;
+	background: #FFD6D6;
+	border: 1px solid #AAA;
+	border-radius: 4px;
+}
+
+.acdHead a {
+	display: block;
+	padding: 10px 0;
+	color: #E50065;
+	font-size: 0.9rem;
+	text-decoration: none;
+	position: relative;
+}
+
+.acdHead a:after {
+	content: "";
+	background: url("/img/old/icon/accodion_close.png") no-repeat;
+	background-size: cover;
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -6px;
+}
+
+.acdClosed a:after {
+	content: "▼";
+	margin-top: 0;
+	font-size: 0.9em;
+	color: #444;
+	background: transparent;
+	top: initial;
+}
+
+.acdBody {
+	padding: 10px 0;
+	text-align: left;
+	border-top: 1px solid #CCC;
+}
+

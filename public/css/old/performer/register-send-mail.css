@@ -1,0 +1,327 @@
+@charset "utf-8";
+
+.title {
+    margin-top: 2px;
+    padding: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-top: solid 3px #FF398A;
+    border-bottom: solid 1px #CCC;
+    background: #EFF1F0;
+    background:   linear-gradient(to bottom, #FDFEF9, #EFF1F0);
+    background: -webkit-linear-gradient(top, #FDFEF9, #EFF1F0);
+    background:    -moz-linear-gradient(top, #FDFEF9, #EFF1F0);
+}
+
+.contents_bg {
+    background: #DCDEE3;
+    padding: 10px 5px;
+}
+
+.contents {
+    padding: 10px;
+    background: #FFF;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+.contents div, .contents p {
+    font-size: 0.9rem;
+}
+
+.iphone_box {
+    margin: 10px 5px;
+    padding: 10px;
+    background: #FFF0F0;
+    border: 3px solid #E87A7A;
+    border-radius: 4px;
+}
+
+.acdArea {
+    margin: 10px 0;
+    padding: 0 10px;
+    background: #FFD6D6;
+    border: 1px solid #AAA;
+    border-radius: 4px;
+}
+
+.acdHead a {
+    display: block;
+    padding: 5px 0;
+    font-size: 0.9rem;
+    text-decoration: none;
+    position: relative;
+}
+
+.acdHead a img {
+    width: 20px;
+    margin-right: 3px;
+    vertical-align: -3px;
+}
+
+.acdHead a:after {
+    content: "";
+    background: url(/img/old/icon/accodion_close.png) no-repeat;
+    background-size: cover;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -6px;
+}
+
+.acdClosed a:after {
+    content: "笆ｼ";
+    margin-top: 0;
+    font-size: 0.9em;
+    color: #444;
+    background: transparent;
+    top: initial;
+}
+
+.acdBody {
+    padding: 10px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #AAA;
+}
+
+.acdBody > div {
+    font-size: 0.9rem;
+}
+
+.chuui {
+    padding: 0;
+    background: #FFF;
+}
+
+.chuui .acdHead {
+    padding: 0 10px;
+    background: #FFD6D6;
+    border-radius: 4px 4px 0 0;
+}
+
+.icloud .acdHead a {
+    color: #E50065;
+    text-align: center;
+}
+
+.chuui .acdHead a {
+    color: #F00;
+    font-weight: bold;
+}
+
+.chuui .acdClosed {
+    border-radius: 4px;
+}
+
+.chuui .acdBody {
+    padding: 10px;
+    background: #FFD6D6;
+}
+
+.btn a {
+    width: 50%;
+    display: block;
+    margin: 20px auto 30px;
+    padding: 10px 0;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    background: #FEFEFE;
+    background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+    background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+    background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+    border: solid 1px #999;
+    border-radius: 4px;
+}
+
+.iphone_box .btn a {
+    margin-bottom: 10px;
+}
+
+.settei {
+    width: 70%;
+    margin: 10px auto;
+    padding: 0;
+    border: 1px solid #999;
+    border-radius: 4px;
+    position: relative;
+}
+
+.settei a {
+    display: block;
+    padding: 8px 10px;
+    color: #333;
+    text-decoration: none;
+    background: #FEFEFE;
+    background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+    background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+    background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    border-top: 1px solid #999;
+}
+
+.settei a:nth-child(1) {
+    border-radius: 4px 4px 0 0;
+    border-top: none;
+}
+
+.settei a:nth-child(3) {
+    border-radius: 0 0 4px 4px;
+}
+
+.settei a:after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-top: solid 2px #666;
+    border-right: solid 2px #666;
+    transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    position: absolute;
+    right: 15px;
+    margin-top: 6px;
+}
+
+.mibun_box {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    background: #FFF;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+.mibun_box > div {
+    font-size: 0.9rem;
+}
+
+.mibun_box > div p {
+    font-size: 0.9rem;
+}
+
+.mibun_box > div.mibun_header {
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    background: #EFEFEF;
+    border-bottom: 1px solid #999;
+    border-radius: 4px 4px 0 0;
+}
+
+.mibun_header img {
+    width: 20px;
+    margin-right: 3px;
+    vertical-align: -3px;
+}
+
+.mibun_box .ninshou {
+    margin: 20px 10px;
+    padding: 10px;
+    background: #D3EDF9;
+    border: 2px solid #999;
+}
+
+.mibun_box .ninshou h4 {
+    padding-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.mibun_box .ninshou p {
+    font-size: 0.8rem;
+}
+
+.mibun_img {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.mibun_img img {
+    width: 100%;
+}
+
+.mibun_num {
+    width: 16px;
+    margin-right: 3px;
+    vertical-align: -3px;
+}
+
+.footer {
+    margin-top: 8px;
+    padding: 8px 0;
+    background: #FFF;
+    border-top: 1px solid #888;
+}
+
+/*-- tab --*/
+#mibun_tab {
+    background: #FFF;
+}
+
+#mibun_tab ul {
+    display: table;
+    margin: 0 10px;
+    padding: 0;
+    text-align:center;
+    background: #888;
+    border: 1px solid #999;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#mibun_tab li {
+    display: table-cell;
+    width: 50%;
+    padding: 10px 10px 20px;
+    color: #333;
+    font-weight: bold;
+    list-style: none;
+    cursor: pointer;
+    background: #FFF;
+    position: relative;
+}
+
+#mibun_tab li:first-child {
+    border-right: 1px solid #CCC;
+}
+
+#mibun_tab li:after {
+    content: "▼";
+    display: block;
+    color: #FF1B8D;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+}
+
+#mibun_tab li.noselect {
+    color: #FFF;
+    background: #CCC;
+}
+
+#mibun_tab li.noselect:after {
+    color: #999;
+}
+
+#mibun_tab li img {
+    width: 100%;
+}
+
+.disnon {
+    display: none;
+}
+
+/*-- content_wrap --*/
+.content_wrap {
+    margin: 0 10px;
+    padding: 10px 5px;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+    border-radius: 0 0 4px 4px;
+}

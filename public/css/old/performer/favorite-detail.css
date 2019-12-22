@@ -1,0 +1,355 @@
+@charset "utf-8";
+
+.listbox_area {
+	display: block;
+	padding: 10px 5px 15px;
+	background: #DCDEE3;
+}
+
+.listbox {
+	margin-bottom: 5px;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.status_area {
+	position: relative;
+}
+
+.status {
+	width: 70px;
+	margin: 10px 10px 3px;
+	padding: 2px 0;
+	text-align: center;
+	color: #FFF;
+	font-size: 0.7em;
+	border-radius: 4px;
+}
+
+.status1 {	background: #FF1B8D; }	/*ログイン中*/
+.status2 {	background: #999; }			/*オフライン*/
+.status3 {	background: #F00; }			/*通話中*/
+.status4 {	background: #00F; }			/*待機中*/
+
+.status_area img {
+	vertical-align: -2px;
+}
+
+.date {
+	margin-bottom: 3px;
+	font-size: 0.8em;
+	color: #999;
+	position: absolute;
+	top: 0;
+	right: 10px;
+}
+
+.hn {
+	margin-bottom: 3px;
+	padding-left: 10px;
+	padding-right: 70px;
+	position: relative;
+}
+
+.prof_link {
+	padding: 0 5px;
+	font-size: 0.8rem;
+	font-weight: normal;
+	color: #FFF;
+	text-decoration: none;
+	background: #666;
+	border-radius: 4px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -11px;
+}
+
+.prof_link:after {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-image: url(/img/old/icon/icon_ya.png);
+	background-size: 15px;
+	margin-left: 5px;
+	vertical-align: -3px;
+}
+
+.box_area {
+	display: table;
+	width: 100%;
+}
+
+.box_area > div {
+	display: table-cell;
+	width: 50%;
+}
+
+.box_l {
+	padding: 0 10px;
+}
+
+.box_r {
+	padding-right: 10px;
+}
+
+.box_area > div > div {
+	font-size: 0.9em;
+}
+
+.hist_btn {
+	margin: 5px 0 10px;
+}
+
+.hist_btn a {
+	display: block;
+	padding: 2px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	position: relative;
+}
+
+.hist_btn span {
+	display: block;
+	color: #999;
+	font-size: 0.9em;
+	text-align: center;
+	text-decoration: none;
+	padding: 2px 0;
+	background: #EAEAEA;
+}
+
+.hist_btn a,
+.hist_btn span {
+	line-height: 18px;
+}
+
+.hist_btn .history_m {
+	border: 1px solid #CCC;
+	border-radius: 4px;
+}
+
+.hist_btn .history_t {
+	border: 1px solid #CCC;
+	border-radius: 4px;
+}
+
+.tell_btn {
+	margin: 10px 0;
+}
+
+.tell_btn a, .fav-off a {
+	display: block;
+	padding: 5px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background: linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background: -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	position: relative;
+}
+
+.tell_btn a:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-size: 20px;
+	background-position: 0px 0px;
+	vertical-align: -5px;
+	margin-right: 5px;
+	background-image: url(/img/old/icon/emoji_mailsend.png);
+}
+
+.fav-off a:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-size: 20px;
+	background-position: 0px 0px;
+	vertical-align: -5px;
+	margin-right: 5px;
+	background-image: url(/img/old/icon/emoji_unfav.png);
+}
+
+.jealousy_area.acdArea {
+	margin: 15px 0 0;
+}
+
+.jealousy_area .acdHead {
+	display: table;
+	width: 100%;
+	margin: 0;
+}
+
+.jealousy_area .acdHead a {
+	display: table-cell;
+	color: #333;
+	text-decoration: none;
+	margin: 0;
+	padding: 5px 10px;
+	background: #F4F4F4;
+	border: 1px solid #999;
+	border-radius: 4px 4px 0 0;
+	position: relative;
+}
+
+.jealousy_area .acdHead a:after {
+	content: "";
+	background: url(/img/old/icon/sp/accodion_close.png) no-repeat;
+	background-size: cover;
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -6px;
+}
+
+.jealousy_area .acdClosed a:after {
+	content: "▼";
+	background: transparent;
+	top: initial;
+	margin-top: 0;
+}
+
+.jealousy_area .acdClosed a {
+	padding: 5px 10px;
+	border-radius: 4px;
+	border: 1px solid #999;
+}
+
+.jealousy_area .acdBody {
+	margin: 0;
+	padding: 10px 10px 0;
+	background: #FFF;
+	border-radius: 0 0 4px 4px;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+}
+.jealousy_list {
+	margin: 10px 0;
+}
+
+.jealousy_list select {
+	margin-right: 5px;
+}
+
+.jealousy_btn button {
+	width: 118px;
+	display: block;
+	margin: 5px auto 20px;
+	padding: 10px 0;
+	color: #333;
+	text-align: center;
+	text-decoration: none;
+	font-size: 0.9em;
+	border: 1px solid #999;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background: linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background: -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+}
+
+.comments {
+	margin: 5px 0 20px;
+}
+
+#comment0 {
+	padding: 5px 10px;
+	border: 1px solid #999;
+}
+
+.comments textarea {
+	width: 100%;
+	font-size: 16px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+	outline: 1px solid #999;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.modify_cmt {
+	display: block;
+	text-align: right;
+}
+
+.modify_cmt img {
+	width: 16px;
+	margin-right: 3px;
+	vertical-align: -2px;
+}
+
+.modify_cmt a {
+	padding: 0;
+	color: #F00;
+	font-size: 0.8rem;
+	background: #FFF;
+	border: 0;
+	-webkit-appearance: none;
+}
+
+/* memo */
+.memobox {
+	margin: 10px;
+	background-image: url(/img/old/noteline.png);
+	background-position: 0px 0px;
+	background-size: 1px 17px;
+}
+
+.memobox .memobar {
+	padding: 0 5px;
+	font-size: 0.8rem;
+	color: #999;
+	position: relative;
+}
+
+.memobox .memo_date {
+	color: #999;
+	font-size: 0.8rem;
+	position: absolute;
+	right: 5px;
+	bottom: 0;
+}
+
+.memobox .memotxt {
+	padding: 0 5px 1px;
+	font-size: 0.8rem;
+	position: relative;
+}
+
+.memobox .memotxt a {
+	display: block;
+	color: #F00;
+	text-align: right;
+	font-size: 0.8rem;
+	text-decoration: none;
+}
+
+.memobox .memotxt a img {
+	width: 16px;
+	margin-right: 3px;
+	vertical-align: -2px;
+}
+

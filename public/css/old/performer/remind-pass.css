@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+.btn a {
+	width: 118px;
+	display: block;
+	margin: 20px auto;
+	padding: 10px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}

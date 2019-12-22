@@ -1,0 +1,239 @@
+@charset "utf-8";
+
+.setup_btn input {
+	width: 118px;
+	display: block;
+	margin: 20px auto;
+	padding: 10px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #999;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+}
+
+.contents {
+	margin: 15px 10px;
+}
+
+.contents > div {
+	padding: 10px;
+	word-break: break-all;
+	border: 1px solid #999;
+	border-radius: 0 0 4px 4px;
+}
+
+.contents > div:first-child {
+	padding: 5px 10px;
+	font-weight: bold;
+	background: #EFEFEF;
+	border-bottom: none;
+	border-radius: 4px 4px 0 0;
+}
+
+.contents > div:last-child {
+	font-size: 0.9em;
+}
+
+font[color="#FF1B8D"] {
+	display: none;
+}
+
+
+.selectbox {
+	padding: 10px;
+  border-bottom: 1px solid #CCC;
+  position: relative;
+}
+
+.selectbox:after {
+	content: "";
+	display: block;
+	width: 6px;
+	height: 6px;
+	color: #999;
+	border-top: solid 2px #CCC;
+	border-right: solid 2px #CCC;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	margin-top: -4px;
+}
+
+.selectbox span {
+	color: #999;
+	position: absolute;
+	right: 25px;
+}
+
+.selectbox select {
+  display: none;
+}
+
+.selectarea {
+	display: block;
+	width: 0;
+	height: 100%;
+	background: #F0F0F8;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 10000;
+}
+
+.selectarea > div {
+	margin-bottom: 30px;
+	padding: 10px 0;
+	padding-left: 57px;
+	font-weight: bold;
+	text-align: center;
+	background: #FFF;
+	border-bottom: 1px solid #BBB;
+	position: relative;
+}
+
+.backselect {
+	color: #067CFF;
+	font-weight: normal;
+	position: absolute;
+	left: 10px;
+}
+
+.backselect:before {
+	content: "";
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-top:   3px solid #067CFF;
+	border-right: 3px solid #067CFF;
+	transform:         rotate(-135deg);
+	-moz-transform:    rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+	vertical-align: -2px;
+}
+
+.selectarea ul {
+	padding: 0 10px;
+	background: #FFF;
+	border-top:    1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+
+.selectarea li {
+	padding: 10px;
+	position: relative;
+}
+
+.selectarea li + li {
+	border-top: 1px solid #CCC;
+}
+
+.selectarea li span {
+	display: inline-block;
+	width: 5px;
+	height: 10px;
+	margin-left: 10px;
+	border-bottom: 2px solid #027AFF;
+	border-right:  2px solid #027AFF;
+	transform:         rotate(45deg);
+	-moz-transform:    rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top:   12px;
+}
+
+.selecthour {
+	padding: 10px;
+  border-bottom: 1px solid #CCC;
+}
+
+.selecthour select {
+	font-size: 1.2em;
+}
+
+.checkbox_title {
+	margin-top: 30px;
+	padding: 2px 10px;
+	border-bottom: 1px solid #CCC;
+}
+
+.checkarea {
+	padding: 0 10px;
+	border-bottom: 1px solid #CCC;
+}
+
+.checkbox {
+  padding: 10px 77px 10px 10px;
+  border-bottom: 1px solid #CCC;
+  position: relative;
+}
+
+.checkarea .checkbox:last-child {
+    border: none;
+}
+
+.checkbox label {
+  display: block;
+  width: 55px;
+  height: 30px;
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  border-radius: 30px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -16px;
+}
+
+.checkbox label > span {
+  position: absolute;
+  left: 0px;
+  right: auto;
+  top: 0px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align:center;
+  letter-spacing:normal;
+  background-color: #fff;
+  border: 1px solid #CCC;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: .3s ease-out;
+  -moz-transition: .3s ease-out;
+  box-shadow: -1px 1px 3px #6666;
+}
+
+.checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox input[type="checkbox"]:checked + label {
+  background-color: #4BD663;
+  border: 1px solid #4BD663;
+}
+
+.checkbox input[type="checkbox"]:checked + label > span {
+  left: auto;
+  right: 0px;
+}
+
+#dummyContent_setup {
+	width: 100%;
+	height: 200%;
+	background: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+}

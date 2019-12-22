@@ -1,0 +1,110 @@
+@charaset "utf-8";
+
+.contents {
+	margin: 15px 10px;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.titlebar {
+	padding: 5px 10px;
+	color: #333;
+	font-size: 1.1em;
+	font-weight: bold;
+	background: #EFEFEF;
+	border-bottom: solid 1px #999;
+	border-radius: 4px 4px 0 0;
+}
+
+.titlebar img {
+	width: 20px;
+	margin-right: 5px;
+	vertical-align: -5px;
+}
+
+.bg_y1 { background-color:#FF0; }
+.bg_y2 { background-color:#FFB; }
+
+.btn a {
+	display: block;
+	margin: 20px 10px;
+	padding: 5px 10px;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	border: solid 1px #999;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	position: relative;
+}
+
+.btn a:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-left: 2px solid #666;
+	border-top: 2px solid #666;
+	transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+.lititle {
+	padding: 5px 25px 5px 10px;
+	color: #00F;
+	font-weight: bold;
+	border-top: solid #999 1px;
+	position: relative;
+	cursor: pointer;
+}
+
+.lititle:after {
+	content: "";
+	width: 6px;
+	height: 6px;
+	border-left: 2px solid #00F;
+	border-top: 2px solid #00F;
+	transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -3px;
+}
+
+
+.contents ul li:last-of-type {
+	border-radius: 0 0 5px 5px;
+	border-bottom: 0;
+}
+
+.lititle:first-of-type {
+	border: 0;
+}
+
+.lilink {
+	background: url(/img/old/icon/sankaku.gif) no-repeat left 3px;
+	margin: 10px 0 10px 15px;
+}
+
+.lilink a {
+	margin: 10px 0 10px 15px;
+}
+
+.qa1 {
+	padding: 10px 10px 5px 10px;
+	font-weight: bold;
+	color: #F00;
+}
+
+.qa2 {
+	padding: 10px;
+}

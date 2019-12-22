@@ -1,0 +1,60 @@
+.favmark.acdArea {
+	margin: 15px auto;
+	width: 90%;
+}
+
+.favmark .acdHead {
+	margin: 0;
+}
+
+.favmark .acdHead a {
+	display: block;
+	color: #333;
+	text-decoration: none;
+	margin: 0;
+	padding: 5px 10px;
+	border-radius: 4px 4px 0 0;
+	border: 1px solid #999;
+	background: #F4F4F4;
+	position: relative;
+}
+
+.favmark .acdHead a:after {
+	content: "";
+	background: url("/img/old/icon/accodion_close.png") no-repeat;
+	background-size: cover;
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -6px;
+}
+
+.favmark .acdClosed a:after {
+	content: "▼";
+	color: #555;
+	font-size: 13px;
+	background: transparent;
+	top: initial;
+	margin-top: 0;
+}
+
+.favmark .acdClosed a {
+	padding: 5px 10px;
+	border-radius: 4px;
+	border: 1px solid #999;
+}
+
+.favmark .acdBody {
+	margin: 0;
+	padding: 10px;
+	border-radius: 0 0 4px 4px;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+}
+
+.favmark img[width="12px"] {
+	margin: 3px 10px 0px 1.5px;
+}

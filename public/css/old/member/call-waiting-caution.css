@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+.contents {
+	margin: 15px 10px;
+	padding: 10px;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.contents > .contents {
+	margin: 15px 0 0;
+}
+
+.btn a {
+	display: block;
+	margin: 20px 10px;
+	padding: 5px 10px;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	border: solid 1px #999;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	position: relative;
+}
+
+.btn a:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-left: 2px solid #666;
+	border-top: 2px solid #666;
+	transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-webkit-transform: rotate(135deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+.chuui {
+	margin-top: 15px;
+	padding: 10px;
+	border: 2px solid #F00;
+}
+
+.chuui a {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.chuui > div {
+	color: #F00;
+}

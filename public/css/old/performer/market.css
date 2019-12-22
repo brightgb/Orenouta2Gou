@@ -1,0 +1,221 @@
+@charset "utf-8";
+
+.header-image img {
+    vertical-align: bottom;
+}
+
+.ListBlock {
+    margin-top: 0;
+    display: table;
+    width: 100%;
+    margin-bottom: 1px;
+    box-sizing: border-box;
+}
+
+.ListBlock > div {
+    display: table-cell;
+    width: 20%;
+    background: #666;
+    border-right: 1px solid #FFF;
+}
+
+.ListBlock > div:first-child {
+    border-left: none;
+}
+
+.ListBlock > div:last-child {
+    border-right: none;
+}
+
+.ListBlock a {
+    display: block;
+    padding-top: 5px;
+    color: #FFF;
+    font-size: 0.6rem;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+}
+
+.ListBlock a span {
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin: 0 auto;
+    background-image: url(/img/old/icon/furima_listblock_sprite.png);
+    background-repeat: no-repeat;
+    background-size: 132px auto;
+    -webkit-background-size: 132px auto;
+}
+
+.ListBlock .b01 span { background-position: 0px 0px; }
+.ListBlock .b11 span { background-position: -22px 0px; }
+.ListBlock .b02 span { background-position: -44px 0px; }
+.ListBlock .b03 span { background-position: -66px 0px; }
+.ListBlock .b04 span { background-position: -88px 0px; }
+.ListBlock .b05 span { background-position: -110px 0px; }
+
+.MenuBar {
+    padding: 10px;
+    color: #FFF;
+    font-weight: bold;
+    background: #666;
+    position: relative;
+}
+
+.MenuBar + .setting_list a:first-child {
+    border-top: none;
+}
+
+.contents {
+    margin: 15px 10px;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+/***** listbox *****/
+.listbox_area {
+    display: block;
+    padding: 5px 5px 0;
+    background: #DCDEE3;
+    border-bottom: 1px solid #CCC;
+}
+
+.listbox {
+    display: block;
+    margin-bottom: 5px;
+    padding: 5px 10px 10px;
+    background: #FFF;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+.listbox a.itemBoxContent {
+    display: block;
+    text-decoration: none;
+    position: relative;
+}
+
+.listbox .itemBoxTitle {
+    padding-right: 90px;
+    font-weight: bold;
+    position: relative;
+}
+
+.listbox .item_status {
+    width: 80px;
+    padding: 2px 0;
+    color: #FFF;
+    font-size: 0.7rem;
+    font-weight: normal;
+    text-align: center;
+    border-radius: 4px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -10px;
+}
+
+.item_status00 { background: #00F; }	/*審査中*/
+.item_status01 { background: #FF1B8D; }	/*出品中*/
+.item_status02 { background: #F00; }	/*購入済み・未発送*/
+.item_status03 { background: #094; }	/*発送済み*/
+.item_status04 { background: #999; }	/*非公開*/
+.item_status05 { background: #333; }	/*出品期間終了*/
+.item_status08 { background: #333; }	/*キャンセル*/
+
+.listbox .itemBoxText {
+    width: 100%;
+    padding-left: 85px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.listbox .itemBoxPhoto {
+    width: 80px;
+    padding-right: 5px;
+    vertical-align: bottom;
+}
+
+.listbox .itemBoxText div {
+    padding: 4px 5px 2px;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    border-bottom: 1px dashed #999;
+}
+
+.listbox .itemBoxText .itemBoxPrice {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #F00;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.NewItemMore a {
+    display: block;
+    padding: 5px 10px;
+    color: #09598D;
+    font-size: 0.8em;
+    text-align: right;
+    text-decoration: none;
+    background: #EEE;
+}
+
+.NewItemMore a:after {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    background-image: url(/img/old/icon/emoji_more.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    vertical-align: -2px;
+}
+
+.no_data {
+    margin: 20px 10px;
+    padding: 20px 10px;
+    text-align: center;
+    background: #FFF;
+    border: 1px solid #999;
+    border-radius: 8px;
+}
+
+.link_btn a {
+    width: 60%;
+    margin: 20px auto;
+}
+
+.link_btn a {
+    display: block;
+    padding: 8px 10px;
+    color: #FFF;
+    font-size: 0.9rem;
+    text-align: center;
+    text-decoration: none;
+    background: #FF4D87;
+    border: 1px solid #FF1B65;
+    border-radius: 4px;
+}
+
+.openday {
+    display: block;
+    margin-top: 5px;
+    color: #F00;
+    text-align: center;
+}
+
+.request_item {
+    width: 20px;
+    margin-right: 3px;
+    vertical-align: -5px;
+}
+
+.request_itemBoxPhoto {
+    padding-top: 13px;
+}

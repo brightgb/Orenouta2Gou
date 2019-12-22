@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+#title a {
+	display: inline-block;
+	padding: 0px 5px 0px 5px;
+	color: #FFF;
+	font-size: 0.8rem;
+	font-weight: normal;
+	text-decoration: none;
+	line-height: 1.4rem;
+	border: 1px solid #FFF;
+	border-radius: 4px;
+	position: absolute;
+	right: 4px;
+	top: 50%;
+	margin-top: -12px;
+}
+
+.main_doc_bg {
+	padding: 5px;
+	background: #DCDEE3;
+}
+
+.main_doc {
+	display: block;
+	padding: 10px;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.main_doc .prof_img {
+	margin-bottom: 15px;
+}
+
+.main_doc .prof_img > div:first-child {
+	width: 100px;
+}
+
+.main_doc .prof_img img {
+	width: 100%;
+	vertical-align: bottom;
+}
+
+.main_doc .prof_img .prof_btn a {
+	display: block;
+	width: 100px;
+	margin-top: 5px;
+	padding: 2px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background: linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background: -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #CCC;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.main_doc form > div:before {
+	content: "";
+	width:100%;
+    display: block;
+    margin: 10px 0;
+    border-top: 1px solid #CCC;
+}
+
+.main_doc form > div {
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+}
+
+.main_doc .birthdate span {
+	vertical-align: text-bottom;
+}
+
+.main_doc .hint {
+	margin-top:10px;
+	width:100%;
+	text-align:left;
+	color: #666;
+	font-size: 0.9em;
+}
+
+.main_doc textarea {
+	width: 100%;
+	height: 120px;
+	margin: 5px 0 10px;
+	font-size: 0.9rem;
+	border: 2px solid #999;
+	box-sizing: border-box;
+}
+
+.main_doc .touroku_btn:before {
+	content: none;
+}
+
+.main_doc .touroku_btn {
+	display:block;
+	margin: 10px auto 20px;
+	text-align: center;
+}
+
+.main_doc .touroku_btn button {
+	padding: 10px 30px;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	background: #FEFEFE;
+	background: linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background: -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+	position: relative;
+}

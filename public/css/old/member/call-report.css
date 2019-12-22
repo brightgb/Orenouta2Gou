@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+.sub {
+	margin: 10px 5px;
+}
+
+.sub p {
+	font-size: 0.9em;
+	padding: 5px;
+}
+
+.form {
+	border-radius: 5px;
+	background: #ffb;
+	border: 1px solid #aaa;
+	width: 95%;
+	margin: 10px auto;
+}
+
+.form p {
+	font-size: 0.9em;
+	padding: 5px;
+}
+
+.menu1 {
+	background: #ff0;
+	border-bottom: 1px solid #aaa;
+	border-radius: 5px 5px 0px 0px;
+	padding: 5px;
+}
+
+.menu2 {
+	background: #ff0;
+	border-top: 1px solid #aaa;
+	border-bottom: 1px solid #aaa;
+	padding: 5px;
+}
+
+
+input[type="radio"] {
+	vertical-align: -2px;
+	margin-right: 3px;
+}
+
+input[type="text"] {
+	width: 100%;
+	height: 30px;
+	border: 2px solid #999;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+textarea {
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#confirm-button {
+	margin: 10px auto;
+	text-align: center;
+}
+
+#confirm-button button {
+	display: inline-block;
+	padding: 10px 20px;
+	color: #333;
+	font-size: 0.9em;
+	text-align: center;
+	border: solid 1px #999;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	cursor: pointer;
+}
+
+#send-button {
+	display: table;
+	width: 100%;
+	margin: 15px 0;
+	box-sizing: border-box;
+}
+
+#send-button > div {
+    display: table-cell;
+    width: 50%;
+    padding: 0 10px;
+}
+
+#send-button button {
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-align: center;
+	border: solid 1px #999;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	cursor: pointer;
+}
+
+.chuui {
+	font-size: 0.9em;
+	padding: 5px 5px 10px;
+	color: #F00;
+}
+
+.contents {
+	border: 1px solid #999;
+	border-radius: 5px;
+	margin: 20px 10px;
+	white-space: normal;
+	word-break: break-all;
+}
+
+/***** modal *****/
+.modal {
+	display: none;
+	width: 90%;
+	padding: 20px 10px;
+	color: #333;
+	text-align: center;
+	background: #FFF;
+	border: 2px solid #CCC;
+	border-radius: 5px;
+	position: fixed;
+	box-sizing: border-box;
+	z-index: 10001;
+}
+
+#modal-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 120%;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 10000;
+}
+
+.modal-error p {
+	color: #F00;
+	display: none;
+}

@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+#title + #from_to_count {
+	margin-top: 8px;
+}
+
+.listbox_area {
+	margin: 8px 0;
+	padding: 5px;
+	background: #DCDEE3;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+
+.listbox {
+	margin-bottom: 5px;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.listbox_area > div.listbox:last-child {
+	margin-bottom: 0;
+}
+
+.man_prof {
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	position: relative;
+}
+
+.man_prof .date {
+	font-size: 0.8em;
+	color: #999;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.man_prof .content {
+	display: table;
+	width: 100%;
+}
+
+.man_hn {
+	display: table-cell;
+	/* font-size: 0.9em; */
+}
+
+.man_hn > div{
+	font-size: 0.9em;
+}
+.point_area {
+	display: table-cell;
+}
+
+.point_area > div {
+	text-align: right;
+
+}
+
+.c_point {
+	margin-top: 5px;
+	padding-left: 10px;
+	font-size: 1.3rem;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.c_point img {
+	width: 40px;
+	vertical-align: -12px;
+	margin-right: 3px;
+}
+
+
+.prof_link {
+	display: inline-block;
+	padding: 0 5px;
+	font-size: 0.8rem;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none;
+	background: #666;
+	border-radius: 4px;
+}
+
+.prof_link:after {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-image: url(/img/old/icon/icon_ya.png);
+	background-size: 15px;
+	margin-left: 5px;
+	vertical-align: -3px;
+}
+
+.status_area {
+	height: 21px;
+}
+
+.status {
+	width: 100px;
+	margin-bottom: 3px;
+	padding: 2px 0;
+	text-align: center;
+	color: #FFF;
+	font-size: 0.7em;
+	border-radius: 4px;
+}
+
+.status1 {	background: #FF1B8D; }	/*ログイン中*/
+.status2 {	background: #999; }		/*オフライン*/
+.status3 {	background: #F00; }		/*通話中*/
+.status4 {	background: #00F; }		/*待機中*/
+
+.hr_none #from_to_count + hr {
+	display: none;
+}
+
+.no_data {
+	margin: 20px 10px;
+	padding: 20px 10px;
+	text-align: center;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+.setting_list a {
+	display: block;
+	padding: 10px;
+	color: #333;
+	text-decoration: none;
+	background: #F8F8F8;
+	border-top: 1px solid #CCC;
+	position: relative;
+}
+
+.setting_list a:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-top: solid 2px #999;
+	border-right: solid 2px #999;
+	transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+

@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+#title {
+	text-align: left;
+}
+
+#title .edit, #title .back {
+	display: inline-block;
+	padding: 0 5px;
+	color: #FFF;
+	font-size: 0.9rem;
+	font-weight: normal;
+	text-decoration: none;
+	line-height: 1.4rem;
+	border: 1px solid #FFF;
+	border-radius: 4px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -12px;
+}
+
+.group-list .item a {
+	display: block;
+	padding: 10px;
+	color: #333;
+	font-weight: normal;
+	text-decoration: none;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+}
+
+.profimg {
+	width: 40px;
+	margin-right: 5px;
+	vertical-align: -14px;
+}
+
+.group-list .item a:after {
+	content: "";
+	display: block;
+	width: 8px;
+    height: 8px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -4px;
+    border-top: solid 2px #999;
+    border-right: solid 2px #999;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.group-edit .item {
+	padding: 10px;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+}
+
+.group-edit .item a.name {
+	text-decoration: none;
+	color: #333;
+}
+
+.group-edit .item a.del {
+	display: inline-block;
+	padding: 0 5px;
+    color: #666;
+    font-size: 0.9em;
+    font-weight: normal;
+	text-decoration: none;
+	border: 1px solid #999;
+	border-radius: 4px;
+	position: absolute;
+	right: 10px;
+    top: 50%;
+    margin-top: -12px;
+}
+
+.contents {
+	margin: 20px 10px;
+	border: 1px solid #999;
+	border-radius: 8px;
+	padding: 15px 10px;
+}
+
+.setting_list a {
+	display: block;
+	padding: 10px;
+	color: #333;
+	text-decoration: none;
+	background: #F8F8F8;
+	border-top: 1px solid #CCC;
+	position: relative;
+}
+
+.setting_list a:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+    border-top: solid 2px #999;
+    border-right: solid 2px #999;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+.setting_list img {
+	width: 15px;
+	vertical-align: -2px;
+	margin-right: 3px;
+}
+
+.count {
+	margin-top: 8px;
+	margin-bottom: 8px;
+}

@@ -1,0 +1,247 @@
+@charset "utf-8";
+
+/***** batch_mail *****/
+#title a.mailhist {
+	display: inline-block;
+	padding: 0 5px;
+	color: #FFF;
+	font-size: 0.9rem;
+	font-weight: normal;
+	text-decoration: none;
+	border: 1px solid #FFF;
+	border-radius: 4px;
+	position: absolute;
+	right: 45px;
+	top: 50%;
+	margin-top: -12px;
+}
+
+#title a.question {
+	display: block;
+	width: 24px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -12px;
+}
+
+#title a img {
+	width: 100%;
+}
+
+.search_count {
+	padding: 2px 0;
+	color: #FFF;
+	font-size: 0.9em;
+	text-align: center;
+	background: #333;
+}
+
+.contents {
+	margin: 15px 10px;
+	padding: 10px;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.contents > p {
+	font-size: 0.9em;
+}
+
+/***** mail_area *****/
+.mail_area {
+	margin-top: 20px;
+	padding: 0 10px;
+	position: relative;
+}
+
+textarea {
+	width: 100%;
+	border: 2px solid #999;
+	margin-bottom: 10px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.mail_btn input {
+	width: 118px;
+	display: block;
+	margin: 20px auto 30px;
+	padding: 10px 0;
+	text-align: center;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: solid 1px #999;
+	border-radius: 4px;
+}
+
+.chuui {
+	margin-bottom: 15px;
+	padding: 0 10px;
+	color: #F00;
+}
+
+.chuui img {
+	width: 16px;
+	margin-right: 3px;
+	vertical-align: -2px;
+}
+
+/***** emoji_open_button *****/
+.emoji_open_button {
+	display: inline-block;
+	margin-bottom: 4px;
+	padding: 0 5px;
+	text-align: center;
+	color: #333;
+	text-decoration: none;
+	font-size: 0.9em;
+	border: 1px solid #999;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+}
+
+.emoji_open_button:before {
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url(/img/old/icon/emoji_prof.png);
+	background-size: 16px;
+	margin-right: 3px;
+	vertical-align: -3px;
+}
+
+/***** mstemp modal *****/
+.template_popup {
+	position: relative;
+}
+
+.modal-mstemp-open {
+	width: 36px;
+	height: 41px;
+	background-image: url(/img/old/icon/line_template_g.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 4px;
+	right: 0;
+}
+
+.modal-mstemp {
+	display: none;
+	height: 70%;
+	width: 88%;
+	color: #333;
+	background: #FFF ;
+	border: 2px solid #CCC;
+	border-radius: 4px;
+	position: fixed;
+	box-sizing: border-box;
+	z-index: 10001;
+}
+
+.modal-mstemp .mstemp-body {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 100%;
+}
+
+.modal-mstemp .mstemp-body::-webkit-scrollbar {
+	width: 0px;
+}
+
+.modal-mstemp .mstemp-body::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	background: #CCC;
+}
+
+.modal-mstemp .mstemp-body > div:first-child {
+	padding: 10px;
+	color: #FFF;
+	background: #666;
+}
+
+.modal-mstemp .mstemp-body > div + div {
+	margin: 0 10px;
+	padding: 10px 0;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+}
+
+.modal-mstemp .mstemp-body > div:last-child {
+	border-bottom: none;
+}
+
+.modal-mstemp .mstemp-body button {
+	padding: 2px 10px;
+	color: #333;
+	background: #FFF;
+	border: 1px solid #333;
+	border-radius: 4px;
+	position: absolute;
+	top: 50%;
+	margin-top: -13px;
+}
+
+.modal-mstemp .mstemp-body button:first-of-type {
+	right: 60px;
+}
+
+.modal-mstemp .mstemp-body button:last-of-type {
+	right: 0;
+}
+
+.modal-mstemp .mstemp-body a {
+	display: block;
+	margin: 30px 10px 10px;
+	padding: 10px 0;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none;
+	background: #666;
+	border-radius: 4px;
+}
+/*
+.modal-mstemp span {
+	color: #00F;
+	font-weight: bold;
+} */
+
+.modal-close:after {
+	content: "";
+	display: block;
+	width: 26px;
+	height: 26px;
+	background-color: #999;
+	background-image: url(/img/old/icon/close_w.png);
+	background-size: contain;
+	border-radius: 1em;
+	border: 2px solid #DDD;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+	box-shadow: 0 1px 3px rgba(0,0,0,.15);
+	position: absolute;
+	top: -13px;
+	right: -13px;
+}
+
+#modal-overlay {
+	z-index: 1;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 120%;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 10000;
+}
+

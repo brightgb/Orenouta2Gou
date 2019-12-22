@@ -1,0 +1,405 @@
+@charset "utf-8";
+/***** reload *****/
+.reload {
+	width: 28px;
+	height: 28px;
+	padding: 2px;
+	border: solid 1px #FFF;
+	border-radius: 4px;
+	box-sizing: border-box;
+	position: absolute;
+	right: 60px;
+	top: 50%;
+	margin-top: -14px;
+}
+
+.reload a {
+	display: block;
+	width: 22px;
+	height: 22px;
+	background-image: url(/img/old/icon/reload_w.png);
+	background-size: cover;
+	cursor: pointer;
+}
+
+/***** 表示形式切替 *****/
+.view-select {
+	width: 28px;
+	height: 28px;
+	padding: 2px;
+	border: solid 1px #FFF;
+	border-radius: 4px;
+	box-sizing: border-box;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -14px;
+}
+
+.view-select > div a {
+	display: block;
+	width: 22px;
+	height: 22px;
+	background-image: url(/img/old/icon/viewselect_sprite_w.png);
+	background-size: cover;
+	cursor: pointer;
+}
+
+.view-list a {
+	background-position: 0 0;
+}
+
+.view-grid a {
+	background-position: -22px 0;
+}
+
+/***** 並び替え *****/
+.sort_area {
+	width: 80%;
+	margin: 15px auto;
+	padding: 10px 0;
+	text-align: center;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.sort_area input {
+	display: inline-block;
+	width: 76px;
+	margin-left: 10px;
+	padding: 10px;
+	color: #333;
+	font-size: 0.9em;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+/***** 検索条件 *****/
+.search_area.acdArea {
+	margin: 15px auto;
+	width: 80%;
+}
+
+.search_area .acdHead {
+	margin: 0;
+}
+
+.search_area .acdHead a {
+	display: block;
+	color: #333;
+	text-decoration: none;
+	margin: 0;
+	padding: 5px 10px;
+	border-radius: 4px 4px 0 0;
+	border: 1px solid #999;
+	background: #F4F4F4;
+	position: relative;
+}
+
+.search_area .acdHead a:after {
+	content: "";
+	background: url(/img/old/icon/accodion_close.png) no-repeat;
+	background-size: cover;
+	width: 13px;
+	height: 13px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -6px;
+}
+
+.search_area .acdClosed a:after {
+	content: "▼";
+	color: #555;
+	font-size: 13px;
+	background: transparent;
+	top: initial;
+	margin-top: 0;
+}
+
+.search_area .acdClosed a {
+	padding: 5px 10px;
+	border-radius: 4px;
+	border: 1px solid #999;
+}
+
+.search_area .acdBody {
+	padding: 10px;
+	border-radius: 0 0 4px 4px;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+}
+.search_area .acdBody > div {
+	padding: 0 4px;
+}
+
+.search_area .acdBody hr {
+	margin: 5px 10%;
+	height: 15px;
+	border: 0;
+	background-image: url(/img/old/line01.gif);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.search_area .acdBody input[type="submit"] {
+	width: 118px;
+	margin: 5px 0;
+	padding: 10px 0;
+	color: #333;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: solid 1px #999;
+	border-radius: 4px;
+}
+
+.search_area .acdBody input[name="nickname"] {
+	width: 70%;
+	height: 30px;
+	margin-right: 5px;
+	border: 1px solid #333;
+}
+
+/***** メール歴による絞込み *****/
+ul.select-mailed {
+	text-align: center;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+ul.select1 {
+	background: url(/img/old/select_bg1.jpg) no-repeat;
+	background-size: 100% auto;
+	background-position: center center;
+}
+
+ul.select2 {
+	background: url(/img/old/select_bg2.jpg) no-repeat;
+	background-size: 100% auto;
+	background-position: center center;
+}
+
+ul.select-mailed li {
+	display: inline-block;
+	width: 49%;
+	text-align: center;
+	line-height: 2em;
+	padding-top: 2%;
+	font-size: 0.9em;
+	color: #FF005E;
+}
+
+ul.select-mailed li a {
+	display: inline-block;
+	color: #999;
+}
+
+/***** リスト形式 *****/
+.listbox_area {
+	display: block;
+	margin: 8px 0;
+	padding: 5px;
+	background: #DCDEE3;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+
+.listbox_area > div.listbox:last-child {
+	margin-bottom: 0;
+}
+
+.listbox {
+	margin-bottom: 5px;
+	padding: 10px;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.cast_prof {
+	display: table;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.cast_prof > div {
+	display: table-cell;
+}
+
+.cast_prof > .cast_img {
+	width: 80px;
+	height: 100px;
+	text-align: center;
+}
+
+.cast_prof > .cast_img span {
+	font-size: 0.7em;
+}
+
+.cast_prof > .cast_img .container {
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cast_prof > .cast_img .container img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.cast_prof > .cast_name {
+	vertical-align: top;
+	padding-left: 10px;
+}
+
+.tell_btn {
+	width: 80%;
+	margin-top: 8px;
+}
+
+.tell_btn a {
+	display: block;
+	padding: 5px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	position: relative;
+}
+
+.tell_btn a:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-image: url(/img/old/icon/emoji_camera.png);
+	background-size: 20px;
+	background-position: 0px 0px;
+	vertical-align: -5px;
+	margin-right: 5px;
+}
+
+.cast_prof .status {
+	width: 70px;
+	margin-bottom: 3px;
+	padding: 2px 0;
+	text-align: center;
+	color: #FFF;
+	font-size: 0.7em;
+	border-radius: 4px;
+}
+
+
+.status-offline {	background: #999; }		/*オフライン*/
+.status-online {	background: #FF1B8D; }	/*ログイン中*/
+.status-waiting {	background: #00F; }		/*待機中*/
+.status-talking {	background: #F00; }		/*通話中*/
+
+.no_data {
+	margin: 20px 10px;
+	padding: 20px 10px;
+	text-align: center;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+/***** グリッド形式 *****/
+ul.profilePic {
+	overflow: hidden;
+	position: relative;
+}
+
+ul.profilePic li {
+	width: 33.3%;
+	text-align: center;
+	float: left;
+	border-bottom: 1px solid #CCC;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+ul.profilePic li:nth-child(1),
+ul.profilePic li:nth-child(2),
+ul.profilePic li:nth-child(3) {
+	border-top: 1px solid #CCC;
+	margin-top: 8px;
+}
+
+ul.profilePic li:nth-child(3n+1) {
+	border-right: 1px solid #CCC;
+}
+
+ul.profilePic li:nth-child(3n+2) {
+	border-right: 1px solid #CCC;
+}
+
+ul.profilePic li:nth-child(3n+3) {
+	border-right: 1px solid #FFF;
+}
+
+ul.profilePic li:last-child {
+	margin-bottom: 8px;
+}
+
+ul.profilePic li a {
+	display: block;
+	padding-top: 5px;
+	color: #333;
+	font-size: 0.7em;
+	line-height: 14px;
+	text-decoration: none;
+}
+
+ul.profilePic li .status-list {
+	width: 70px;
+	margin: 0 auto;
+	padding: 2px 0;
+	text-align: center;
+	color: #FFF;
+	font-size: 0.7em;
+	border-radius: 4px;
+}
+
+ul.profilePic li .thumbnail {
+	margin: 0 5% 5% 10px;
+	position: relative;
+}
+
+ul.profilePic li .thumbnail:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+ul.profilePic li .thumbnail .container {
+	position: absolute;
+    top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+ul.profilePic li .thumbnail .container img {
+	max-width: 100%;
+	max-height: 100%;
+}

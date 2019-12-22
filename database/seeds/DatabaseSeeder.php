@@ -1,0 +1,18 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * @return void
+     */
+    public function run()
+    {
+        //初期設定
+        $this->call(first_permission_registerSeed::class);
+        $this->call(first_role_registerSeed::class);
+        $this->call(first_admin_registerSeeder::class);
+        $this->call(first_users_registerSeed::class);
+    }
+}

@@ -1,0 +1,731 @@
+@charset "utf-8";
+
+/***** list_switch *****/
+#ListUserMailBox .list_switch {
+	display: table;
+	width: 100%;
+	border-bottom: 1px solid #CCC;
+}
+
+#ListUserMailBox .list_switch > div {
+	display: table-cell;
+	width: 33%;
+	text-align: center;
+}
+
+#ListUserMailBox .list_switch .this {
+	border-bottom: 2px solid #FF1B8D;
+}
+
+#ListUserMailBox .list_switch a {
+	display: block;
+	padding: 10px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+}
+
+#ListUserMailBox .list_switch span {
+	color: #FF1B8D;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+/***** 絞込み *****/
+#ListUserMailBox #filtering {
+	width: 80%;
+	margin: 15px auto;
+	padding: 10px 0;
+	text-align: center;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+#ListUserMailBox #filtering input {
+	display: inline-block;
+	width: 76px;
+	margin-left: 10px;
+	padding: 10px;
+	color: #333;
+	font-size: 0.9em;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+/***** 検索 *****/
+#ListUserMailBox .search_field {
+	display: -webkit-box;
+	display: -moz-box;
+	margin: 8px 5px;
+}
+
+#ListUserMailBox .search_field > div {
+	display: -webkit-box;
+	display: -moz-box;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+}
+
+#ListUserMailBox .search_field > div > input[type="text"] {
+	display: block;
+	width: 63%;
+	height: 34px;
+	margin: 0 2% 0 0;
+}
+
+#ListUserMailBox .search_field > div > input[type="submit"] {
+	display: block;
+	width: 35%;
+	height: 34px;
+	padding: 2px 8px;
+	font-size: 0.9em;
+	font-weight: normal;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+/***** banner *****/
+#ListUserMailBox .iphone_banner a {
+	display: block;
+	margin: 20px 10px;
+	padding: 10px 20px 10px 10px;
+	background: #FFF;
+	text-decoration: none;
+	border: 2px solid #999;
+	border-radius: 4px;
+	position: relative;
+}
+
+#ListUserMailBox .iphone_banner a > div:first-child{
+	color: #F00;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+#ListUserMailBox .iphone_banner a .emoji {
+	width: 20px;
+	margin-right: 5px;
+}
+
+#ListUserMailBox .iphone_banner a:after {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-top: 2px solid #666;
+	border-right: 2px solid #666;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+#ListUserMailBox .android_banner a {
+	display: block;
+	margin: 20px 10px;
+	padding: 10px 30px 10px 0px;
+	text-decoration: none;
+	background: #FFF;
+	border-radius: 4px;
+	border: 2px solid #999;
+	position: relative;
+}
+
+#ListUserMailBox .android_banner a:after {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-top: 2px solid #666;
+	border-right: 2px solid #666;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+#ListUserMailBox .android_banner a > div {
+	text-align: right;
+}
+
+/****************************************************************/
+
+#ListUserMailBox a[name="up"] + #pagerBtn + hr {
+	display: none;
+}
+
+#ListUserMailBox .listbox_area {
+	display: block;
+	margin: 8px 0;
+	padding: 8px 5px;
+	background: #DCDEE3;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+
+#ListUserMailBox .listbox_area > div.listbox:last-child {
+	margin-bottom: 0;
+}
+
+#ListUserMailBox .listbox {
+	margin-bottom: 8px;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+#ListUserMailBox .listtop {
+	display: table;
+	width: 100%;
+	height: 18px;
+	padding: 10px 10px 0;
+	box-sizing: border-box;
+	position: relative;
+}
+
+#ListUserMailBox .listtop > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#ListUserMailBox .mailflag {
+	width: 60px;
+	padding-right: 10px;
+	text-align: center;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+#ListUserMailBox .flag1 { color: #F90; }	/*返信済*/
+#ListUserMailBox .flag2 { color: #00F; }	/*既読*/
+#ListUserMailBox .flag3 { color: #F00; }	/*未読*/
+
+
+#ListUserMailBox .listmain .status_area {
+	display: table;
+	width: 100%;
+	margin-bottom: 3px;
+}
+
+#ListUserMailBox .status {
+	display: table-cell;
+	width: 70px;
+	padding: 2px 0;
+	color: #FFF;
+	font-size: 0.7em;
+	text-align: center;
+	border-radius: 4px;
+}
+
+#ListUserMailBox .status1 {	background: #FF1B8D; }	/*ログイン中*/
+#ListUserMailBox .status2 {	background: #999; }			/*オフライン*/
+#ListUserMailBox .status3 {	background: #F00; }			/*待機中*/
+#ListUserMailBox .status4 {	background: #00F; }			/*通話中*/
+
+#ListUserMailBox .attach {
+	color: #F00;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+#ListUserMailBox .attach img {
+	width: 16px;
+	margin-right: 2px;
+	vertical-align: -2px;
+}
+
+#ListUserMailBox .protect {
+	width: 28px;
+}
+
+#ListUserMailBox .protect img {
+	width: 18px;
+	padding-right: 10px;
+}
+
+#ListUserMailBox .del_check {
+	width: 50px;
+}
+
+#ListUserMailBox .del_check label {
+	font-size: 0.9em;
+}
+
+#ListUserMailBox .del_check input {
+	vertical-align: -2px;
+	margin-right: 3px;
+}
+
+#ListUserMailBox .date {
+	display: table-cell;
+	color: #999;
+	font-size: 0.9em;
+	text-align: right;
+}
+
+#ListUserMailBox .listmain {
+	display: table;
+	width: 100%;
+	padding: 5px 10px 10px;
+	text-decoration: none;
+	box-sizing: border-box;
+	position: relative;
+}
+
+#ListUserMailBox .listmain > div {
+	display: table-cell;
+}
+
+#ListUserMailBox .listmain > .list_L {
+	width: 60px;
+	position: relative;
+}
+
+#ListUserMailBox .listmain > .list_R {
+	padding-left: 10px;
+	vertical-align: top;
+	position: relative;
+}
+
+#ListUserMailBox .prof_img img {
+	width: 60px;
+}
+
+#ListUserMailBox .hn_area {
+	margin-bottom: 8px;
+	position: relative;
+}
+
+#ListUserMailBox .hn {
+	padding-right: 90px;
+	font-size: 0.9em;
+}
+
+#ListUserMailBox img[title="お気に入り"],
+#ListUserMailBox img[title="被お気に入り"],
+#ListUserMailBox img[title="両想い"] {
+	margin-left: 5px;
+}
+
+#ListUserMailBox .prof_link a {
+	padding: 0 5px;
+	font-size: 0.8rem;
+	color: #FFF;
+	text-decoration: none;
+	background: #666;
+	border-radius: 4px;
+	position: absolute;
+	right: 0;
+	top: -1px;
+}
+
+#ListUserMailBox .prof_link a:after {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-left: 5px;
+	background-image: url(/img/old/icon/icon_ya.png);
+	background-size: 15px;
+	vertical-align: -3px;
+}
+
+#ListUserMailBox .mail_doc a {
+	display: block;
+	margin-top: 2px;
+	padding: 6px 10px;
+	color: #333;
+	font-size: 0.8em;
+	line-height: 1.4em;
+	text-decoration: none;
+	background: #FFF;
+	background:   linear-gradient(to bottom, #FFF, #FFE6FF);
+	background: -webkit-linear-gradient(top, #FFF, #FFE6FF);
+	background:    -moz-linear-gradient(top, #FFF, #FFE6FF);
+	border: solid 1px #999;
+	border-radius: 4px;
+	position: relative;
+}
+
+#ListUserMailBox .mail_doc a:before {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	background-image: url(/img/old/icon/balloon2.png);
+	background-size: contain;
+	background-position: 0px 0px;
+	position: absolute;
+	top: 5px;
+	left: -8px;
+}
+
+#ListUserMailBox .listbtm {
+	padding: 2px 10px;
+	text-align: right;
+	background: #EEE;
+	border-top: 1px solid #CCC;
+	border-radius: 0 0 4px 4px;
+}
+
+#ListUserMailBox .listbtm a {
+	color: #666;
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
+#ListUserMailBox .listbtm a.mail_hist {
+	margin-left: 10px;
+}
+
+#ListUserMailBox .listbtm a:before {
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-right: 3px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	vertical-align: -3px;
+}
+
+#ListUserMailBox .listbtm a.return_mail:before {
+	background-image: url(/img/old/icon/emoji_mailreply.png);
+}
+
+#ListUserMailBox .listbtm a.view_mail:before {
+	background-image: url(/img/old/icon/emoji_mail2.png);
+}
+
+#ListUserMailBox .listbtm a.mail_hist:before {
+	background-image: url(/img/old/icon/emoji_mailhist.png);
+}
+
+#ListUserMailBox .hr_none #from_to_count + hr {
+	display: none;
+}
+
+#ListUserMailBox .no_data {
+	margin: 20px 10px;
+	padding: 20px 10px;
+	text-align: center;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+#ListUserMailBox .count_btn {
+	text-align: center;
+}
+
+#ListUserMailBox .count_btn button {
+	margin: 0;
+	padding: 1px 5px;
+	color: #333;
+	line-height: 1.4em;
+	background: #DDD;
+	background:   linear-gradient(to bottom, #FFF, #DDD);
+	background: -webkit-linear-gradient(top, #FFF, #DDD);
+	background:    -moz-linear-gradient(top, #FFF, #DDD);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+#ListUserMailBox .count_btn button[disabled] {
+	color: #BBB;
+	background: #DDD;
+	border: 1px solid #BBB;
+}
+
+#ListUserMailBox .del_btn {
+	margin: 10px 0;
+	text-align: center;
+}
+
+#ListUserMailBox .del_btn input {
+	width: 50%;
+	padding: 1px 0;
+	color: #333;
+	line-height: 1.4em;
+	background: #DDD;
+	background:   linear-gradient(to bottom, #FFF, #DDD);
+	background: -webkit-linear-gradient(top, #FFF, #DDD);
+	background:    -moz-linear-gradient(top, #FFF, #DDD);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+#ListUserMailBox div.btn_search {
+	width: 70%;
+	margin: 10px auto 0;
+	font-size: 0.9em;
+	text-align: center;
+	background: #DDD;
+	background:   linear-gradient(to bottom, #FFF, #DDD);
+	background: -webkit-linear-gradient(top, #FFF, #DDD);
+	background:    -moz-linear-gradient(top, #FFF, #DDD);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+#ListUserMailBox div.btn_search a {
+	display: block;
+	padding: 0.5em 0;
+	color: #333;
+	text-decoration: none;
+}
+
+#ListUserMailBox div.btn_search img {
+	width: 20px;
+	margin-right: 2px;
+	vertical-align: -2px;
+}
+
+/***** マナー返信/招待メール *****/
+#ListUserMailBox .manner_reply {
+	height: 17px;
+	margin-right: 5px;
+	vertical-align:-4px;
+}
+
+/***** 全選択 *****/
+#ListUserMailBox .from_to_count_check {
+	display: table;
+	width: 100%;
+}
+
+#ListUserMailBox .from_to_count_check > div {
+	display: table-cell;
+	padding: 0 4px;
+}
+
+#ListUserMailBox .from_to_count_check > div:first-child {
+	width: 70%;
+}
+
+#ListUserMailBox .from_to_count_check > div:last-child {
+	width: 30%;
+}
+
+#ListUserMailBox .from_to_count_check label {
+	font-size: 0.9rem;
+}
+
+#ListUserMailBox .from_to_count_check input {
+	vertical-align: -2px;
+	margin-right: 3px;
+}
+
+/***** reload *****/
+#ListUserMailBox .hd_reload {
+	width: 28px;
+	height: 28px;
+	padding: 2px;
+	border: 1px solid #FFF;
+	border-radius: 4px;
+	box-sizing: border-box;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -14px;
+}
+
+#ListUserMailBox .hd_reload a {
+	display: block;
+	width: 22px;
+	height: 22px;
+	background-image: url(/img/old/icon/reload_w.png);
+	background-size: cover;
+	cursor: pointer;
+}
+
+/***** line切り替え *****/
+#ListUserMailBox .viewSelect {
+	width: 76px;
+	height: 28px;
+	padding: 2px 0;
+	text-align: center;
+	border: 1px solid #FFF;
+	border-radius: 4px;
+	box-sizing: border-box;
+	position: absolute;
+	right: 60px;
+	top: 50%;
+	margin-top: -14px;
+}
+
+#ListUserMailBox .viewSelect > div a {
+	display: block;
+	color: #FFF;
+	font-size: 0.9rem;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#ListUserMailBox .viewSelect > div a:before {
+	content: "";
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	background-image: url(/img/old/icon/line_sprite.png);
+	background-size: auto 22px;
+	vertical-align: -6px;
+}
+
+#ListUserMailBox .view_line a:before {
+	margin-right: 2px;
+	background-position: 0 0;
+}
+
+#ListUserMailBox .view_mail a:before {
+	margin-right: 6px;
+	background-position: -22px 0;
+}
+
+/***** メール削除 *****/
+#ListUserMailBox #lblMessage {
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	padding: 20px 10px;
+	color: #333;
+	text-align: center;
+	background: #FFF;
+	border: 1px solid #666;
+	border-radius: 4px;
+	position: fixed;
+	z-index: 100000;
+}
+
+#ListUserMailBox .lblMessage-close:after {
+	content: "";
+	display: block;
+	width: 26px;
+	height: 26px;
+	background-color: #999;
+	background-image: url(/img/old/icon/close_w.png);
+	background-size: contain;
+	border-radius: 1em;
+	border: 2px solid #DDD;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+	box-shadow: 0 1px 3px rgba(0,0,0,.15);
+	position: absolute;
+	top: -13px;
+	right: -13px;
+}
+
+#lblMessage-overlay {
+	width: 100%;
+	height: 120%;
+	background-color: rgba(0, 0, 0, 0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+}
+
+/***** line *****/
+#ListUserMailBox .listbox_area_line {
+	display: block;
+	margin: 8px 0;
+	border-top: 1px solid #CCC;
+}
+
+#ListUserMailBox .listbox_area_line .listbox {
+	margin-bottom: 0;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #CCC;
+	border-radius: 0;
+}
+
+#ListUserMailBox .listbox_area_line a {
+	display: block;
+	text-decoration: none;
+}
+
+#ListUserMailBox .listbox_area_line .listbox_man .list_L img {
+	border-radius: 50%;
+}
+
+#ListUserMailBox .listbox_area_line .hn_date {
+	display: table;
+	width: 100%;
+	margin-top: 4px;
+}
+
+#ListUserMailBox .listbox_area_line .date {
+	width: 100px;
+}
+
+#ListUserMailBox .listbox_area_line .hn {
+	padding: 0;
+}
+
+#ListUserMailBox .listbox_area_line .mail_doc_line {
+	padding-right: 10px;
+	font-size: 0.8em;
+}
+
+#ListUserMailBox .listbox_area_line .listmain {
+	padding: 8px 10px;
+}
+
+#ListUserMailBox .listbox_area_line .listmain:after {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-top: 2px solid #666;
+	border-right: 2px solid #666;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+#ListUserMailBox .mail_attach {
+	margin-top: 5px;
+}
+
+#ListUserMailBox .mail_attach a {
+	display: inline-block;
+	color: #1DA1F2;
+	font-size: 10px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 1;
+}
+
+#ListUserMailBox .mail_attach span {
+	display: block;
+	width: 22px;
+	height: 22px;
+	margin: 0px auto 3px;
+	background-image: url(/img/old/icon/mail_attach.png);
+	background-repeat: no-repeat;
+	background-size: 44px;
+}
+
+#ListUserMailBox .with_pic span   { background-position: 0 -22px; }
+#ListUserMailBox .with_movie span { background-position: -22px -22px; }
+

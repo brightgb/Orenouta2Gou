@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+#title a {
+	display: block;
+	width: 24px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -12px;
+}
+
+#title a img {
+	width: 100%;
+}
+
+.no_data {
+	margin: 20px 10px;
+	padding: 20px 10px;
+	text-align: center;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+.send_btn {
+	width: 60%;
+	margin: 20px auto;
+}
+
+.send_btn a {
+	width: 100%;
+    display: inline-block;
+    padding: 10px 0;
+    color: #00F;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+	background: #FFF;
+    border: 2px solid #00F;
+    border-radius: 50px;;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.send_btn a:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	background-image: url(/img/old/icon/album_sprite.png);
+	background-size: 120px auto;
+	-webkit-background-size: 120px auto;
+	background-repeat: no-repeat;
+	background-position: -60px -20px;
+	vertical-align: -6px;
+}
+
+.listbox_area {
+	margin-top: -5px;
+	margin-bottom: 8px;
+	padding-left: 3px;
+	border-bottom: 1px solid #CCC;
+	overflow: hidden;
+}
+
+.listbox_area li {
+	width: 33.3%;
+	float: left;
+	text-align: center;
+	border-right: 3px solid #FFF;
+	border-bottom: 3px solid #FFF;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+}
+
+.listbox_area li a {
+	display: block;
+	color: #333;
+	text-decoration: none;
+	position: relative;
+}
+
+.prof_pic {
+	width: 100%;
+	vertical-align: bottom;
+}
+
+.listbox_area .prof_status {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.status {
+	margin: 0 auto;
+	padding: 2px 0;
+	color: #FFF;
+	font-size: 0.7em;
+	text-align: center;
+}
+
+.status1 { background: rgba(255,  27, 141, 0.7); } /*ギャラリー用公開中*/
+.status2 { background: rgba(255,   0,   0, 0.7); } /*プロフィール用*/
+.status3 { background: rgba(109, 109, 109, 0.7); } /*非表示*/
+
+
+
+

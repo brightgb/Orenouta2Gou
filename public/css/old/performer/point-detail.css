@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+.date {
+	margin: 20px 10px;
+}
+
+.date > div:first-child {
+	padding: 5px 10px;
+	font-weight: bold;
+	background: #EFEFEF;
+	border: 1px solid #999;
+	border-radius: 4px 4px 0 0;
+}
+
+.date > div:last-child {
+	padding: 10px;
+	text-align: center;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	border-radius: 0 0 4px 4px;
+}
+
+.date > div:last-child > br:first-child {
+	display: none;
+}
+
+.date select {
+	margin-bottom: 5px;
+}
+
+.date_btn input {
+	display: block;
+	width: 118px;
+	margin: 10px auto 0;
+	padding: 10px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+}
+
+.point_table_title {
+	margin: 0 10px;
+	padding: 5px 10px;
+	font-weight: bold;
+	background: #EFEFEF;
+	border: 1px solid #999;
+}
+
+.point_table {
+	margin: 0 10px 10px;
+}
+
+.point_table dl {
+	display: table;
+	width: 100%;
+}
+
+.point_table dt {
+	display: table-cell;
+	padding: 3px 10px;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+}
+
+.point_table dd {
+	display: table-cell;
+	width: 30%;
+	padding: 3px 10px;
+	text-align: right;
+	border-bottom: 1px solid #999;
+	border-right: 1px solid #999;
+}
+
+.point_table .total dt,
+.point_table .total dd {
+	border-bottom: 2px solid #999;
+}
+
+
+
+
+

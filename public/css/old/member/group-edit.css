@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+#title {
+	text-align: left;
+	padding-right: 35px;
+}
+
+#title a {
+	display: inline-block;
+	width: 24px;
+	text-decoration: none;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -12px;
+}
+
+#title a img {
+	width: 100%;
+}
+
+.group-list .item {
+	padding: 20px 10px;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+}
+
+.group-list .item a:first-child {
+	color: #333;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.group-list .item a.added {
+	color: #999;
+}
+
+.group-list .item a img {
+    margin-right: 5px;
+    vertical-align: -3px;
+}
+
+.group-list .item a:last-child {
+	display: inline-block;
+	padding: 0 5px;
+    color: #666;
+    font-size: 0.9em;
+    text-align: center;
+	text-decoration: none;
+	border: 1px solid #999;
+	border-radius: 4px;
+	position: absolute;
+	right: 10px;
+    top: 50%;
+    margin-top: -23px;
+}

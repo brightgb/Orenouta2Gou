@@ -1,0 +1,207 @@
+@charset "utf-8";
+
+#title a {
+	display: inline-block;
+	padding: 0 5px;
+	color: #FFF;
+	font-size: 0.9rem;
+	text-decoration: none;
+	line-height: 1.4rem;
+	border: 1px solid #FFF;
+	border-radius: 4px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -12px;
+}
+
+.pay_btn {
+	width: 50%;
+	margin: 20px auto;
+}
+
+.pay_btn a {
+	display: block;
+	padding: 8px 0;
+	color: #FFF;
+	font-size: 0.9em;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	background: #F00;
+	border-radius: 4px;
+}
+
+.pay_btn span {
+	display: block;
+	padding: 8px 0;
+	color: #999;
+	font-size: 0.9em;
+	text-align: center;
+	background: #EAEAEA;
+	border: 1px solid #CCC;
+	border-radius: 4px;
+}
+
+.point_table_title {
+	margin: 0 10px;
+	padding: 5px 10px;
+	font-weight: bold;
+	background: #EFEFEF;
+	border: 1px solid #999;
+}
+
+.point_table {
+	margin: 0 10px 20px;
+}
+
+.point_table dl {
+	display: table;
+	width: 100%;
+}
+
+.point_table dt {
+	display: table-cell;
+	padding: 3px 10px;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+}
+
+.point_table dd {
+	display: table-cell;
+	width: 30%;
+	padding: 3px 10px;
+	text-align: right;
+	border-bottom: 1px solid #999;
+	border-right: 1px solid #999;
+}
+
+.point_table .total dt,
+.point_table .total dd {
+	border-bottom: 2px solid #999;
+}
+
+.pay_hist_title {
+	margin: 0 10px;
+	padding: 5px 10px;
+	font-weight: bold;
+	background: #EFEFEF;
+	border: 1px solid #999;
+}
+
+.pay_hist {
+	margin: 0 10px 10px;
+}
+
+.pay_hist dl {
+	display: table;
+	width: 100%;
+}
+
+.pay_hist dt {
+	display: table-cell;
+	padding: 3px 10px;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+}
+
+.pay_hist dd {
+	display: table-cell;
+	width: 30%;
+	padding: 3px 10px;
+	text-align: right;
+	border-bottom: 1px solid #999;
+	border-right: 1px solid #999;
+}
+
+.pay_hist_guid dt,
+.pay_hist_guid dd {
+	padding: 0;
+	border: none;
+}
+
+.pay_hist_guid a {
+	padding: 3px 2px 0;
+	font-size: 0.9em;
+}
+
+.pay_hist_guid span {
+	display: none;
+}
+
+.confirm_title {
+	margin: 0 10px;
+	padding: 5px 10px;
+	font-weight: bold;
+	background: #EFEFEF;
+	border: 1px solid #999;
+	border-radius: 4px 4px 0 0;
+}
+
+.confirm_btn {
+	margin: 0 10px 20px;
+	padding: 15px 10px;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	border-radius: 0 0 4px 4px;
+}
+
+.confirm_btn > div {
+	display: table;
+	width: 100%;
+}
+
+.confirm_btn > div > div {
+	display: table-cell;
+	width: 50%;
+}
+
+.confirm_btn a {
+	display: block;
+	margin: 0 10px;
+	padding: 5px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+}
+
+.no_data {
+	padding: 20px 10px;
+	text-align: center;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+}
+
+.kakutoku_poinit {
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.kakutoku_poinit a {
+	display: block;
+	margin: 15px 10px 5px;
+	padding: 5px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+}

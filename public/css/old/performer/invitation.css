@@ -1,0 +1,382 @@
+@charset "utf-8";
+
+#title a {
+	display: inline-block;
+	padding: 0 5px;
+	color: #FFF;
+	font-size: 0.9rem;
+	text-decoration: none;
+	line-height: 1.4rem;
+	border: 1px solid #FFF;
+	border-radius: 4px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -12px;
+	cursor: pointer;
+}
+
+.contents_bg {
+	margin: 15px 0 20px;
+	padding: 0 10px;
+}
+
+/************************
+複数行あるとき
+<div class="contents_bg">
+<div class="contents">
+<div class="contents_doc"></div>
+</div>
+</div>
+*************************/
+
+.contents {
+	display: table;
+	width: 100%;
+	min-height: 90px;
+	padding: 10px;
+	border: 1px solid #999;
+	border-radius: 8px;
+	box-sizing: border-box;
+}
+
+.contents_doc {
+	display:table-cell;
+	vertical-align:middle;
+}
+
+/************************
+一行のみ
+<div class="contents_bg">
+<div class="contents_sline"></div>
+</div>
+*************************/
+
+.contents_sline {
+	width: 100%;
+	height: 90px;
+	line-height: 90px;
+	padding: 0 10px;
+	border: 1px solid #999;
+	border-radius: 8px;
+	box-sizing: border-box;
+}
+
+.friend_ct {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.friend_ct a {
+	display: block;
+	margin: 10px 0;
+	padding: 10px 20px 10px 80px;
+	color: #333;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+	position: relative;
+	overflow: hidden;
+}
+
+.friend_m a {
+	color: #06F;
+}
+
+.friend_w a {
+	color: #F09;
+}
+
+.friend_ct a:before {
+	content: "";
+	width: 60px;
+	height: 60px;
+	background-image: url(/img/old/icon/friend_ct.png);
+	background-size: contain;
+	-webkit-background-size: auto 100%;
+	-moz-background-size: contain;
+	background-repeat: no-repeat;
+	opacity: 0.5;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	opacity: 0.5;
+}
+
+.friend_m a:before {
+	margin-top: -23px;
+	background-position: 0;
+}
+
+.friend_w a:before {
+	margin-top: -33px;
+	background-position: -60px 0;
+}
+
+.friend_ct a:after {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-top: solid 2px #666;
+	border-right: solid 2px #666;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+.friend_ct span {
+	font-size: 1.4rem;
+}
+
+.friend_all {
+	display: table;
+	width: 80%;
+	margin: 0 auto 40px;
+	text-align: center;
+}
+
+.friend_all > div {
+	display: table-cell;
+	height: 46px;
+	vertical-align: middle;
+	box-sizing: border-box;
+}
+
+.friend_all > div:first-child {
+	width: 50%;
+	color: #FFF;
+	font-size: 0.8em;
+	background: #333;
+	border-radius: 4px 0 0 4px;
+}
+
+.friend_all > div:last-child {
+	padding: 0 10px;
+	text-align: right;
+	border-top: 1px solid #666;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+	border-radius: 0 4px 4px 0;
+}
+
+.friend_all span {
+	color: #F00;
+	font-size: 1.4rem;
+}
+
+.friend02_ct {
+	display: table;
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.friend02_nm {
+	border: 1px solid #CCC;
+	border-radius: 4px 4px 0 0;
+}
+
+.friend02_pt {
+	border-bottom: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	border-radius: 0 0 4px 4px;
+}
+
+.friend02_ct > div {
+	display: table-cell;
+	height: 32px;
+	font-size: 0.9em;
+	vertical-align: middle;
+	box-sizing: border-box;
+}
+
+.friend02_ct > div:first-child {
+	width: 40%;
+	color: #FFF;
+	background: #333;
+}
+
+.friend02_ct > div:last-child {
+	padding: 0 10px;
+	text-align: right;
+}
+
+.friend02_ct span {
+	color: #F00;
+	font-size: 1.4rem;
+}
+
+.friend02_m > div:first-child {
+	background: #54B0FF;
+}
+
+.friend02_w > div:first-child {
+	background: #FF79D2;
+}
+
+.chuui {
+	width: 90%;
+	margin: 5px auto 15px;
+	color: #999;
+	font-size: 0.9em;
+}
+
+/*****************/
+
+.switch_navi {
+	display: table;
+	width: 90%;
+	margin: 15px auto;
+}
+
+.switch_navi > div {
+	display: table-cell;
+	width: 33%;
+	color: #FFF;
+	font-size: 0.9em;
+	text-align: center;
+	background: #FFB000;
+	border-top: 1px solid #FFB000;
+	border-bottom: 1px solid #FFB000;
+	border-left: 1px solid #FFB000;
+}
+
+.switch_navi > div:first-child {
+	border-radius: 4px 0 0 4px;
+}
+
+.switch_navi > div:last-child {
+	border-radius: 0 4px 4px 0;
+	border-right: 1px solid #FFB000;
+}
+
+.switch_navi > div:first-child a {
+	border-radius: 4px 0 0 4px;
+}
+
+.switch_navi > div:last-child a {
+	border-radius: 0 4px 4px 0;
+}
+
+.switch_navi span {
+	padding: 2px 0;
+}
+
+.switch_navi a {
+	display: block;
+	text-decoration: none;
+	color: #EFA500;
+	padding: 2px 0;
+	background: #FFF;
+}
+
+a[name="up"] + #pagerBtn + hr {
+	display: none;
+}
+
+.listbox_area {
+	display: block;
+	margin: 8px 0;
+	padding: 8px 5px;
+	background: #DCDEE3;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+
+.listbox_area > div.listbox:last-child {
+	margin-bottom: 0;
+}
+
+.listbox {
+	display: block;
+	margin-bottom: 8px;
+	padding: 5px 10px;
+	text-decoration: none;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 4px;
+	position: relative;
+}
+
+a.listbox:after {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+	border-top: solid 2px #666;
+	border-right: solid 2px #666;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+.listbox .list_name {
+	font-weight: bold;
+}
+
+.listbox .taikai_name {
+	color: #999;
+	position: relative;
+}
+
+.listbox .taikaizumi {
+	font-size: 0.9rem;
+	font-weight: normal;
+	position: absolute;
+	right: 0;
+}
+
+.listbox .list_date {
+	margin: 5px 0;
+	color: #999;
+	font-size: 0.8rem;
+}
+
+.listbox .list_pt {
+	font-size: 0.9rem;
+}
+
+.back_btn a {
+	display: block;
+	margin: 10px 20px;
+	padding: 5px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	position: relative;
+}
+
+.back_btn a:before {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-left: 2px solid #666;
+	border-top: 2px solid #666;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+

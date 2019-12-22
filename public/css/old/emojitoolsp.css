@@ -1,0 +1,84 @@
+div.emoji_palette
+{
+    width:		295px;
+}
+
+.emoji_item
+{
+	/* smart phone */
+	border:solid 1px #F99;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    margin:2px;
+}
+
+
+.emoji_palette .emoji_pager a
+{
+	width:40px;
+    padding:1px 0px;
+    text-align:center;
+    margin:2px 3px;
+}
+.emoji_palette .emoji_pager a.emoji_page
+{
+	border:solid 1px #F99;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    -moz-border-radius:2px;
+}
+
+div.emoji_buffer
+{
+	width:156px;
+}
+
+div.emoji_bs_key
+{
+	border-radius:2px;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    margin-right:4px;
+}
+div.emoji_bs_key a
+{
+
+    width:40px;
+    height:13px;
+    padding-top:4px;
+    padding-bottom:0px;
+	font-size:9px;
+    text-align:center;
+    /*height:22px;
+    padding:0px 0px;*/
+}
+
+div.emoji_item:hover
+{
+}
+
+.emoji_item .emoji_item_inner
+{
+	height:15px;
+	width:15px;
+    padding:0px;
+    background-repeat:no-repeat;
+    background-position:center center;
+    margin:2px;
+}
+
+
+.no-android-highlight
+{
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+.emoji_palette div.emoji_window_button a.emoji_palette_close
+{
+	font-size:0.8em;
+	width:40px;
+	padding:2px 6px;
+	text-align:right;
+}

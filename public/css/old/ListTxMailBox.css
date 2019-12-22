@@ -1,0 +1,416 @@
+@charset "utf-8";
+
+#ListTxMailBox .title {
+	margin-top: 2px;
+	padding: 8px;
+	font-size: 1.1em;
+	font-weight: bold;
+	border-top: solid 3px #FF398A;
+	border-bottom: solid 1px #CCC;
+	background: #EFF1F0;
+	background:   linear-gradient(to bottom, #FDFEF9, #EFF1F0);
+	background: -webkit-linear-gradient(top, #FDFEF9, #EFF1F0);
+	background:    -moz-linear-gradient(top, #FDFEF9, #EFF1F0);
+}
+
+#ListTxMailBox .mail_search {
+	margin: 8px 10px 0;
+	display: -webkit-box;
+	display: -moz-box;
+}
+
+#ListTxMailBox .mail_search > div{
+	display: -webkit-box;
+	display: -moz-box;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+}
+
+#ListTxMailBox .mail_search > div > input[type="text"] {
+	display: block;
+	width: 63%;
+	height: 34px;
+	margin: 0 2% 0 0;
+}
+
+#ListTxMailBox .mail_search > div > input[type="submit"] {
+	width: 35%;
+	height: 34px;
+	display: block;
+	padding: 2px 8px;
+	font-size: 0.9em;
+	font-weight: normal;
+	border: solid 1px #999;
+	border-radius: 4px;
+	background: #F8F8F8;
+	background:   linear-gradient(to bottom, #FFF, #DDD);
+	background: -webkit-linear-gradient(top, #FFF, #DDD);
+	background:    -moz-linear-gradient(top, #FFF, #DDD);
+}
+
+
+#ListTxMailBox a[name="up"] + #pagerBtn + hr {
+	display: none;
+}
+
+#ListTxMailBox .listbox_area {
+	display: block;
+	margin: 8px 0;
+	padding: 8px 5px;
+	background: #DCDEE3;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+
+#ListTxMailBox .listbox_area > div.listbox:last-child {
+	margin-bottom: 0;
+}
+
+#ListTxMailBox .listbox {
+	margin-bottom: 8px;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+#ListTxMailBox .listtop {
+	height: 18px;
+	padding: 10px 10px 0;
+	position: relative;
+}
+
+#ListTxMailBox .check_area {
+	display: table;
+}
+
+#ListTxMailBox .attach {
+	display: table-cell;
+	color: #F00;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+#ListTxMailBox .attach img {
+	width: 16px;
+	vertical-align: -2px;
+	margin-right: 2px;
+}
+
+#ListTxMailBox .del_check {
+	font-size: 0.9em;
+	position: absolute;
+	right: 10px;
+	top: 10px
+}
+
+#ListTxMailBox .del_check input {
+	vertical-align: -2px;
+	margin-right: 3px;
+}
+
+#ListTxMailBox .date {
+	display: table-cell;
+	color: #999;
+	font-size: 0.9em;
+	text-align: right;
+}
+
+#ListTxMailBox .listmain {
+	display: table;
+	width: 100%;
+	padding: 8px 10px 10px;
+	text-decoration: none;
+	box-sizing: border-box;
+	position: relative;
+}
+
+#ListTxMailBox .listmain > div {
+	display: table-cell;
+}
+
+#ListTxMailBox .listmain > .list_L {
+	width: 60px;
+	position: relative;
+}
+
+#ListTxMailBox .listmain > .list_R {
+	vertical-align: top;
+	padding-left: 10px;
+}
+
+#ListTxMailBox .failed {
+	margin-right: 10px;
+	color: #F00;
+	text-align: center;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+#ListTxMailBox .prof_img img {
+	width: 60px;
+}
+
+#ListTxMailBox .listbox_man .prof_img img {
+	border-radius: 50%;
+}
+
+#ListTxMailBox .status_area {
+	display: table;
+	width: 100%;
+	margin-bottom: 3px;
+}
+
+#ListTxMailBox .status {
+	display: table-cell;
+	width: 70px;
+	padding: 2px 0;
+	text-align: center;
+	color: #FFF;
+	font-size: 0.7em;
+	border-radius: 4px;
+}
+
+#ListTxMailBox .status1 {	background: #FF1B8D; }	/*ログイン中*/
+#ListTxMailBox .status2 {	background: #999; }			/*オフライン*/
+#ListTxMailBox .status3 {	background: #F00; }			/*待機中*/
+#ListTxMailBox .status4 {	background: #00F; }			/*通話中*/
+
+#ListTxMailBox .hn_area {
+	margin-bottom: 8px;
+	position: relative;
+}
+
+#ListTxMailBox .hn {
+	padding-right: 90px;
+	font-size: 0.9em;
+}
+
+#ListTxMailBox .hn img[title="お気に入り"],
+#ListTxMailBox .hn img[title="被お気に入り"],
+#ListTxMailBox .hn img[title="両想い"] {
+	margin-left: 5px;
+}
+
+#ListTxMailBox .prof_link a {
+	padding: 0 5px;
+	font-size: 0.8rem;
+	color: #FFF;
+	text-decoration: none;
+	background: #666;
+	border-radius: 4px;
+	position: absolute;
+	right: 0;
+	top: -1px;
+}
+
+#ListTxMailBox .prof_link a:after {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-image: url(/img/old/icon/icon_ya.png);
+	background-size: 15px;
+	margin-left: 5px;
+	vertical-align: -3px;
+}
+
+#ListTxMailBox .mail_doc a {
+	display: block;
+	margin-top: 2px;
+	padding: 6px 10px;
+	color: #333;
+	font-size: 0.8em;
+	line-height: 1.4em;
+	text-decoration: none;
+	background: #FFF;
+	background:   linear-gradient(to bottom, #FFF, #FFE6FF);
+	background: -webkit-linear-gradient(top, #FFF, #FFE6FF);
+	background:    -moz-linear-gradient(top, #FFF, #FFE6FF);
+	border: solid 1px #999;
+	border-radius: 4px;
+	position: relative;
+}
+
+#ListTxMailBox .mail_doc a:before {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	background-image: url(/img/old/icon/balloon2.png);
+	background-size: contain;
+	background-position: 0px 0px;
+	position: absolute;
+	top: 5px;
+	left: -8px;
+}
+
+#ListTxMailBox .listbtm {
+	padding: 2px 10px;
+	text-align: right;
+	background: #EEE;
+	border-top: 1px solid #CCC;
+	border-radius: 0 0 4px 4px;
+}
+
+#ListTxMailBox .listbtm a {
+	color: #666;
+	font-size: 0.8em;
+	text-decoration: none;
+}
+
+#ListTxMailBox .listbtm a.mail_hist {
+	margin-left: 10px;
+}
+
+#ListTxMailBox .listbtm a:before {
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	vertical-align: -3px;
+	margin-right: 3px;
+}
+
+#ListTxMailBox .listbtm a.return_mail:before {
+	background-image: url(/img/old/icon/emoji_txmail.png);
+}
+
+#ListTxMailBox .listbtm a.view_mail:before {
+	background-image: url(/img/old/icon/emoji_mail2.png);
+}
+
+#ListTxMailBox .listbtm a.mail_hist:before {
+	background-image: url(/img/old/icon/emoji_mailhist.png);
+}
+
+#ListTxMailBox .hr_none #from_to_count + hr {
+	display: none;
+}
+
+#ListTxMailBox .no_data {
+	margin: 20px 10px;
+	padding: 20px 10px;
+	text-align: center;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+#ListTxMailBox .count_btn {
+	text-align: center;
+}
+
+#ListTxMailBox .count_btn input {
+	margin: 0;
+	padding: 1px 5px;
+	color: #333;
+	line-height: 1.4em;
+	background: #DDD;
+	background:   linear-gradient(to bottom, #FFF, #DDD);
+	background: -webkit-linear-gradient(top, #FFF, #DDD);
+	background:    -moz-linear-gradient(top, #FFF, #DDD);
+	border: solid 1px #999;
+	border-radius: 4px;
+}
+
+#ListTxMailBox .count_btn input[disabled="disabled"] {
+	color: #BBB;
+	background: #DDD;
+	border: 1px solid #BBB;
+}
+
+#ListTxMailBox .del_btn {
+	margin: 20px 0;
+	text-align: center;
+}
+
+#ListTxMailBox .del_btn input {
+	width: 50%;
+	padding: 1px 0;
+	color: #333;
+	line-height: 1.4em;
+	background: #DDD;
+	background:   linear-gradient(to bottom, #FFF, #DDD);
+	background: -webkit-linear-gradient(top, #FFF, #DDD);
+	background:    -moz-linear-gradient(top, #FFF, #DDD);
+	border: solid 1px #999;
+	border-radius: 4px;
+}
+
+#ListTxMailBox .setting_list a {
+	display: block;
+	padding: 10px;
+	color: #333;
+	text-decoration: none;
+	background: #F8F8F8;
+	border-top: 1px solid #CCC;
+	position: relative;
+}
+
+#ListTxMailBox .setting_list a:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+  border-top: solid 2px #999;
+  border-right: solid 2px #999;
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+/***** manner_reply *****/
+.manner_reply {
+	height:17px;
+	margin-right: 5px;
+	vertical-align:-4px;
+}
+
+/***** メール削除 *****/
+#ListTxMailBox #lblMessage {
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	padding: 20px 10px;
+	color: #333;
+	text-align: center;
+	background: #FFF;
+	border: 1px solid #666;
+	border-radius: 4px;
+	position: fixed;
+	z-index: 100000;
+}
+
+#ListTxMailBox .lblMessage-close:after {
+	content: "";
+	display: block;
+	width: 26px;
+	height: 26px;
+	background-color: #999;
+	background-image: url(/img/old/icon/close_w.png);
+	background-size: contain;
+	border-radius: 1em;
+	border: 2px solid #DDD;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+	box-shadow: 0 1px 3px rgba(0,0,0,.15);
+	position: absolute;
+	top: -13px;
+	right: -13px;
+}
+
+#lblMessage-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 120%;
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 99999;
+}
+

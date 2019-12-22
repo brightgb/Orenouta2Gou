@@ -1,0 +1,275 @@
+@charset "utf-8";
+
+/***** man_prof *****/
+.man_prof {
+	width: 100%;
+	display: table;
+	padding: 5px 0;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+}
+
+.man_prof div {
+	display: table-cell;
+	padding-left: 10px;
+	color: #333;
+	font-size: 0.8rem;
+	vertical-align: middle;
+}
+
+.man_prof .prof_img {
+	width: 30px;
+}
+
+.man_prof .prof_img img {
+	width: 100%;
+	max-height: 30px;
+	object-fit: contain;
+}
+
+.man_prof .rec_count {
+	padding-right: 10px;
+	font-size: 1em;
+	text-align: right;
+}
+
+/***** page_guid *****/
+.page_guid {
+	width: 100%;
+	display: table;
+	border-bottom: 1px solid #CCC;
+}
+
+.contents_box + .page_guid {
+	border-top: 1px solid #CCC;
+	border-bottom: none;
+}
+
+.page_guid div {
+	width: 33%;
+	display: table-cell;
+	text-align: center;
+	position: relative;
+}
+
+.page_guid span {
+	display: block;
+	padding: 10px;
+	color: #CCC;
+	font-size: 0.9em;
+	position: relative;
+}
+
+.page_guid a {
+	display: block;
+	padding: 10px;
+	color: #333;
+	font-size: 0.9em;
+	text-decoration: none;
+	position: relative;
+}
+
+.page_guid div:nth-child(2):before {
+	content: "";
+	width: 1px;
+	height: 22px;
+	background: #CCC;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -11px;
+}
+
+.page_guid div:nth-child(2):after {
+	content: "";
+	width: 1px;
+	height: 22px;
+	background: #CCC;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -11px;
+}
+
+.page_guid div:first-child span:before {
+	content: "";
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	margin-right: 10px;
+	border-top: solid 2px #CCC;
+	border-right: solid 2px #CCC;
+	-moz-transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+	transform: rotate(-135deg);
+	vertical-align: 1px;
+}
+
+.page_guid div:first-child a:before {
+	content: "";
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	margin-right: 10px;
+	border-top: solid 2px #333;
+	border-right: solid 2px #333;
+	-moz-transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+	transform: rotate(-135deg);
+	vertical-align: 1px;
+}
+
+.page_guid div:last-child span:after {
+	content: "";
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	margin-left: 10px;
+	border-top: solid 2px #CCC;
+	border-right: solid 2px #CCC;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	vertical-align: 1px;
+}
+
+.page_guid div:last-child a:after {
+	content: "";
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	margin-left: 10px;
+	border-top: solid 2px #333;
+	border-right: solid 2px #333;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	vertical-align: 1px;
+}
+
+/***** contents_box *****/
+.contents_box {
+	margin: 15px 10px;
+	border: 2px solid #999;
+	border-radius: 8px;
+}
+
+.diary_header {
+	width: 100%;
+	display: table;
+}
+
+.diary_header > div {
+	display: table-cell;
+}
+
+.diary_title {
+	font-weight: bold;
+	font-size: 1.2em;
+	padding: 10px 10px 0;
+}
+
+.diary_date {
+	color: #666;
+	font-size: 0.8em;
+	text-align: right;
+	padding: 10px 10px 0;
+	white-space: nowrap;
+}
+
+.diary_img {
+	margin: 15px 10px;
+	text-align: center;
+}
+
+.diary_img img {
+	width: 100%;
+	max-height: 355px;
+	object-fit: contain;
+}
+
+.diary_doc {
+	margin-top: 10px;
+	padding: 0 10px;
+	font-size: 0.9em;
+}
+
+.diary_footer {
+	display: table;
+	width: 100%;
+	margin-top: 30px;
+	background: #EEE;
+	border-radius: 0 0 8px 8px;
+	border-top: 1px solid #CCC;
+	position: relative;
+}
+
+.diary_footer > div {
+	display: table-cell;
+	font-size: 0.8em;
+}
+
+.diary_footer a {
+	display: block;
+	padding: 5px 0;
+	color: #666;
+	text-align: center;
+	text-decoration: none;
+	position: relative;
+}
+
+.diary_like a {
+	padding: 5px 10px;
+	text-align: left;
+}
+
+.diary_prof a {
+	padding: 5px 10px 5px 0;
+	text-align: right;
+}
+
+.diary_footer span {
+	display: block;
+	padding: 5px 10px;
+	color: #666;
+	text-align: left;
+	position: relative;
+}
+
+.diary_footer a:before {
+	content: "";
+	display: inline-block;
+	margin-right: 3px;
+	width: 16px;
+	height: 16px;
+	background-size: contain;
+	vertical-align: -3px;
+}
+
+.diary_like a:before {
+	background-image: url(/img/old/icon/iine.png);
+}
+
+.diary_mail a:before {
+	background-image: url(/img/old/icon/emoji_mail2.png);
+}
+
+.diary_prof a:before {
+	background-image: url(/img/old/icon/emoji_profile.png);
+}
+
+.diary_footer span:before {
+	content: "";
+	display: inline-block;
+	margin-right: 3px;
+	width: 16px;
+	height: 16px;
+	background-image: url(/img/old/icon/iine_on.png);
+	background-size: contain;
+	vertical-align: -3px;
+}
+
+
+
+
+

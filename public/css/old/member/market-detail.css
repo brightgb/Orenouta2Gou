@@ -1,0 +1,321 @@
+@charset "utf-8";
+
+img {
+	vertical-align: bottom;
+}
+
+.ListBlock {
+	display: table;
+	width: 100%;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	box-sizing: border-box;
+}
+
+.ListBlock > div {
+	display: table-cell;
+	width: 20%;
+	background: #666;
+	border-right: 1px solid #FFF;
+}
+
+.ListBlock > div:first-child {
+	border-left: none;
+}
+
+.ListBlock > div:last-child {
+	border-right: none;
+}
+
+.ListBlock a {
+	display: block;
+	padding-top: 5px;
+	color: #FFF;
+	font-size: 0.6rem;
+	text-align: center;
+	text-decoration: none;
+	position: relative;
+}
+
+.ListBlock a span {
+	display: block;
+	width: 22px;
+	height: 22px;
+	margin: 0 auto;
+	background-image: url(/img/old/icon/furima_listblock_sprite.png);
+	background-repeat: no-repeat;
+	background-size: 132px auto;
+	-webkit-background-size: 132px auto;
+}
+
+.ListBlock .b01 span { background-position: 0px 0px; }
+.ListBlock .b11 span { background-position: -22px 0px; }
+.ListBlock .b02 span { background-position: -44px 0px; }
+.ListBlock .b03 span { background-position: -66px 0px; }
+.ListBlock .b04 span { background-position: -88px 0px; }
+.ListBlock .b05 span { background-position: -110px 0px; }
+
+/***** cast_prof *****/
+.cast_prof {
+	display: block;
+	padding: 5px 0;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+}
+
+.cast_prof div {
+	color: #333;
+	position: absolute;
+	left: 50px;
+	top: 5px;
+}
+
+.cast_prof div > p {
+	font-size: 0.8rem;
+}
+
+.cast_prof img {
+	width: 30px;
+	margin: 0 10px;
+	border-radius: 50%;
+}
+
+.cast_prof:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-top: solid 2px #999;
+	border-right: solid 2px #999;
+	transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+.subtitle {
+	margin: 10px 10px 0;
+	padding: 2px 10px;
+	font-weight: bold;
+	border-bottom: 2px solid #999;
+	border-left: 5px solid #999;
+}
+
+/***** itemImg *****/
+.itemImgL {
+	width: 60%;
+	margin: 10px auto;
+}
+
+.itemImgL a {
+	display: block;
+}
+
+.itemImgS {
+	display: table;
+	width: 100%;
+	margin: 10px 0;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+
+.itemImgS > a {
+	display: table-cell;
+	width: 33%;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+
+/***** item_detail *****/
+.item_detail {
+	margin: 10px;
+}
+
+.item_detail table {
+	width: 100%;
+}
+
+.item_detail td {
+	padding: 5px;
+	font-size: 0.9rem;
+	border: 1px solid #999;
+}
+
+.item_detail td:first-child {
+	width: 90px;
+	background: #F4F4F4;
+	box-sizing: border-box;
+}
+
+.item_detail td.itemBoxPrice {
+	color: #F00;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+/***** stepBtn *****/
+.stepBtn {
+	text-align: center;
+	margin: 20px 0;
+}
+
+.stepBtn > div {
+	position: relative;
+	width: 60%;
+	margin: 0 auto;
+}
+
+.stepBtn input {
+	display: block;
+	width: 100%;
+	padding: 10px 0 10px 20px;;
+	color: #333;
+	font-size: 0.9rem;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.stepBtn > div:before {
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-right: 3px;
+	background: url(/img/old/icon/emoji_cart.png);
+	background-size: cover;
+	-webkit-background-size: cover;
+	position: absolute;
+	left: 25%;
+	top: 50%;
+	margin-top: -10px;
+}
+
+.point_err {
+    margin: 20px 10px;
+    padding: 10px 30px;
+    color: #F00;
+    background: #FDD;
+    border: 1px solid #666;
+	border-radius: 4px;
+}
+
+.point_err a {
+	display: block;
+	margin: 20px auto 10px;
+	padding: 5px 0;
+	color: #333;
+	font-size: 0.9rem;
+	text-align: center;
+	text-decoration: none;
+	background: #EAEAEA;
+	background: 	linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: 	 -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.point_err img {
+	width: 20px;
+	vertical-align: -5px;
+	margin-right: 5px;
+}
+
+/* 購入詳細 */
+.userinfo {
+	margin: 10px;
+	padding: 0 0 10px;
+	font-size: 14px;
+	border: solid 1px #999;
+}
+
+.userinfo > div:first-child {
+	padding: 5px;
+	font-weight: bold;
+	background: #EFEFEF;
+	border-bottom: 1px solid #999;
+	position: relative;
+}
+
+.userinfo dl {
+	margin: 5px;
+}
+
+.userinfo dl:last-child {
+	margin: 5px 5px 0;
+}
+
+.userinfo dt {
+	margin: 10px 0 5px;
+	padding: 5px 10px;
+	background: #EFEFEF;
+	border-radius: 4px;
+}
+
+.userinfo dd {
+	margin: 0;
+	padding-left: 5px;
+}
+
+.userinfo dd + dd {
+	margin-top: 5px;
+}
+
+.orderImg {
+    display: flex;
+    justify-content: flex-start;
+    margin: 5px;
+}
+
+.orderImg div:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+
+}
+
+.orderImg div {
+    position: relative;
+    flex-basis: 23%;
+    margin: 0 1%;
+}
+
+.orderImg div img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+}
+
+.userinfo .item_status {
+	display: inline-block;
+	width: 80px;
+	margin-left: 15px;
+	padding: 2px 0;
+	color: #FFF;
+	font-size: 0.7rem;
+	font-weight: normal;
+	text-align: center;
+	border-radius: 4px;
+	vertical-align: 2px;
+}
+
+.item_status00 { background: #00F; }	/*審査中*/
+.item_status01 { background: #FF1B8D; }	/*出品中*/
+.item_status02 { background: #999; }	/*非表示*/
+.item_status03 { background: #F00; }	/*購入済み・未発送*/
+.item_status04 { background: #094; }	/*発送済み*/
+.item_status05 { background: #333; }	/*キャンセル*/
+.item_status06 { background: #333; }	/*出品期間終了*/
+.item_status07 { background: #3C4E92; }	/*非公開*/
+

@@ -1,0 +1,35 @@
+
+#serch_form1 {
+    border-color: silver;
+}
+#serch_form1 th {
+    border-color: silver;
+    border-collapse: collapse;
+    background-color: #3c8dbc;
+    white-space: nowrap;
+    color: #ffffff;
+}
+#serch_form1 td {
+    border-color: silver;
+    padding: 2px;
+    white-space: nowrap;
+}
+
+#serch_form2 {
+    border-color: solid 1px #3c8dbc;
+}
+#serch_form2 th {
+    padding: 2px;
+    padding-left: 10px;
+    padding-right:10px;
+    border-color: #3c8dbc;
+    border-bottom: solid 1px #ffffff;
+    background-color: #3c8dbc;
+    white-space: nowrap;
+    color: #ffffff;
+}
+#serch_form2 td {
+    padding: 2px;
+    padding-left: 5px;
+    border-bottom: solid 1px #3c8dbc;
+}

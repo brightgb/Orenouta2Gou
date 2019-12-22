@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+.contents {
+	margin: 20px 10px;
+	padding: 10px;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+textarea {
+	width: 100%;
+	border: 2px solid #999;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+}
+
+.mail_btn input {
+	width: 118px;
+	display: block;
+	margin: 0 auto 30px;
+	padding: 10px 0;
+	text-align: center;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}

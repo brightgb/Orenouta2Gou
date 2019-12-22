@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* 登録 */
+.mail-register {
+	margin: 20px 10px 10px;
+	padding: 10px;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+.mail-register .btn {
+	width: 80%;
+	margin: 10px auto;
+}
+
+.mail-register .btn a {
+	display: block;
+	color: #333;
+	text-align: center;
+	text-decoration: none;
+	padding: 5px 10px;
+	border-top: solid 1px #666;
+	border-left: solid 1px #999;
+	border-right: solid 1px #999;
+	border-bottom: solid 1px #999;
+	border-radius: 4px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd));
+	background: -moz-linear-gradient(top, #ffffff, #dddddd);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* 変更 */
+.add {
+	margin: 15px 10px;
+	padding: 10px;
+	border: 1px solid #CCC;
+	border-radius: 8px;
+}
+
+.add > p:first-child {
+	font-weight: bold;
+}
+
+.btn {
+	margin: 15px auto 20px;
+	text-align: center;
+}
+
+.btn a {
+	display: inline-block;
+	padding: 10px 20px;
+	color: #333;
+	font-size: 0.9em;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.acdArea {
+	margin: 15px 10px;
+}
+
+.acdHead a {
+	display: block;
+	padding: 5px 30px 5px 10px;
+	color: #666;
+	font-size: 0.9em;
+	font-weight: bold;
+	text-decoration: none;
+	background: #F4F4F4;
+	border: 1px solid #999;
+	border-radius: 4px 4px 0 0;
+	position: relative;
+}
+
+.acdClosed a {
+	border-radius: 4px;
+}
+
+.acdHead a:after {
+	content: "";
+	display: block;
+	width: 17px;
+	height: 17px;
+	background: url(/img/old/icon/icon_front_open_bottom.png);
+	background-size: 100%;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -8px;
+}
+
+.acdHead.acdClosed a:after {
+	background: url(/img/old/icon/icon_front_open_top.png);
+	background-size: 100%;
+}
+
+.acdBody {
+	padding: 10px 10px 0;
+	border-bottom: 1px solid #999;
+	border-left:   1px solid #999;
+	border-right:  1px solid #999;
+	border-radius: 0 0 4px 4px;
+}
+
+

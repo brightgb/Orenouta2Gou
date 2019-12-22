@@ -1,0 +1,541 @@
+@charset "utf-8";
+/***** メールアドレス未登録 *****/
+.caution-mail {
+	padding: 10px 5px;
+	background: #DCDEE3;
+}
+
+.caution-mail a {
+	display: block;
+	padding: 15px 20px 15px 10px;
+	color: #F00;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	background: #FFEFFF;
+	border: 2px solid #F00;
+	border-radius: 4px;
+	position: relative;
+}
+
+/***** 電話番号未登録 *****/
+.caution-tel {
+	margin: 10px;
+	padding: 10px 20px;
+	color: #F00;
+	text-align: center;
+	background: #FFC;
+	border: 1px solid #AAA;
+	border-radius: 4px;
+}
+
+.caution-tel a {
+	display: block;
+	margin-top: 5px;
+	padding: 5px 20px;
+	color: #333;
+	font-size: 0.9rem;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: solid 1px #CCC;
+	border-radius: 4px;
+}
+
+/***** 運営からのお知らせ *****/
+.AdminReport {
+	margin: 10px 5px 0;
+	background: #FFF;
+}
+
+.AdminReport a {
+	display: block;
+	padding: 5px 20px 5px 10px;
+	color: #333;
+	font-size: 0.8rem;
+	text-decoration: none;
+	background: #FFFDDD;
+	border: 2px solid #FFF100;
+	border-radius: 4px;
+	position: relative;
+}
+
+.AdminReport a:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-top: solid 2px #999;
+	border-right: solid 2px #999;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+/***** メインメニュー *****/
+.ListBlock {
+	display: table;
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 0 1px;
+	box-sizing: border-box;
+}
+
+.ListBlock > div {
+	display: table-cell;
+	width: 20%;
+	background: #000;
+	border-right: 1px solid #FFF;
+}
+
+.ListBlock > div:last-child {
+	border-right: none;
+}
+
+.ListBlock a {
+	display: block;
+	padding-top: 5px;
+	color: #FFF;
+	font-size: 0.6rem;
+	text-align: center;
+	text-decoration: none;
+	position: relative;
+}
+
+.ListBlock a span {
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 0 auto;
+	background-image: url(/img/old/icon/usertop_sprite.png);
+	background-repeat: no-repeat;
+	background-size: 150px 150px;
+}
+
+.ListBlock .ListBlock_mail  span { background-position:	 0px 	 0px; }
+.ListBlock .ListBlock_mark  span { background-position: -30px	 0px; }
+.ListBlock .ListBlock_fav   span { background-position: -60px	 0px; }
+.ListBlock .ListBlock_hifav span { background-position: -90px	 0px; }
+.ListBlock .ListBlock_group span { background-position: -120px	 0px; }
+
+.ListBlockCast div:nth-child(1) span { background-position:	 0px 	0px; }
+.ListBlockCast div:nth-child(2) span { background-position:  0px 	-90px; }
+.ListBlockCast div:nth-child(3) span { background-position: -90px 	-30px; }
+.ListBlockCast div:nth-child(4) span { background-position: -60px 	0px; }
+.ListBlockCast div:nth-child(5) span { background-position: -30px 	0px; }
+
+.ListBlock a p {
+	width: 22px;
+	line-height: 18px;
+	color: #FFF;
+	font-size: 0.7rem;
+	text-align: center;
+	background: #F00;
+	border: 2px solid #FFF;
+	border-radius: 20px;
+	box-sizing: border-box;
+	position: absolute;
+	top: 1px;
+	right: 1px;
+}
+
+/***** 女性検索リンク *****/
+.FindUser {
+	margin: 15px 30px;
+}
+
+.FindUser a {
+	display: block;
+	padding: 10px 20px 10px 55px;
+	color: #333;
+	font-size: 0.9rem;
+	font-weight: bold;
+	text-decoration: none;
+	background: #FFF;
+	box-shadow: 1px 1px 2px rgba(51, 51, 51, 0.22);
+	border: 1px solid #CCC;
+	border-radius: 4px;
+	position: relative;
+}
+
+.FindUser a span {
+	font-size: 0.7rem;
+	line-height: 1;
+}
+
+.FindUser a:before {
+	content: "";
+	display: block;
+	width: 42px;
+	height: 42px;
+	background-color: #FF1B8D;
+	background-image: url(/img/old/icon/emoji_search.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-radius: 4px 0 0 4px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.FindUser a:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-top: solid 2px #999;
+	border-right: solid 2px #999;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+/***** 女性一覧 *****/
+.performer-list .select-status {
+	display: table;
+	width: 100%;
+	margin-top: 30px;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center center;
+}
+
+.performer-list .select-status.waiting 	{ background-image: url(/img/old/select_bg4_1.png); }
+.performer-list .select-status.login 	{ background-image: url(/img/old/select_bg4_2.png); }
+.performer-list .select-status.neighbor { background-image: url(/img/old/select_bg4_3.png); }
+.performer-list .select-status.new 		{ background-image: url(/img/old/select_bg4_4.png); }
+
+.performer-list .select-status button {
+	display: table-cell;
+	width: 25%;
+	padding: 10px 0;
+	color: #666;
+	font-size: 0.8em;
+	text-align: center;
+	background: transparent;
+	border: none;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	outline: none;
+	position: relative;
+}
+
+.performer-list .content {
+	display: block;
+	margin-top: 10px;
+	overflow: hidden;
+	position: relative;
+	border-bottom: 1px solid #CCC;
+}
+
+.performer-list .content > li {
+	display: block;
+	float: left;
+	width: 33.3%;
+	text-align: center;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.performer-list .content > li:nth-last-child(n+3) {
+	border-bottom: 1px solid #CCC;
+}
+
+.performer-list .content > li:nth-child(3n+1) {
+	border-right: 1px solid #CCC;
+}
+
+.performer-list .content > li:nth-child(3n+2) {
+	border-right: 1px solid #CCC;
+}
+
+.performer-list .content > li:nth-child(3n+3) {
+	border-right: 1px solid #FFF;
+}
+
+.performer-list .content > li a {
+	display: block;
+	padding: 10px 10px 15px;
+	position: relative;
+}
+
+.login-status > div {
+	width: 40%;
+	height: 20px;
+	font-size: 0;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.login-status .status0 { background-image: url(/img/old/icon/status-offline.png); } 		/*オフライン*/
+.login-status .status1 { background-image: url(/img/old/icon/status-online.png); } 			/*ログイン中*/
+.login-status .status2 { background-image: url(/img/old/icon/status-talking.png); } 		/*通話中*/
+.login-status .status3 { background-image: url(/img/old/icon/status-waiting-voice.png); } 	/*音声通話待機*/
+.login-status .status4 { background-image: url(/img/old/icon/status-waiting-tv.png); } 		/*TV通話待機*/
+.login-status .status5 { background-image: url(/img/old/icon/status-waiting-both.png); } 	/*音声/TV通話待機*/
+
+.mark-item {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	align-items: center;
+	right: 10px;
+	top: 30px;
+	width: 22px;
+}
+.mark-item img {
+	padding-bottom: 2px;
+	/* text-align: right; */
+}
+
+.mark-item img.favorite-both{
+	width: 15px;
+	height: 15px;
+}
+
+.mark-item img.favorite-member, .mark-item img.favorite-performer{
+	width: 12px;
+	height: 12px;
+}
+
+.mark-item img.tv-ok{
+	width: 20px;
+}
+
+.profile .detail {
+	font-size: 0.7em;
+	line-height: 20px;
+	position: absolute;
+	right: 10px;
+	top:   10px;
+}
+
+.profile .thumbnail {
+	width: 100%;
+	vertical-align: bottom;
+}
+
+.content-template {
+	display: none;
+}
+
+.more a {
+	display: block;
+	padding: 5px 10px;
+	text-align: right;
+	color: #09598D;
+	font-size: 0.8em;
+	text-decoration: none;
+	background: #EEE;
+	border-bottom: 1px solid #BBB;
+	position: relative;
+}
+
+.more a:after {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-left: 5px;
+	background-image: url(/img/old/icon/emoji_more.png);
+	background-repeat: no-repeat;
+	background-size: 15px;
+	vertical-align: -2px;
+}
+
+/***** 通話待機中 *****/
+.call-waiting  {
+	margin: 15px 10px;
+	padding: 10px 10px 0;
+	text-align: center;
+	background: #E9E9FF;
+	border: 2px solid #00F;
+	border-radius: 4px;
+}
+
+.call-waiting.error {
+	background: #FFFDDD;
+	border: 2px solid #FFF100;
+}
+
+.call-waiting .stop {
+	margin: 15px auto;
+
+}
+
+.call-waiting .stop a {
+	display: inline-block;
+	padding: 5px 20px;
+	color: #333;
+	font-size: 0.9rem;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	position: relative;
+}
+
+.call-waiting .stop a:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	vertical-align: -5px;
+	background-image: url(/img/old/icon/usertop_sprite.png);
+	background-repeat: no-repeat;
+	background-size: 100px 100px;
+	background-position: 0px -80px;
+}
+
+/***** 各種コンテンツ *****/
+.menu-bar {
+	margin-top: 15px;
+	padding: 10px;
+	color: #FFF;
+	font-weight: bold;
+	background: #000;
+	position: relative;
+}
+
+.menu-bar:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	vertical-align: -4px;
+	background-image: url(/img/old/icon/usertop_sprite.png);
+	background-repeat: no-repeat;
+	background-size: 100px 100px;
+}
+
+.menu-content {
+	display: flex;
+	overflow-x: auto;
+	padding: 10px 0;
+	border-bottom: 1px solid #BBB;
+}
+
+.menu-content .item {
+	display: flex;
+	flex: 0 0 30vw;
+	height: 30vw;
+	padding: 0 5px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.menu-content .item img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+
+/***** 完全撮り下ろしギャラリー *****/
+#pickup-selfie .menu-bar:before	{ background-position: -20px -40px; }
+/***** 今週のピックアップガール *****/
+#pickup-girl .menu-bar:before	{ background-position: -40px -40px; }
+/***** 顔出し無料自己紹介動画 *****/
+#pickup-movie .menu-bar:before	{ background-position: -60px -40px; }
+
+
+/***** バナー *****/
+.BannerArea {
+	margin: 15px 10px;
+	text-align: center;
+}
+
+.BannerArea > a {
+	display: block;
+}
+
+.BannerArea > a + a {
+	margin-top: 10px;
+}
+
+.BannerArea img {
+	width: 100%;
+	vertical-align: bottom;
+}
+
+.Banner_ma10 {
+	margin: 10px;
+}
+
+/***** モーダル *****/
+#modal-overlay {
+	display: none;
+	width: 100%;
+	height: 120%;
+	background-color: rgba( 0,0,0, 0.6 );
+	z-index: 10000;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.modal {
+	display: none;
+	width: 80%;
+	margin: 0;
+	padding: 10px;
+	background: #FFF;
+	position: fixed;
+	border: 2px solid #AAA;
+	border-radius: 4px;
+	z-index: 99999;
+}
+
+.modal-close {
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+	background: url(/img/old/icon/close.png) no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: -8px;
+	right: -8px;;
+}
+
+/***** モーダル 新規登録者向け *****/
+/***** モーダル 電話番号未登録 *****/
+.modal .modal-content img {
+	width: 100%;
+}
+.modal .button-close {
+	display: block;
+	margin: 10px;
+	padding: 5px 20px;
+	color: #333;
+	font-size: 0.9rem;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	cursor: pointer;
+}
+
+.modal label {
+	display: block;
+	font-size: 0.9rem;
+	text-align: center;
+}
+

@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+.contents {
+	margin: 20px 10px;
+	padding: 10px;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+#image-data {
+	margin-top: 15px;
+	padding: 0px 10px;
+	text-align :center;
+}
+#image-data img {
+	max-width: 355px;
+	max-height: 355px;
+	vertical-align: bottom;
+}
+
+input[type="text"], textarea {
+	width: 100%;
+	border: 2px solid #999;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+input[type="text"] {
+	height: 30px;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+.bbs_btn input {
+	width: 118px;
+	display: block;
+	margin: 30px auto;
+	padding: 10px 0;
+	text-align: center;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+#title a {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	text-decoration: none;
+	background-image: url(/img/old/icon/album_sprite.png);
+	background-repeat: no-repeat;
+	background-size: 150px;
+	background-position: -100px -25px;
+	position: absolute;
+	top: 50%;
+	margin-top: -13px;
+	right: 10px;
+	cursor: pointer;
+}
+
+.upload-area {
+	width: 100%;
+	display: table;
+	margin: 10px 0;
+	padding: 0 5px;
+	background: #FFF;
+	box-sizing: border-box;
+}
+
+.upload-area > div {
+	display: table-cell;
+	padding: 0 5px;
+	vertical-align: top;
+	box-sizing: border-box;
+}
+
+.upload-area .upload {
+	margin: 20px auto;
+}
+
+.upload-area .upload button {
+	width: 100%;
+    display: inline-block;
+    padding: 10px 0;
+    color: #00F;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+	background: #FFF;
+    border: 2px solid #00F;
+    border-radius: 50px;;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.upload-area .upload button:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	background-image: url(/img/old/icon/album_sprite.png);
+	background-size: 120px auto;
+	-webkit-background-size: 120px auto;
+	background-repeat: no-repeat;
+	background-position: -60px -20px;
+	vertical-align: -6px;
+}
+
+.upload-area .rotate {
+	width: 70px;
+}
+
+.upload-area .rotate button {
+	width: 100%;
+	display: block;
+	padding: 5px 0;
+	font-size: 0.7em;
+	text-align: center;
+	line-height: 11px;
+	background: #FEFEFE;
+	background: linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background: -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+
+.upload-area  span {
+	display: block;
+	margin: 0 auto 2px;
+	width: 20px;
+	height: 20px;
+	background-image: url(/img/old/icon/album_sprite.png);
+	background-size: 120px auto;
+	-webkit-background-size: 120px auto;
+	background-repeat: no-repeat;
+}
+
+.upload-area .rotate   span { background-position: -20px 0; }
+.upload-area .imgcheck span { background-position: 0 -20px; }
+
+.modify-area .rotate {
+	width: 60%;
+	margin: 15px auto;
+}
+
+.modify-area .rotate button {
+	width: 100%;
+	display: inline-block;
+	padding: 5px 0;
+	font-size: 0.9em;
+	text-align: center;
+	/* line-height: 11px; */
+	background: #FEFEFE;
+	background: linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background: -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+.modify-area .rotate span {
+	display: inline-block;
+    margin-right: 5px;
+    width: 20px;
+	height: 20px;
+	vertical-align: bottom;
+	background-image: url(/img/old/icon/album_sprite.png);
+	background-size: 120px auto;
+	background-position: -20px 0;
+	-webkit-background-size: 120px auto;
+	background-repeat: no-repeat;
+}

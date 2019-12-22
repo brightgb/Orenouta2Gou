@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+#title {
+	text-align: left;
+}
+
+#title a {
+	display: inline-block;
+	padding: 0 5px;
+	color: #FFF;
+	font-size: 0.9rem;
+	text-decoration: none;
+	line-height: 1.4rem;
+	border: 1px solid #FFF;
+	border-radius: 4px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -12px;
+	cursor: pointer;
+}
+
+.setting_list a {
+	display: block;
+	padding: 10px;
+	color: #333;
+	text-decoration: none;
+	background: #F8F8F8;
+	border-top: 1px solid #CCC;
+	position: relative;
+}
+
+.setting_list a:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-top: solid 2px #999;
+	border-right: solid 2px #999;
+	transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+.setting_list img {
+	width: 15px;
+	vertical-align: -2px;
+	margin-right: 3px;
+}
+
+.contents_bg {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	margin-top: -85px;
+}
+
+#title + #from_to_count {
+	margin-top: 8px;
+}
+
+a[name="up"] + #pagerBtn + hr {
+	display: none;
+}
+
+.listbox_area {
+	display: block;
+	margin: 8px 0;
+	padding: 5px;
+	background: #DCDEE3;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+
+.listbox_area > div.listbox:last-child {
+	margin-bottom: 0;
+}
+
+.listbox {
+	margin-bottom: 3px;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 4px;
+	position: relative;
+}
+
+.cast_prof {
+	display: table;
+	width: 100%;
+	padding: 10px;
+	text-decoration: none;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.cast_prof > div {
+	display: table-cell;
+}
+
+.cast_prof > .cast_img {
+	width: 60px;
+}
+
+.cast_prof > .cast_img img {
+	width: 100%;
+	border-radius: 50%;
+}
+
+.cast_prof > .cast_name {
+	vertical-align: top;
+	padding-left: 10px;
+}
+
+.cast_prof .status {
+	display: inline-block;
+	width: 70px;
+	margin-bottom: 3px;
+	padding: 2px 0;
+	text-align: center;
+	color: #FFF;
+	font-size: 0.7em;
+	border-radius: 4px;
+}
+
+.cast_prof .status-offline {	background: #999; }		/*オフライン*/
+.cast_prof .status-online  {	background: #FF1B8D; }	/*ログイン中*/
+.cast_prof .status-waiting {	background: #F00; }		/*待機中*/
+.cast_prof .status-talking {	background: #00F; }		/*通話中*/
+
+.cast_prof .status_area img {
+	vertical-align: -2px;
+}
+
+.hn_area {
+	position: relative;
+}
+
+.cast_name .cast_hn {
+	padding-right: 60px;
+	font-size: 0.9em;
+}
+
+.cast_name .cast_hn span {
+	font-size: 0.7rem;
+}
+
+a.prof_link  {
+	padding: 0 5px;
+	font-size: 0.8rem;
+	color: #FFF;
+	text-decoration: none;
+	background: #666;
+	border-radius: 4px;
+	position: absolute;
+	right: 0;
+	top: -1px;
+}
+
+a.prof_link:after {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-image: url(/img/old/icon/icon_ya.png);
+	background-size: 15px;
+	margin-left: 5px;
+	vertical-align: -3px;
+}
+
+a.mod, a.delete {
+	display: inline-block;
+	padding: 0 5px;
+	color: #666;
+	font-size: 0.9em;
+	font-weight: normal;
+	text-decoration: none;
+	border: 1px solid #999;
+	border-radius: 4px;
+	position: absolute;
+	right: 0;
+	top: -1px;
+}
+
+.cast_cmt {
+	margin-top: 5px;
+	padding: 6px 10px;
+	font-size: 0.8em;
+	background: #FFF;
+	background:   linear-gradient(to bottom, #FFF, #FFE6FF);
+	background: -webkit-linear-gradient(top, #FFF, #FFE6FF);
+	background:    -moz-linear-gradient(top, #FFF, #FFE6FF);	border: solid 1px #999;
+	border-radius: 4px;
+	position: relative;
+}
+
+.cast_cmt:before {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	background-image: url(/img/old/icon/balloon2.png);
+	background-size: contain;
+	background-position: 0px 0px;
+	position: absolute;
+	top: 5px;
+	left: -8px;
+}
+
+.memobox {
+	margin: 10px;
+	background-image: url(/img/old/noteline.png);
+	background-position: 0px -2px;
+}
+
+.memobox .memobar {
+	padding: 0 5px;
+	font-size: 0.9rem;
+	color: #999;
+	position: relative;
+}
+
+.memobox .memo_date {
+	color: #999;
+	font-size: 0.9rem;
+	position: absolute;
+	right: 5px;
+	bottom: 0;
+}
+
+.memobox .memotxt {
+	padding: 0 5px 1px;
+	font-size: 0.9rem;
+	position: relative;
+}
+
+.memobox .memotxt a {
+	display: block;
+	color: #F00;
+	text-align: right;
+	font-size: 0.9rem;
+	text-decoration: none;
+}
+
+.memobox .memotxt a img {
+	width: 16px;
+	margin-right: 3px;
+	vertical-align: -2px;
+}
+
+.no_data {
+	margin: 20px 10px;
+	padding: 20px 10px;
+	text-align: center;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+.hr_none #from_to_count + hr {
+	display: none;
+}
+

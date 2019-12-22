@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+img {
+	vertical-align: bottom;
+}
+
+.error > p {
+	margin: 15px 0;
+	color: #F00;
+	font-weight: bold;
+    text-align: center;
+}
+
+.req_point {
+	width: 60%;
+	margin: 30px auto;
+	padding: 10px;
+	border: 3px solid #D48700;
+	border-radius: 8px;
+}
+
+.req_point table {
+	width: 100%;
+}
+
+.req_point td {
+	padding: 10px;
+}
+
+.req_point td:last-child {
+	font-weight: bold;
+	text-align: right;
+}
+
+.edform {
+	margin: 10px;
+	border: 2px solid #E5E5E5;
+}
+
+br + .editem {
+	border-top: 1px solid #E5E5E5;
+}
+
+.editem {
+	display: table;
+	width: 100%;
+}
+
+.edlbl {
+	display: table-cell;
+	width: 35%;
+	padding: 5px;
+	text-align: right;
+	vertical-align: middle;
+	background: #F6F6F6;
+	box-sizing: border-box;
+}
+
+.cvvtoha {
+	display: none;
+}
+
+.edtxt {
+	display: table-cell;
+	width: 65%;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.edtxt input {
+	width: 100%;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+.edtxt #txtExpireMM,
+.edtxt #txtExpireYY {
+	width: 20%;
+}
+
+.expireMM {
+	display: inline-block;
+}
+
+.expireYY {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.expireMM:after {
+	content:" ";
+	display: inline-block;
+}
+
+.expireYY:after {
+	content:"";
+	display: inline-block;
+}
+
+.notice {
+	margin-top: 5px;
+	color: #999;
+	font-size: 0.9em;
+}
+
+.notice + .notice {
+	margin-top: 0;
+}
+
+.pay_btn {
+	margin: 0 10px 30px;
+}
+
+.pay_btn input {
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	color: #FFF;
+	font-size: 1.3rem;
+	font-weight: bold;
+	text-align: center;
+	background: #FFD451;
+	border: none;
+	border-radius: 8px;
+	box-sizing: border-box;
+}
+
+.header {
+	padding: 10px 0;
+	text-align: center;
+	background: #FFCC51;
+	border-bottom: 3px solid #C99700;
+}
+
+.txt {
+	padding: 10px;
+	background: #FFEAA9;
+}
+
+.footer {
+	padding: 5px 0;
+	text-align: center;
+	background: #FFCC51;
+}
+
+.footer > div {
+	margin-bottom: 10px;
+}
+
+.footer > div:last-child {
+	margin-bottom: 0;
+}

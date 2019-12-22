@@ -1,0 +1,317 @@
+@charset "utf-8";
+
+.title {
+	height: 2em;
+	line-height: 2em;
+	margin-top: 2px;
+	padding: 3px 8px;
+	font-size: 1.1em;
+	font-weight: bold;
+	border-top: solid 3px #FF398A;
+	border-bottom: solid 1px #CCC;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FDFEF9), color-stop(1, #EFF1F0));
+	background: -moz-linear-gradient(top, #FDFEF9, #EFF1F0 100%);
+}
+
+.listbox_area {
+	margin: 8px 0;
+	padding: 5px;
+	background: #DCDEE3;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+
+.listbox_area > div.listbox:last-child {
+	margin-bottom: 0;
+}
+
+.listbox {
+	margin-bottom: 5px;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.cast_prof {
+	display: block;
+	width: 100%;
+	padding: 10px 10px 0;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+.prof_link {
+	padding: 0 5px;
+	font-size: 0.8rem;
+	color: #FFF;
+	text-decoration: none;
+	background: #666;
+	border-radius: 4px;
+	position: absolute;
+	right: 0;
+	top: 21px;
+}
+
+.prof_link:after {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-image: url(/img/old/icon/icon_ya.png);
+	background-size: 15px;
+	margin-left: 5px;
+	vertical-align: -3px;
+}
+
+.cast_prof > div {
+	display: table-cell;
+}
+
+.cast_prof > .cast_img img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	vertical-align: bottom;
+}
+
+.cast_prof .date {
+	font-size: 0.8em;
+	color: #999;
+}
+
+.cast_prof > .cast_name {
+	width: 100%;
+	vertical-align: top;
+	padding-left: 10px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.cast_hn {
+	padding-right: 60px;
+	font-size: 0.9em;
+}
+
+.cast_prof .status {
+	width: 70px;
+	margin-bottom: 3px;
+	padding: 2px 0;
+	text-align: center;
+	color: #FFF;
+	font-size: 0.7rem;
+	border-radius: 4px;
+}
+
+.cast_prof .status-offline {	background: #999; }		/*オフライン*/
+.cast_prof .status-online  {	background: #FF1B8D; }	/*ログイン中*/
+.cast_prof .status-waiting {	background: #F00; }		/*待機中*/
+.cast_prof .status-talking {	background: #00F; }		/*通話中*/
+
+.cast_prof .status_area img {
+	vertical-align: -2px;
+}
+
+.cast_date {
+	font-size: 0.8em;
+	color: #999;
+}
+
+.sort_area {
+	width: 70%;
+	margin: 15px auto;
+	padding: 10px 0;
+	text-align: center;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.sort_area input {
+	display: inline-block;
+	margin-left: 10px;
+	padding: 10px;
+	text-align: center;
+	color: #333;
+	text-decoration: none;
+	font-size: 0.9em;
+	border: 1px solid #999;
+	border-radius: 3px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+}
+
+.hr_none #from_to_count + hr {
+	display: none;
+}
+
+.no_data {
+	margin: 20px 10px;
+	padding: 20px 10px;
+	text-align: center;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+.setting_list a {
+	display: block;
+	padding: 10px;
+	color: #333;
+	text-decoration: none;
+	background: #F8F8F8;
+	border-top: 1px solid #CCC;
+	position: relative;
+}
+
+.setting_list a:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-top: solid 2px #999;
+	border-right: solid 2px #999;
+	transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+.cast_bbs {
+	display: block;
+	margin: 8px 10px 10px;
+	padding: 6px 10px;
+	text-decoration: none;
+	background: #FFF;
+	background:   linear-gradient(to bottom, #FFF, #FFE6FF);
+	background: -webkit-linear-gradient(top, #FFF, #FFE6FF);
+	background:    -moz-linear-gradient(top, #FFF, #FFE6FF);
+	border: solid 1px #999;
+	border-radius: 4px;
+	position: relative;
+}
+
+.cast_bbs:after,
+.cast_bbs:before {
+	content: " ";
+	height: 0;
+	width: 0;
+	border: solid transparent;
+	position: absolute;
+	bottom: 100%;
+	left: 25px;
+}
+
+.cast_bbs:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #FFF;
+	border-width: 6px;
+	margin-left: -6px;
+}
+
+.cast_bbs:before {
+	border-color: rgba(153, 153, 153, 0);
+	border-bottom-color: #666;
+	border-width: 7px;
+	margin-left: -7px;
+}
+
+.bbs_title {
+	font-weight: bold;
+}
+
+.bbs_doc {
+	font-size: 0.8em;
+	color: #666;
+	position: relative;
+}
+
+.bbs_doc a {
+	color: #666;
+	text-decoration: none;
+}
+
+/* 女性ごとの絞込み時 */
+.data_header {
+	margin: 0 10px;
+	padding: 5px 10px;
+	color: #FFF;
+	background: #666;
+	border-radius: 4px 4px 0 0;
+}
+
+.data_area > div:last-child {
+	border-radius: 0 0 4px 4px;
+	overflow: hidden;
+}
+
+.data_box {
+	margin: 0 10px;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	position: relative;
+}
+
+.data_box > a {
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	position: relative;
+}
+
+.data_box > a:after {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-top: 2px solid #666;
+	border-right: 2px solid #666;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+.data_box .bbs_title {
+	color: #E50065;
+	font-weight: bold;
+}
+
+.data_box .bbs_doc {
+	font-size: 0.8em;
+}
+
+.data_box .bbs_date {
+	margin-top: 5px;
+	padding-right: 15px;
+	color: #666;
+	font-size: 0.8em;
+	text-align: right;
+}
+
+.diary_prof {
+	text-align: center;
+	margin: 20px auto;
+	width: 90%;
+}
+
+.diary_prof a {
+	width: 100%;
+	display: block;
+	padding: 5px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}

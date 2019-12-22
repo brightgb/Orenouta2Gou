@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+#title a {
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	text-decoration: none;
+	background-image: url(/img/old/icon/album_sprite.png);
+	background-repeat: no-repeat;
+	background-size: 150px;
+	background-position: -100px -25px;
+	position: absolute;
+	top: 50%;
+	margin-top: -13px;
+	right: 10px;
+	cursor: pointer;
+}
+
+.count_area {
+	position: relative;
+}
+
+.data_area {
+	padding: 5px;
+    background: #DCDEE3;
+}
+
+.data_box {
+	padding: 10px;
+	background: #FFF;
+    border: 1px solid #999;
+}
+
+.data_cast_del + .data_box {
+    border-bottom: none;
+}
+
+.data_box .data_date {
+	margin-bottom: 5px;
+	color: #666;
+	font-size: 0.8em;
+}
+
+.data_box .data_date img {
+	width: 16px;
+	margin-right: 2px;
+	vertical-align: -3px;
+}
+
+.image-wrapper {
+	margin-top: 10px;
+	height: auto;
+	position: relative;
+}
+
+.image-wrapper:before {
+	content: "";
+	display: block;
+	padding-top: 100%;
+}
+
+.image-wrapper #image-data {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.image-wrapper #image-data img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+
+.data_btm {
+	background: #EEE;
+    border-top: 1px dotted #999;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+}
+
+.cast_btn input {
+	width: 50%;
+	display: block;
+	margin: 10px auto;
+	padding: 10px 0;
+	font-size: 0.9rem;
+	text-align: center;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.rotate {
+	margin: 10px auto 0;
+}
+
+.rotate button  {
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	font-size: 0.9em;
+	text-align: center;
+	background: #FEFEFE;
+	background: linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background: -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.rotate button:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	background-image: url(/img/old/icon/album_sprite.png);
+	background-size: 120px auto;
+	-webkit-background-size: 120px auto;
+	background-repeat: no-repeat;
+	background-position: -20px 0;
+	vertical-align: -6px;
+}
+

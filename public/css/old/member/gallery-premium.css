@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+.sort-area {
+	margin: 15px 10px;
+	padding: 10px 0;
+	text-align: center;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.sort-area input {
+	display: inline-block;
+	margin-left: 10px;
+	padding: 10px;
+	color: #333;
+	font-size: 0.9em;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+
+.discription {
+	margin: 20px 10px;
+	padding: 10px;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+.used_btn {
+	width: 60%;
+	margin: 0 auto 20px;
+}
+
+.used_btn a {
+	display: block;
+	padding: 5px 0;
+	color: #333;
+	font-size: 0.9em;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #CCC;
+	border-radius: 4px;
+	position: relative;
+}
+
+.listbox_area {
+	margin: 8px 0;
+	padding: 5px;
+	background: #DCDEE3;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+
+.no_data {
+	margin: 20px 10px;
+	padding: 20px 10px;
+	text-align: center;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+
+
+.listbox {
+	margin-bottom: 5px;
+	padding: 10px;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 4px;
+	position: relative;
+}
+
+.listbox_area > div.listbox:last-child {
+	margin-bottom: 0;
+}
+
+.cast_prof {
+	display: table;
+	width: 100%;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px dashed #CCC;
+}
+
+.cast_prof > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.cast_prof .prof_img {
+	width: 60px;
+}
+
+.cast_prof .prof_img img {
+	width: 100%;
+	border-radius: 50%;
+	vertical-align: bottom;
+}
+
+.cast_prof .dl_flag img  {
+	border: 2px solid #E23668;
+}
+
+.cast_prof .cast_name {
+	padding-left: 10px;
+	font-size: 0.8rem;
+}
+
+.data_main {
+	position: relative;
+}
+
+
+.data_main .date {
+	color: #999;
+	font-size: 0.8em;
+	position: absolute;
+	top: 3px;
+	right: 0;
+}
+
+.data_main .date img {
+	width: 16px;
+	margin-right: 3px;
+	vertical-align: -3px;
+}
+
+.data_main .category {
+	display: inline-block;
+	margin-bottom: 8px;
+	padding: 2px 5px;
+	color: #FF1B8D;
+	font-size: 0.8em;
+	text-align: center;
+	border: 1px solid #FF1B8D;
+	border-radius: 4px;
+}
+
+.data_main .thumbnail{
+	margin: 0 25%;
+	position: relative;
+}
+
+.data_main .thumbnail:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.data_main .thumbnail .container {
+	position: absolute;
+    top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.data_main .thumbnail .container img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+
+
+.view_btn a {
+	display: block;
+	width: 60%;
+	margin: 10px auto 0;
+	padding: 5px 0;
+	color: #FFF;
+	font-size: 0.9em;
+	text-align: center;
+	text-decoration: none;
+	background: #00F;
+	background:   linear-gradient(to bottom, #66F, #00F);
+	background: -webkit-linear-gradient(top, #66F, #00F);
+	background:    -moz-linear-gradient(top, #66F, #00F);
+	border: 1px solid #00F;
+	border-radius: 4px;
+	position: relative;
+}
+
+.view_btn a:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-image: url(/img/old/icon/emoji_camera2.png);
+	background-size: 20px;
+	background-position: 0px 0px;
+	vertical-align: -5px;
+	margin-right: 5px;
+}
+
+.cast_cmt {
+	margin-top: 10px;
+	background: #FFF;
+	background:   linear-gradient(to bottom, #FFF, #FFE6FF);
+	background: -webkit-linear-gradient(top, #FFF, #FFE6FF);
+	background:    -moz-linear-gradient(top, #FFF, #FFE6FF);
+	border: 1px solid #CCC;
+	border-radius: 4px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.cast_cmt .acdHead {
+	margin: 0;
+}
+
+.cast_cmt .acdHead a {
+	display: block;
+	padding: 6px 10px 2px;
+	color: #F00;
+	font-size: 0.8rem;
+	font-weight: bold;
+	text-decoration: none;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.cast_cmt .acdHead a:after {
+	content: "閉じる";
+	padding-left: 14px;
+	color: #333;
+	font-size: 0.7rem;
+	font-weight: normal;
+	background-image: url(/img/old/icon/emoji_close.png);
+	background-repeat: no-repeat;
+	background-size: 12px 12px;
+	background-position: 0 4px;
+	position: absolute;
+	right: 10px;
+	bottom: 0px;
+}
+
+.cast_cmt .acdClosed a:after {
+	content: "続きを読む";
+	background-image: url(/img/old/icon/emoji_open.png);
+	bottom: 3px;
+}
+
+.cast_cmt .acdClosed a {
+	height: 30px;
+	padding-right: 80px;
+}
+
+.cast_cmt .acdBody {
+	padding: 0 10px 20px;
+	font-size: 0.75rem;
+}

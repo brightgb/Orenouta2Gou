@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+#title + #from_to_count {
+	margin-top: 8px;
+}
+
+.hr_none {
+	margin-bottom: 8px;
+}
+
+a[name="up"] + #pagerBtn + hr,
+.hr_none > hr {
+	display: none;
+}
+
+.ReportArea {
+	margin: 8px 0;
+	padding: 5px;
+	background: #DCDEE3;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+
+.ReportBox {
+	margin-bottom: 5px;
+	padding: 10px;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.ReportDate {
+	color: #999;
+	font-size: 0.9em;
+}
+
+.ReportTitle {
+	font-weight: bold;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #CCC;
+}
+
+.no_data {
+	margin: 20px 10px;
+	padding: 20px 10px;
+	text-align: center;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 8px;
+}
+

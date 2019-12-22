@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+.listbox_area {
+	display: block;
+	margin-top: 8px;
+	padding: 5px;
+	background: #DCDEE3;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+
+.listbox_area > div.listbox:last-child {
+	margin-bottom: 0;
+}
+
+.listbox {
+	margin-bottom: 5px;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.man_prof {
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	position: relative;
+}
+
+.man_prof:after {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-top: solid 2px #666;
+	border-right: solid 2px #666;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+.man_prof .call-result div {
+	font-size: 0.7em;
+}
+
+.date {
+	color: #999;
+	font-size: 0.8em;
+}
+
+.lst_select {
+	width: 80%;
+	margin: 15px auto;
+	padding: 10px 0;
+	text-align: center;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.lst_select br {
+	display: none;
+}
+
+.lst_select input {
+	display: inline-block;
+	margin-left: 10px;
+	padding: 10px;
+	color: #333;
+	font-size: 0.9em;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+
+.no_data {
+	margin: 20px 10px;
+	padding: 20px 10px;
+	text-align: center;
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 8px;
+}

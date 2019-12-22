@@ -1,0 +1,1237 @@
+@charset "utf-8";
+
+#UserTop #mainContent {
+	overflow: hidden;
+}
+
+/***** AdminReport インフォメーション *****/
+#UserTop .AdminReport {
+	margin: 10px 5px 0;
+	background: #FFF;
+}
+
+#UserTop .AdminReport a {
+	display: block;
+	padding: 5px 20px 5px 10px;
+	color: #333;
+	font-size: 0.8rem;
+	text-decoration: none;
+	background: #FFFDDD;
+	border: 2px solid #FFF100;
+	border-radius: 4px;
+	position: relative;
+}
+
+#UserTop .AdminReport a:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+  border-top: solid 2px #999;
+  border-right: solid 2px #999;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+/***** MailErr メール転送エラー *****/
+#UserTop .MailErr {
+	padding: 10px 5px;
+	background: #DCDEE3;
+}
+
+#UserTop .MailErr a {
+	display: block;
+	padding: 15px 20px 15px 10px;
+	color: #F00;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	background: #FFEFFF;
+	border: 2px solid #F00;
+	border-radius: 4px;
+	position: relative;
+}
+
+#UserTop .MailErr a:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	vertical-align: -5px;
+	background-image: url("../../ViComm/man/Image/A001/img/emoji_ihan_y.png");
+	background-repeat: no-repeat;
+	background-size: 20px;
+}
+
+#UserTop .MailErr a:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+  border-top: solid 2px #999;
+  border-right: solid 2px #999;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+/***** UserProf プロフィール *****/
+#UserTop .UserProf {
+	display: table;
+	width: 100%;
+	margin: 10px 0;
+	background: #FFF;
+}
+
+#UserTop .UserProf > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#UserTop .UserProfL {
+	width: 30%;
+	position: relative;
+}
+
+#UserTop .UserProfL img {
+	width: 100%;
+	padding: 0 10px 0 15px;
+	box-sizing: border-box;
+}
+
+#UserTop .UserProfR {
+	padding-right: 15px;
+}
+
+#UserTop .UserProfR .ModifyProf a {
+	display: block;
+	padding: 5px 20px 5px 10px;
+	color: #333;
+	font-size: 0.9rem;
+	text-decoration: none;
+	border: 1px solid #999;
+	border-radius: 4px 4px 0 0;
+	position: relative;
+}
+
+#UserTop .UserProfR .ModifyProf a:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+  border-top: solid 2px #999;
+  border-right: solid 2px #999;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+#UserTop .UserProfR .PointAdd {
+	padding: 5px 10px;
+	font-size: 0.9rem;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	border-radius: 0 0 4px 4px;
+	position: relative;
+}
+
+#UserTop .UserProfR .PointAdd span {
+	color: #F00;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+#UserTop .UserProfR .PointAdd a {
+	display: inline-block;
+	padding: 0 5px;
+	color: #FFF;
+	text-decoration: none;
+	line-height: 1.4rem;
+	background: #F60;
+	border-radius: 4px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -11px;
+}
+
+/***** ListBlock *****/
+#UserTop .ListBlock {
+	display: table;
+	width: 100%;
+	margin-bottom: 10px;
+	padding: 0 1px;
+	box-sizing: border-box;
+}
+
+#UserTop .ListBlock > div {
+	display: table-cell;
+	width: 20%;
+	background: #000;
+	border-right: 1px solid #FFF;
+}
+
+#UserTop .ListBlock > div:last-child {
+	border-right: none;
+}
+
+#UserTop .ListBlock a {
+	display: block;
+	padding-top: 5px;
+	color: #FFF;
+	font-size: 0.6rem;
+	text-align: center;
+	text-decoration: none;
+	position: relative;
+}
+
+#UserTop .ListBlock a span {
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 0 auto;
+	background-image: url(/img/old/icon/usertop_sprite.png);
+	background-repeat: no-repeat;
+	background-size: 150px 150px;
+}
+
+#UserTop .ListBlock .ListBlock_mail  span { background-position:	 0px 	 0px; }
+#UserTop .ListBlock .ListBlock_mark  span { background-position: -30px	 0px; }
+#UserTop .ListBlock .ListBlock_fav   span { background-position: -60px	 0px; }
+#UserTop .ListBlock .ListBlock_hifav span { background-position: -90px	 0px; }
+#UserTop .ListBlock .ListBlock_group span { background-position: -120px	 0px; }
+
+#UserTop .ListBlockCast div:nth-child(1) span { background-position:	 0px   0px; }
+#UserTop .ListBlockCast div:nth-child(2) span { background-position: 	 0px -90px; }
+#UserTop .ListBlockCast div:nth-child(3) span { background-position: -90px -30px; }
+#UserTop .ListBlockCast div:nth-child(4) span { background-position: -60px	 0px; }
+#UserTop .ListBlockCast div:nth-child(5) span { background-position: -30px	 0px; }
+
+#UserTop .ListBlock a p {
+	width: 22px;
+	line-height: 18px;
+	color: #FFF;
+	font-size: 0.7rem;
+	text-align: center;
+	background: #F00;
+	border: 2px solid #FFF;
+	border-radius: 20px;
+	box-sizing: border-box;
+	position: absolute;
+	top: 1px;
+	right: 1px;
+}
+
+#UserTop .MenuBar {
+	padding: 10px;
+	color: #FFF;
+	font-weight: bold;
+	background: #000;
+	position: relative;
+}
+
+#UserTop .MenuBar:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	vertical-align: -4px;
+	background-image: url(/img/old/icon/usertop_sprite.png);
+	background-repeat: no-repeat;
+	background-size: 100px 100px;
+}
+
+#UserTop .OnlineUserTitle:before { background-position: 	0px	 -40px; }
+#UserTop .Pickup07Title:before	 { background-position: -20px	 -40px; }
+#UserTop .RecommendTitle:before	 { background-position: -40px	 -40px; }
+#UserTop .Pickup01Title:before	 { background-position: -60px	 -40px; }
+
+#UserTop .MenuBarMan01:before		 { background-position: -80px	 -40px; }
+#UserTop .MenuBarMan02:before		 { background-position: 	0px	 -60px; }
+
+#UserTop .MenuBarCast01:before	 { background-position: -80px	 -40px; }
+#UserTop .MenuBarCast02:before	 { background-position: 	0px		 0px; }
+#UserTop .MenuBarCast03:before	 { background-position: -20px	 -60px; }
+#UserTop .MenuBarCast04:before	 { background-position: 	0px	 -60px; }
+#UserTop .MenuBarCast05:before	 { background-position: -40px	 -60px; }
+#UserTop .MenuBarCast06:before	 { background-position: -80px	 -60px; }
+
+#UserTop .PickupTitle {
+	margin-top: 15px;
+}
+
+#UserTop .MenuBarMan01 {
+	margin-top: 15px;
+}
+
+#UserTop .SubMenuBar {
+	padding: 5px 10px;
+	color: #FFF;
+	font-size: 0.9rem;
+	text-align: center;
+	background: #666;
+}
+
+/***** OnlineUser 待機女性 *****/
+#UserTop .OnlineUserPic {
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+
+#UserTop .OnlineUserPic > div {
+	float: left;
+	width: 33.3%;
+	text-align: center;
+	border-bottom: 1px solid #CCC;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+#UserTop .OnlineUserPic > div:last-child:after {
+	content: "";
+	width: 100%;
+	height: 1px;
+	background: #CCC;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+#UserTop .OnlineUserPic > div:nth-child(3n+1) {
+  border-right: 1px solid #CCC;
+}
+
+#UserTop .OnlineUserPic > div:nth-child(3n+2) {
+  border-right: 1px solid #CCC;
+}
+
+#UserTop .OnlineUserPic > div:nth-child(3n+3) {
+  border-right: 1px solid #FFF;
+}
+
+#UserTop .OnlineUserPic > div a {
+	display: block;
+	padding: 10px 0 15px;
+}
+
+#UserTop .OnlineUserPic > div img:not(.status) {
+	width: 100%;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+
+#UserTop .OnlineUserPic > div img.status {
+	width: 33%;
+}
+
+#UserTop .OnlineUserPic a {
+	display: block;
+	padding-top: 5px;
+	color: #333;
+	font-size: 0.7em;
+	text-decoration: none;
+}
+
+#UserTop .OnlineUserMore a {
+	display: block;
+	padding: 5px 10px;
+	text-align: right;
+	color: #09598D;
+	font-size: 0.8em;
+	text-decoration: none;
+	border-bottom: 1px solid #BBB;
+	background: #EEE;
+}
+
+#UserTop .OnlineUserMore a:after {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-left: 5px;
+	background-image: url("../../ViComm/man/Image/A001/img/emoji_more.png");
+	background-repeat: no-repeat;
+	background-size: 15px;
+	vertical-align: -2px;
+}
+
+/***** FindUser 全体検索 *****/
+#UserTop .FindUser {
+	margin: 15px 30px;
+}
+
+#UserTop .FindUser a {
+	display: block;
+	padding: 10px 20px 10px 55px;
+	color: #333;
+	font-size: 0.9rem;
+	font-weight: bold;
+	text-decoration: none;
+	background: #FFF;
+	box-shadow: 1px 1px 2px rgba(51, 51, 51, 0.22);
+	border: 1px solid #CCC;
+	border-radius: 4px;
+	position: relative;
+}
+
+#UserTop .FindUser a span {
+	font-size: 0.7rem;
+	line-height: 1;
+}
+
+#UserTop .FindUser a:before {
+	content: "";
+	display: block;
+	width: 42px;
+	height: 42px;
+	background-color: #FF1B8D;
+	background-image: url(/img/old/icon/emoji_search.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+  border-radius: 4px 0 0 4px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#UserTop .FindUser a:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+  border-top: solid 2px #999;
+  border-right: solid 2px #999;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+/***** StartWaitting 通話待機設定 *****/
+#UserTop .StartWaitting {
+	margin: 15px 30px;
+}
+
+#UserTop .StartWaitting a {
+	display: block;
+	padding: 5px 20px;
+	color: #333;
+	font-size: 0.9rem;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	position: relative;
+}
+
+#UserTop .StartWaitting a:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	vertical-align: -5px;
+	background-image: url(/img/old/icon/usertop_sprite.png);
+	background-repeat: no-repeat;
+	background-size: 100px 100px;
+	background-position: 0px -80px;
+}
+
+#UserTop .StartWaittingBox {
+	margin: 15px 10px;
+	padding: 10px 10px 0;
+	text-align: center;
+	background: #E9E9FF;
+	border: 2px solid #00F;
+	border-radius: 4px;
+}
+
+#UserTop .StartWaittingBox .StartWaitting {
+	margin: 15px auto;
+}
+
+#UserTop .StartWaittingBox .StartWaitting a {
+	display: inline-block;
+}
+
+#UserTop .WaitingErr {
+	margin: 10px;
+	padding: 15px 10px 0;
+	background: #FFFDDD;
+	border: 2px solid #FFF100;
+	border-radius: 4px;
+}
+
+#UserTop .WaitingErr .StartWaitting {
+	margin: 15px 20px;
+}
+
+#UserTop .WaitingErr .StartWaitting a {
+	padding: 5px 0;
+}
+
+/***** flipsnap共通 *****/
+#UserTop .flipsnap {
+	display: -webkit-box;
+	display: -moz-box;
+}
+
+#UserTop .maxPoint {
+	width: 100%;
+	padding-top: 10px;
+}
+
+#UserTop .viewport {
+	margin: 0 auto;
+  overflow: hidden;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+}
+
+#UserTop .flipsnap .item {
+	display: block;
+	width: 30%;
+	padding: 0 5px;
+	box-sizing: border-box;
+}
+
+#UserTop .flipsnap .item a {
+	display: block;
+	width: 100%;
+	height: inherit;
+	background-repeat: no-repeat;
+	border: 1px solid #CCC;
+	background-size: cover;
+	-webkit-background-size: cover;
+	box-sizing: border-box;
+}
+
+#UserTop .flipsnap img {
+	width: 100%;
+	border: 1px solid #CCC;
+	box-sizing: border-box;
+}
+
+#UserTop .pointer {
+	padding: 5px 0 10px;
+	line-height: 0;
+	text-align: center;
+}
+
+#UserTop .pointer span {
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	margin-right: 3px;
+	background: #CCC;
+	border-radius: 5px;
+}
+
+#UserTop .pointer span.current {
+	background: #FF1B8D;
+}
+
+/***** Recommend ピックアップガール *****/
+#UserTop .RecommendParts {
+	background: #FFF;
+	border-bottom: 1px solid #BBB;
+}
+
+/***** Pickup07 完全撮り下ろしギャラリー *****/
+#UserTop .Pickup07Parts {
+	background: #FFF;
+}
+
+#UserTop .Pickup07More a {
+	display: block;
+	padding: 5px 10px;
+	text-align: right;
+	color: #09598D;
+	font-size: 0.8rem;
+	text-decoration: none;
+	background: #EEE;
+	border-top: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+}
+
+#UserTop .Pickup07More a:after {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-left: 5px;
+	background-image: url("../../ViComm/man/Image/A001/img/emoji_more.png");
+	background-repeat: no-repeat;
+	background-size: 15px;
+	vertical-align: -2px;
+}
+
+/***** Pickup01 顔出し自己紹介動画 *****/
+#UserTop .Pickup01Parts {
+	background: #FFF;
+}
+
+#UserTop .Pickup01Parts .item {
+	position: relative;
+}
+
+#UserTop .Pickup01Parts .item a:before {
+	content: "";
+	width: 30px;
+	height: 30px;
+	background-image: url("../../ViComm/man/Image/A001/img/play.png");
+	background-size: 30px;
+	background-position: 0px 0px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -15px;
+	margin-left: -15px;
+	z-index: 9;
+}
+
+#UserTop .Pickup01More a {
+	display: block;
+	padding: 5px 10px;
+	text-align: right;
+	color: #09598D;
+	font-size: 0.8em;
+	text-decoration: none;
+	background: #EEE;
+	border-top: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+	position: relative;
+}
+
+#UserTop .Pickup01More a:after {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-left: 5px;
+	background-image: url("../../ViComm/man/Image/A001/img/emoji_more.png");
+	background-repeat: no-repeat;
+	background-size: 15px;
+	vertical-align: -2px;
+}
+
+/***** BannerParts スライドバナー *****/
+#UserTop .BannerParts {
+	margin: 15px 0 5px;
+}
+
+#UserTop .BannerParts .maxPoint {
+	padding-top: 0;
+}
+
+#UserTop .BannerParts .item {
+	width: 100%;
+	padding: 0 10px;
+}
+
+#UserTop .BannerParts .item a {
+	background-size: contain;
+	background-position: center;
+	border: none;
+}
+
+#UserTop .BannerParts .item:nth-child(1) a { background-image: url("../../ViComm/man/Image/A001/img/job_candy_sp.png"); }
+#UserTop .BannerParts .item:nth-child(2) a { background-image: url("../../ViComm/man/Image/A001/img/fm_soon_sp.png"); }
+#UserTop .BannerParts .item:nth-child(3) a { background-image: url("../../ViComm/man/Image/A001/img/mens_shoukai_banner4.png"); }
+#UserTop .BannerParts .item:nth-child(4) a { background-image: url("../../ViComm/man/Image/A001/img/f_tomodachi_shokai3_sp.png"); }
+
+/***** BannerArea バナー *****/
+#UserTop .BannerArea {
+	margin: 15px 10px;
+	text-align: center;
+}
+
+#UserTop .BannerArea > a {
+	display: block;
+}
+
+#UserTop .BannerArea > a + a {
+	margin-top: 10px;
+}
+
+#UserTop .BannerArea img {
+	width: 100%;
+}
+
+#UserTop .Banner_ma10 {
+	margin: 10px;
+}
+
+#UserTop .ModifyUserTel {
+	margin: 10px;
+	padding: 10px 20px;
+	color: #F00;
+	text-align: center;
+	background: #FFC;
+	border: 1px solid #AAA;
+	border-radius: 4px;
+}
+
+#UserTop .ModifyUserTel a {
+	display: block;
+	margin-top: 5px;
+	padding: 5px 20px;
+	color: #333;
+	font-size: 0.9rem;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: solid 1px #CCC;
+	border-radius: 4px;
+}
+
+/***** MenuBlock *****/
+#UserTop .MenuBlock {
+	display: table;
+	width: 100%;
+}
+
+#UserTop .MenuBlock > div {
+	display: table-cell;
+	width: 50%;
+	border-bottom: 1px solid #CCC;
+}
+
+#UserTop .LastBlock > div {
+	border-bottom: none;
+}
+
+#UserTop .MenuBlock a {
+	display: block;
+	padding: 10px;
+	color: #333;
+	font-size: 0.8rem;
+	text-decoration: none;
+	position: relative;
+}
+
+#UserTop .MenuBlock > div + div {
+	border-left: 1px solid #CCC;
+}
+
+#UserTop .MenuBlock a:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+  border-top: solid 2px #999;
+  border-right: solid 2px #999;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+/***** DesignOld 旧デザインへ表示変更 *****/
+#UserTop .DesignOld {
+	margin-bottom: 10px;
+}
+
+#UserTop .DesignOld a {
+	display: block;
+	padding: 5px 0;
+	color: #333;
+	font-size: 0.9rem;
+	font-weight: normal;
+	text-align: center;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	box-shadow: none;
+	border: solid 1px #CCC;
+	border-radius: 15px;
+	position: relative;
+}
+
+#UserTop .DesignOld a:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	vertical-align: -5px;
+	background-image: url(/img/old/icon/usertop_sprite.png);
+	background-repeat: no-repeat;
+	background-size: 100px 100px;
+	background-position: -20px -80px;
+}
+
+/***** modal_opening *****/
+#modal-content {
+	display: none;
+	width: 80%;
+	margin: 0;
+	padding: 10px;
+	background: #FFF;
+	position: fixed;
+	border: 2px solid #AAA;
+	border-radius: 4px;
+	z-index: 99999;
+}
+
+#modal-content .mailadd_img img {
+	width: 100%;
+}
+
+#modal-content .mailadd_btn {
+	display: block;
+	margin: 10px;
+	padding: 5px 20px;
+	color: #333;
+	font-size: 0.9rem;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	cursor: pointer;
+}
+
+#modal-content label {
+	display: block;
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+#modal-close {
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+	background: url("../../ViComm/man/Image/A001/img/close.png") no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: -8px;
+	right: -8px;;
+}
+
+#modal-overlay {
+	display: none;
+	width: 100%;
+	height: 120%;
+	background-color: rgba( 0,0,0, 0.6 );
+	z-index: 10000;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+/***** modal-begginer *****/
+#modal-beginner-content {
+	display: none;
+	width: 80%;
+	margin: 0;
+	padding: 10px;
+	background: #FFF;
+	position: fixed;
+	border: 2px solid #AAA;
+	border-radius: 4px;
+	z-index: 99999;
+}
+
+#modal-beginner-content .mailadd_img img {
+	width: 100%;
+}
+
+#modal-beginner-content .mailadd_btn {
+	display: block;
+	margin: 10px;
+	padding: 5px 20px;
+	color: #333;
+	font-size: 0.9rem;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	cursor: pointer;
+}
+
+#modal-beginner-content label {
+	display: block;
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+/***** modal-egg *****/
+/*****
+#modal-egg-switch {
+	width: 40px;
+	padding: 5px;
+	background: rgba(0, 0, 0, 0.6);
+	border-radius: 4px;
+	box-sizing: border-box;
+	position: fixed;
+	left: 10px;
+	top: 61px;
+	z-index: 100;
+}
+
+#modal-egg-content {
+	display: none;
+	width: 80%;
+	margin: 0;
+	padding: 10px;
+	background: #FFF;
+	position: fixed;
+	border: 2px solid #AAA;
+	border-radius: 4px;
+	z-index: 99999;
+}
+
+#modal-egg-content .mailadd_btn {
+	display: block;
+	margin: 10px;
+	padding: 5px 20px;
+	color: #333;
+	font-size: 0.9rem;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	cursor: pointer;
+}
+
+#modal-egg-content label {
+	display: block;
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+#modal-egg-content .mailadd_img {
+	padding: 25px 10px 10px;
+	border: 1px solid #666;
+}
+
+#modal-egg-content .egg_wobble {
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+}
+
+#modal-egg-content .egg_wobble img {
+	animation-name: egg_wobble;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes egg_wobble {
+  from, to {
+    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+  50% {
+    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+}
+@-webkit-keyframes egg_wobble {
+  from, to {
+    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+  50% {
+    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+}
+
+#modal-egg-content .egg_blink {
+	margin: 0 auto;
+	position: relative;
+}
+
+#modal-egg-content .egg_blink img:first-child {
+	display: block;
+	margin: 0 auto;
+}
+
+#modal-egg-content .egg_blink img:last-child {
+	animation-name: egg_blink;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	left: 35%;
+}
+
+@keyframes egg_blink {
+	0%  { opacity: 1; }
+	40% { opacity: 0; }
+	60% { opacity: 0; }
+}
+@-webkit-keyframes egg_blink {
+	0%  { opacity: 1; }
+	40% { opacity: 0; }
+	60% { opacity: 0; }
+}
+
+#modal-egg-content .egg_btn {
+	width: 200px;
+	margin: 15px auto;
+	padding: 1px;
+	background: #FFF;
+	border: 1px solid #006593;
+	border-radius: 4px;
+	position: relative;
+}
+
+#modal-egg-content .egg_btn a {
+	display: block;
+	padding: 10px 10px;
+	color: #FFF;
+	font-size: 0.9em;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 1px 1px 0px #000;
+	text-decoration: none;
+	background: #00ABEE;
+	border: 1px solid #006593;
+	border-radius: 4px;
+	position: relative;
+}
+
+#modal-egg-content .egg_btn a:before {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-top: 2px solid #000;
+	border-right: 2px solid #000;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -5px;
+}
+
+#modal-egg-content .egg_btn a:after {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-top: 2px solid #FFF;
+	border-right: 2px solid #FFF;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 11px;
+	top: 50%;
+	margin-top: -6px;
+}
+*****/
+
+/***** modal-tel *****/
+#modal-tel-content {
+	display: none;
+	width: 80%;
+	margin: 0;
+	padding: 10px;
+	background: #FFF;
+	position: fixed;
+	border: 2px solid #AAA;
+	border-radius: 4px;
+	z-index: 99999;
+}
+
+#modal-tel-content .mailadd_img img {
+	width: 100%;
+}
+
+#modal-tel-content .mailadd_btn {
+	display: block;
+	margin: 10px;
+	padding: 5px 20px;
+	color: #333;
+	font-size: 0.9rem;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	cursor: pointer;
+}
+
+#modal-tel-content label {
+	display: block;
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+#modal-tel-close {
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+	background: url("../../ViComm/man/Image/A001/img/close.png") no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: -8px;
+	right: -8px;;
+}
+
+/***** modal-spoint *****/
+#modal-spoint-content {
+	display: none;
+	width: 80%;
+	margin: 0;
+	padding: 10px;
+	background: #FFF;
+	position: fixed;
+	border: 2px solid #AAA;
+	border-radius: 4px;
+	z-index: 99999;
+}
+
+#modal-spoint-content .mailadd_img img {
+	width: 100%;
+}
+
+#modal-spoint-content .mailadd_btn {
+	display: block;
+	margin: 10px 10px 0;
+	padding: 5px 20px;
+	color: #333;
+	font-size: 0.9rem;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	cursor: pointer;
+}
+
+#modal-spoint-close {
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+	background: url("../../ViComm/man/Image/A001/img/close.png") no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: -8px;
+	right: -8px;;
+}
+
+#modal-spoint-content .login_bonus_pt {
+	margin: 10px 0;
+	padding: 5px 0;
+	color: #F00;
+	text-align: center;
+	border: 1px solid #F00;
+	border-radius: 4px;
+}
+
+#modal-spoint-content .login_bonus_pt span {
+	font-size: 1.4rem;
+}
+
+/***** フリマ未発送 *****/
+#UserTop .unsent {
+	margin: 10px 5px;
+}
+
+#UserTop .unsent a {
+	display: block;
+	padding: 15px 20px 15px 10px;
+	color: #F00;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	background: #FFEFFF;
+	border: 2px solid #F00;
+	border-radius: 4px;
+	position: relative;
+}
+
+#UserTop .unsent a:before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	vertical-align: -5px;
+	background-image: url("../../ViComm/man/Image/A001/img/emoji_ihan_y.png");
+	background-repeat: no-repeat;
+	background-size: 20px;
+}
+
+/***** modal-app *****/
+#modal-app-content {
+	display: none;
+	width: 80%;
+	margin: 0;
+	padding: 10px;
+	background: #FFF;
+	position: fixed;
+	border: 2px solid #AAA;
+	border-radius: 4px;
+	z-index: 99999;
+}
+
+#modal-app-content .mailadd_img img {
+	width: 100%;
+}
+
+#modal-app-content .mailadd_btn {
+	display: block;
+	margin: 10px;
+	padding: 5px 20px;
+	color: #333;
+	font-size: 0.9rem;
+	text-decoration: none;
+	text-align: center;
+	border: solid 1px #CCC;
+	border-radius: 4px;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	cursor: pointer;
+}
+
+#modal-app-content label {
+	display: block;
+	font-size: 0.9rem;
+	text-align: center;
+}

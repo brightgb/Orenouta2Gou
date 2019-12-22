@@ -1,0 +1,198 @@
+.emoji_open_button
+{
+}
+
+.emoji_window_mask
+{
+  display: none;
+  background-color: #000;
+	opacity: 0.6;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 90000;
+}
+
+div.emoji_palette
+{
+	width: 218px;
+	padding: 2px;
+	margin: 0px;
+	font-size: 80%;
+	cursor: default;
+	background-color: #FFF;
+	border: 2px solid #FBB;
+	position:	absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 99999;
+}
+
+div.emoji_buffer_area
+{
+	padding:2px 0px;
+	margin:0px;
+	border-bottom:solid 1px #FBB;
+}
+div.emoji_buffer
+{
+	float:left;
+	width:164px;
+}
+
+div.emoji_bs_key
+{
+	float:right;
+	margin:1px;	
+	border:solid 1px #FBB;
+	margin:1px 2px;
+	text-align:center;	
+	cursor:pointer;
+}
+div.emoji_bs_key a
+{
+	display:block;
+	background-color:#fff;
+	color:#FBB;
+	text-align:center;
+	padding:2px;
+	width:40px;
+	height:14px;
+}
+div.emoji_bs_key a:hover
+{
+	background-color:#FBB;
+	color:#fff;
+}
+
+.emoji_palette div.emoji_palette_title 
+{
+    background-color: #FBB;
+    color: #FFF;
+    padding: 2px 2px;
+    margin: 0px;
+    clear: both;
+    cursor:move;
+}
+
+.emoji_palette .emoji_pager
+{
+	border-top:solid 1px #FBB;
+	padding: 1px;
+	margin: 0px;
+}
+
+.emoji_palette .emoji_pager a
+{
+	display:block;
+	padding:2px 3px;
+    margin: 0px;
+	text-align:center;
+    cursor:	pointer;
+	text-decoration:none;
+}
+
+.emoji_palette .emoji_pager a.emoji_page
+{
+    color: #F99;
+	float: left;
+	background-color:#FFF;
+}
+
+.emoji_palette .emoji_pager a.emoji_page:hover
+{
+	background-color:#FCC;
+}
+
+
+.emoji_palette div.emoji_window_button 
+{
+    text-align:	right;
+    padding:	0px;
+    margin:		0px;
+}
+
+.emoji_palette div.emoji_window_button a.emoji_palette_close
+{
+	font-weight:	bold;
+	color:			#FFF;
+	margin:			0px;
+	padding:		0px;
+	float:			right;
+	text-align:		center;
+	cursor:			pointer;
+	padding:		2px;
+}
+
+.emoji_palette div.emoji_window_button a.emoji_palette_close:hover
+{
+	color:#F55;
+}
+
+
+.emoji_palette div.emoji_palette #emoji_container,
+.emoji_palette div.emoji_footer
+{
+	clear:both;
+	margin:0px;
+	padding:0px;
+}
+
+.emoji_item
+{
+    cursor:	pointer;
+    float:left;
+    position:relative;
+    overflow:hidden;
+}
+
+div.emoji_item:hover
+{
+	background-color:#FAA;
+}
+.emoji_item .emoji_item_inner
+{
+	height:16px;
+	width:16px;
+    padding:0px;
+    background-repeat:no-repeat;
+    background-position:center center;
+    margin:2px;
+}
+.no-android-highlight
+{
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.emoji_buffer_item
+{
+	height:16px;
+	width:16px;
+    padding:0px;
+    background-repeat:no-repeat;
+    background-position:center center;
+    margin:1px;
+    float:left;
+}
+
+/**** clearfix ****/
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  min-height: 1px;
+}
+
+* html .clearfix {
+  height: 1px;
+  /*\*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+

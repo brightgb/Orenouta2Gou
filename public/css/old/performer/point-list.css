@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+.date {
+	text-align: center;
+	width: 95%;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.date .previous {
+	width: 20%;
+	display: inline-block;
+	text-align: left;
+}
+
+.date .current {
+	display: inline-block;
+	width: 55%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.date .next {
+	width: 20%;
+	display: inline-block;
+	text-align: right;
+}
+
+table {
+	border-bottom: 1px solid #666;
+	width: 95%;
+	margin: 0 auto;
+}
+
+tr {
+	border-top: 1px solid #666;
+	border-left: 1px solid #666;
+	border-right: 1px solid #666;
+}
+
+td {
+	display: inline-block;
+	padding: 5px 10px;
+	line-height: 1.4;
+}
+
+.day {
+	width: 20%;
+	text-align: center;
+}
+
+.point {
+	border-left: 1px solid #666;
+}
+
+.table_sum tr {
+	background: #EFEFEF;
+	border-top: 2px solid #666;
+	border-left: 2px solid #666;
+	border-right: 2px solid #666;
+}
+
+.table_sum td {
+	padding: 5px 10px;
+	font-weight: bold;
+}
+
+.table_sum .point {
+	font-size: 1.1rem;
+}

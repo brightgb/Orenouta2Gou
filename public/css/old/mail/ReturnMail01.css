@@ -1,0 +1,681 @@
+@charset "utf-8";
+
+/***** line風背景 *****/
+body {
+	background: url(/img/old/mail/line_bg.jpg) 0 0 repeat-y;
+	background-size: 100%;
+}
+
+#ReturnMail01 .line_footer {
+	padding-bottom: 8px;
+}
+
+#ReturnMail01 .line_footer > div {
+	color: #FFF;
+}
+
+/***** main *****/
+#ReturnMail01 .message {
+	width: 100%;
+	display: table;
+	margin-top: 20px;
+}
+
+#ReturnMail01 .prof_img {
+	width: 40px;
+	display: table-cell;
+}
+
+#ReturnMail01 .line_area_man .prof_img img {
+	border-radius: 50%;
+}
+
+#ReturnMail01 .main_area {
+	display: table-cell;
+	padding: 22px 0 0 10px;
+	vertical-align: top;
+	position: relative;
+}
+
+#ReturnMail01 .date {
+	color: #FFF;
+	font-size: 0.9em;
+}
+
+#ReturnMail01 .message_tx .date {
+	padding-right: 10px;
+	text-align: right;
+}
+
+#ReturnMail01 .re_text {
+	margin-right: 30px;
+	padding-bottom: 10px;
+	background: #FFF;
+	border-radius: 8px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+#ReturnMail01 .re_text:before {
+	content: "";
+	width: 0;
+	height: 0;
+	border: solid transparent;
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #FFF;
+	border-width: 5px;
+	position: absolute;
+	right: 100%;
+	top: 10px;
+}
+
+#ReturnMail01 .tx_text {
+	margin: 0 10px 0 70px;
+	padding-bottom: 10px;
+	text-align: left;
+	background: #85E249;
+	border-radius: 8px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+#ReturnMail01 .tx_text:after {
+	content: "";
+	width: 0;
+	height: 0;
+	border: solid transparent;
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: #85E249;
+	border-width: 5px;
+	position: absolute;
+	left: 100%;
+	top: 10px;
+}
+
+#ReturnMail01 .mail_doc {
+	min-height: 22px;
+	padding: 10px 10px 0;
+	font-size: 0.9em;
+}
+
+#ReturnMail01 .attach_pm {
+	padding-top: 5px;
+	text-align: center;
+}
+
+#ReturnMail01 .attach_pm a {
+	color: #F00;
+	font-size: 0.9em;
+}
+
+/***** protect *****/
+#ReturnMail01 .protect_btn a {
+	display: block;
+	padding: 2px 7px;
+	color: #333;
+	font-size: 10px;
+	line-height: 1.4em;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #666;
+	border-radius: 4px;
+	position: absolute;
+	right: 30px;
+	top: 2px;
+}
+
+#ReturnMail01 .protect_btn a:before {
+	content: "";
+	display: block;
+	margin: 0 2px;
+	width: 16px;
+	height: 16px;
+	background-image: url(/img/old/icon/mail_protect.png);
+	background-size: auto 16px;
+	-webkit-background-size: auto 16px;
+	-moz-background-size: auto 16px;
+	background-repeat: no-repeat;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#ReturnMail01 .protect_btn a.protect:before {
+	background-position: 0;
+}
+
+#ReturnMail01 .protect_btn a.unprotect:before {
+	background-position: -16px 0;
+}
+
+#ReturnMail01 .protect_img {
+	width: 18px;
+	margin-left: 10px;
+	margin-bottom: -5px;
+	padding-top: 5px;
+}
+
+#ReturnMail01 .protect_img img {
+	width: 100%;
+}
+
+#ReturnMail01 .del {
+	color: #FFF;
+	font-size: 0.9rem;
+	position: absolute;
+	right: 30px;
+	top: 8px;
+}
+
+/***** return_form *****/
+#ReturnMail01 #return_form {
+	display: block;
+	margin: 20px 10px 15px;
+	position: relative;
+}
+
+#ReturnMail01 #return_form #lblDoc {
+	color: #FFF;
+}
+
+#ReturnMail01 #return_form #lblDoc font[color="#FF1B8D"] {
+	display: none;
+}
+
+#ReturnMail01 textarea[name="mail_txt"] {
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	word-wrap: break-word;
+	resize: horizontal;
+	height: 82px;
+}
+
+#ReturnMail01 #return_form input[name="cmdSubmit"] {
+	display: block;
+	width: 118px;
+	margin: 20px auto;
+	padding: 10px 0;
+	color: #333;
+	font-size: 0.9rem;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #666;
+	border-radius: 4px;
+}
+
+/***** attach *****/
+#ReturnMail01 #return_form .attach {
+	display: table;
+	width: 80%;
+	margin: 10px auto 20px;
+}
+
+#ReturnMail01 #return_form .attach input {
+	display: none;
+}
+
+#ReturnMail01 #return_form .attach label {
+	display: table-cell;
+	width: 33%;
+	padding: 5px 0;
+	color:#BBB;
+	font-size: 0.9em;
+	text-align: center;
+	background: #EAEAEA;
+	box-sizing: border-box;
+}
+
+#ReturnMail01 #return_form .attach label:first-of-type {
+	border-right: 1px solid #CCC;
+	border-radius: 4px 0 0 4px;
+}
+
+#ReturnMail01 #return_form .attach label:last-of-type {
+	border-left: 1px solid #CCC;
+	border-radius: 0 4px 4px 0;
+}
+
+#ReturnMail01 #return_form .attach input:checked + label {
+	color: #FFF;
+	background: #00F;
+}
+
+#ReturnMail01 .attach div {
+	display: table-cell;
+	width: 33%;
+	padding: 5px 0;
+	color:#BBB;
+	font-size: 0.9em;
+	text-align: center;
+	background: #EAEAEA;
+	box-sizing: border-box;
+}
+
+#ReturnMail01 .attach div:first-of-type {
+	border-right: 1px solid #CCC;
+	border-radius: 4px 0 0 4px;
+}
+
+#ReturnMail01 .attach div:last-of-type {
+	border-left: 1px solid #CCC;
+	border-radius: 0 4px 4px 0;
+}
+
+#ReturnMail01 .attach input:checked + div {
+	color: #FFF;
+	background: #00F;
+}
+
+/***** iphone_banner *****/
+#ReturnMail01 .iphone_banner a {
+	display: block;
+	margin: 20px 10px;
+	padding: 10px 20px 10px 10px;
+	text-decoration: none;
+	background: #FFF;
+	border: 2px solid #999;
+	border-radius: 4px;
+	position: relative;
+}
+
+#ReturnMail01 .iphone_banner a > div:first-child{
+	color: #F00;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+#ReturnMail01 .iphone_banner a > div:last-child{
+	color: #333;
+	font-size: 0.9em;
+}
+
+#ReturnMail01 .iphone_banner a .emoji {
+	width: 20px;
+	margin-right: 5px;
+}
+
+#ReturnMail01 .iphone_banner a:after {
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	border-top: 2px solid #666;
+	border-right: 2px solid #666;
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -4px;
+}
+
+/***** point_error *****/
+#ReturnMail01 .point_err {
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  color: #F00;
+  text-align: center;
+  background: #FDD;
+  border: 1px solid #666;
+	border-radius: 4px;
+}
+
+#ReturnMail01 .point_err .point_btn a {
+  display: block;
+  width: 100%;
+  margin: 20px auto 10px;
+  padding: 5px 0;
+  color: #333;
+  font-size: 0.9rem;
+  text-decoration: none;
+	background: #EAEAEA;
+	background: 	linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: 	 -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+  border: 1px solid #BBB;
+	border-radius: 4px;
+}
+
+#ReturnMail01 .point_err .point_btn img {
+	width: 20px;
+	vertical-align: -5px;
+	margin-right: 5px;
+}
+
+/***** emoji_btn *****/
+#ReturnMail01 .emoji_open_button {
+	display: inline-block;
+	margin-bottom: 4px;
+	padding: 0 5px;
+	color: #333;
+	font-size: 0.9em;
+	text-align: center;
+	line-height: 1.4rem;
+	text-decoration: none;
+	background: #FEFEFE;
+	background:   linear-gradient(to bottom, #FEFEFE, #EAEAEA);
+	background: -webkit-linear-gradient(top, #FEFEFE, #EAEAEA);
+	background:    -moz-linear-gradient(top, #FEFEFE, #EAEAEA);
+	border: 1px solid #666;
+	border-radius: 4px;
+}
+
+#ReturnMail01 .emoji_open_button:before {
+	content: "";
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url(/img/old/icon/emoji_prof.png);
+	background-size: 16px;
+	margin-right: 3px;
+	vertical-align: -3px;
+}
+
+/***** manner_reply man *****/
+#ReturnMail01 .manner_area.acdArea {
+	margin: 15px 0;
+}
+
+#ReturnMail01 .manner_area .acdHead {
+	display: table;
+	width: 100%;
+	margin: 0;
+}
+
+#ReturnMail01 .manner_area .acdHead a {
+	display: table-cell;
+	margin: 0;
+	padding: 5px 10px;
+	color: #333;
+	text-decoration: none;
+	background: #F4F4F4;
+	border: 1px solid #BBB;
+}
+
+#ReturnMail01 .manner_area .acdHead a {
+	font-size: 0.9rem;
+	border-radius: 4px 0 0 0;
+	position: relative;
+}
+
+#ReturnMail01 .manner_area .acdHead a:before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	margin-right: 5px;
+	background: url(/img/old/icon/emoji_manner.png) no-repeat;
+	background-size: cover;
+	vertical-align: -5px;
+}
+
+#ReturnMail01 .manner_area .acdHead a:after {
+	content: "";
+	width: 13px;
+	height: 13px;
+	background: url(/img/old/icon/accodion_close.png) no-repeat;
+	background-size: cover;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -6px;
+}
+
+#ReturnMail01 .manner_area .acdClosed a:after {
+	content: "▼";
+	color: #555;
+	font-size: 13px;
+	background: transparent;
+	top: initial;
+	margin-top: 0;
+}
+
+#ReturnMail01 .manner_area .acdHead .qs {
+	display: table-cell;
+	width: 20px;
+	padding: 0 5px;
+	background: #F4F4F4;
+	border-top: 1px solid #BBB;
+	border-right: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+	border-radius: 0 4px 0 0;
+}
+
+#ReturnMail01 .manner_area .acdHead .qs img {
+	width: 100%;
+	vertical-align: middle;
+}
+
+#ReturnMail01 .manner_area .acdClosed a {
+	padding: 5px 10px;
+	border-radius: 4px;
+	border: 1px solid #BBB;
+}
+
+#ReturnMail01 .manner_area .acdClosed a {
+	border-radius: 4px 0 0 4px;
+}
+
+#ReturnMail01 .manner_area .acdClosed .qs {
+	border-radius: 0 4px 4px 0;
+}
+
+#ReturnMail01 .manner_area .acdBody {
+	margin: 0;
+	padding: 0;
+	background: #FFF;
+	border-radius: 0 0 4px 4px;
+	border-bottom: 1px solid #BBB;
+	border-left: 1px solid #BBB;
+	border-right: 1px solid #BBB;
+}
+
+#ReturnMail01 .manner_note {
+	padding-top: 10px;
+	color: #F00;
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+#ReturnMail01 .manner_select label {
+	display: block;
+	padding: 10px 10px 0 28px;
+	text-indent: -18px;
+	font-size: 0.9rem;
+	text-align: left;
+}
+
+#ReturnMail01 .manner_select label input {
+	margin-right: 5px;
+}
+
+#ReturnMail01 .manner_sendover {
+	padding: 15px 10px;
+	color: #333;
+	font-size: 0.9rem;
+	text-align: left;
+}
+
+#ReturnMail01 .modal-content {
+	display: none;
+	width: 88%;
+	padding: 10px;
+	color: #333;
+	background: #FFF ;
+	border: 2px solid #CCC;
+	border-radius: 5px;
+	position: fixed;
+	box-sizing: border-box;
+	z-index: 10001;
+}
+
+#ReturnMail01 .modal-close:after {
+	content: "";
+	display: block;
+	width: 26px;
+	height: 26px;
+	background-color: #999;
+	background-image: url(/img/old/icon/close_w.png);
+	background-size: contain;
+	border-radius: 1em;
+	border: 2px solid #DDD;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.15);
+	box-shadow: 0 1px 3px rgba(0,0,0,.15);
+	position: absolute;
+	top: -13px;
+	right: -13px;
+}
+
+#modal-overlay {
+	z-index: 1;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 120%;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 10000;
+}
+
+/***** manner_reply cast *****/
+#ReturnMail01 .manner_reply {
+	height:17px;
+	padding: 5px 10px;
+	border-bottom: 1px solid #999;
+	position: relative;
+}
+
+#ReturnMail01 .manner_reply .manner_img {
+	height:17px;
+}
+
+#ReturnMail01 .manner_reply .qs {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -12px;
+}
+
+#ReturnMail01 .manner_reply .qs img {
+	width: 24px;
+}
+
+/***** mstemp modal *****/
+#ReturnMail01 .template_popup {
+	position: relative;
+}
+
+#ReturnMail01 .template_popup select {
+	display: none;
+}
+
+#ReturnMail01 .modal-mstemp-open {
+	width: 36px;
+	height: 41px;
+	background-image: url(/img/old/icon/line_template.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 4px;
+	right: 0;
+}
+
+#ReturnMail01 .modal-mstemp {
+	display: none;
+	height: 70%;
+	width: 88%;
+	color: #333;
+	background: #FFF ;
+	border: 2px solid #CCC;
+	border-radius: 4px;
+	position: fixed;
+	box-sizing: border-box;
+	z-index: 10001;
+}
+
+#ReturnMail01 .modal-mstemp .mstemp-body {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 100%;
+}
+
+#ReturnMail01 .modal-mstemp .mstemp-body::-webkit-scrollbar {
+	width: 0px;
+}
+
+#ReturnMail01 .modal-mstemp .mstemp-body::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+	background: #CCC;
+}
+
+#ReturnMail01 .modal-mstemp .mstemp-body > div:first-child {
+	padding: 10px;
+	color: #FFF;
+	background: #666;
+}
+
+#ReturnMail01 .modal-mstemp .mstemp-body > div + div {
+	margin: 0 10px;
+	padding: 10px 0;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+}
+
+#ReturnMail01 .modal-mstemp .mstemp-body > div:last-child {
+	border-bottom: none;
+}
+
+#ReturnMail01 .modal-mstemp .mstemp-body button {
+	padding: 2px 10px;
+	color: #333;
+	background: #FFF;
+	border: 1px solid #333;
+	border-radius: 4px;
+	position: absolute;
+	top: 50%;
+	margin-top: -13px;
+}
+
+#ReturnMail01 .modal-mstemp .mstemp-body button:first-of-type {
+	right: 60px;
+}
+
+#ReturnMail01 .modal-mstemp .mstemp-body button:last-of-type {
+	right: 0;
+}
+
+#ReturnMail01 .modal-mstemp .mstemp-body a {
+	display: block;
+	margin: 30px 10px 10px;
+	padding: 10px 0;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none;
+	background: #666;
+	border-radius: 4px;
+}
+
+/***** point_area *****/
+#ReturnMail01 .point_area {
+	padding: 4px 10px;
+	color: #FFF;
+	background: #4D7692;
+	border: 1px solid #FFF;
+	border-radius: 8px;
+	position: absolute;
+	right: 0;
+	top: -4px;
+}
+
+#ReturnMail01 .point_area a {
+	margin: 0 5px;
+	color: #F00;
+}
