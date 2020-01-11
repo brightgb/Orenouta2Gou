@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use App\Library\Util;
 use App\Model\AdminInfo;
 use App\Model\UserQuestion;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -18,18 +19,40 @@ class IndexController extends Controller
     public function index()
     {
         $now_month = Carbon::now()->month;
+        $device = Util::getUserDevice();
+
         if ($now_month >= 3 && $now_month <=5) {
-            $image = '/storage/image/Admin/bXOztui65t.jpg';
+            if ($device == config('constKey.DEVICE_TYPE.ANDROID') ||
+                $device == config('constKey.DEVICE_TYPE.IOS')) {
+                $image = '/storage/image/Admin/bXOztui65t_sp.jpg';
+            } else {
+                $image = '/storage/image/Admin/bXOztui65t_pc.jpg';
+            }
         } elseif ($now_month >= 6 && $now_month <=8) {
-            $image = '/storage/image/Admin/eRWziIxI2K.jpg';
+            if ($device == config('constKey.DEVICE_TYPE.ANDROID') ||
+                $device == config('constKey.DEVICE_TYPE.IOS')) {
+                $image = '/storage/image/Admin/eRWziIxI2K_sp.jpg';
+            } else {
+                $image = '/storage/image/Admin/eRWziIxI2K_pc.jpg';
+            }
         } elseif ($now_month >= 9 && $now_month <=11) {
-            $image = '/storage/image/Admin/mlPAjEl6Zg.jpg';
+            if ($device == config('constKey.DEVICE_TYPE.ANDROID') ||
+                $device == config('constKey.DEVICE_TYPE.IOS')) {
+                $image = '/storage/image/Admin/mlPAjEl6Zg_sp.jpg';
+            } else {
+                $image = '/storage/image/Admin/mlPAjEl6Zg_pc.jpg';
+            }
         } else {
-            $image = '/storage/image/Admin/x7dXTjJoNy.jpg';
+            if ($device == config('constKey.DEVICE_TYPE.ANDROID') ||
+                $device == config('constKey.DEVICE_TYPE.IOS')) {
+                $image = '/storage/image/Admin/x7dXTjJoNy_sp.jpg';
+            } else {
+                $image = '/storage/image/Admin/x7dXTjJoNy_pc.jpg';
+            }
         }
 
         $title = '俺の歌を育てろ';
-        return view('my_song.index', compact('title', 'image'));
+        return view('my_song.index', compact('title', 'image', 'device'));
     }
 
     /*
