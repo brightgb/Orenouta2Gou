@@ -22,8 +22,11 @@ class RedirectIfAuthenticated
             case "admin":
                 $redir = '/admin';
                 break;
-            case "performer":
-                $redir = '/performer';
+            case "song":
+                $redir = '/song';
+                break;
+            case "manzai":
+                $redir = '/manzai';
                 break;
             default:
                 $redir = '/';

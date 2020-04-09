@@ -14,7 +14,8 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'user',
+        // メインの部門
+        'guard' => 'song',
         'passwords' => 'users',
     ],
 
@@ -36,6 +37,23 @@ return [
     */
 
     'guards' => [
+        // メイン（歌部門）
+        'song' => [
+            'driver' => 'session',
+            'provider' => 'song',
+        ],
+
+        // サブ（漫才部門）
+        'manzai' => [
+            'driver' => 'session',
+            'provider' => 'manzai',
+        ],
+
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+/*
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
@@ -46,31 +64,16 @@ return [
             'provider' => 'users',
         ],
 
-        'user' => [
-            'driver' => 'session',
-            'provider' => 'users',
-        ],
-
-        'performer' => [
-            'driver' => 'session',
-            'provider' => 'performers',
-        ],
-
         'apiPerformer' => [
             'driver' => 'token',
             'provider' => 'performers',
-        ],
-
-        'admin' => [
-            'driver' => 'session',
-            'provider' => 'admins',
         ],
 
         'apiAdmin' => [
             'driver' => 'token',
             'provider' => 'admins',
         ],
-
+*/
     ],
 
     /*
@@ -91,14 +94,14 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'song' => [
             'driver' => 'eloquent',
-            'model' => App\Model\Member::class,
+            'model' => App\Model\SongUser::class,
         ],
 
-        'performers' => [
+        'manzai' => [
             'driver' => 'eloquent',
-            'model' => App\Model\Performer::class,
+            'model' => App\Model\SongUser::class,
         ],
 
         'admins' => [
@@ -129,7 +132,7 @@ return [
 
     'passwords' => [
         'users' => [
-            'provider' => 'users',
+            'provider' => 'song',
             'table' => 'member_password_resets',
             'expire' => 60,
         ],

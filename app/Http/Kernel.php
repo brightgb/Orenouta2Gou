@@ -35,6 +35,8 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            'throttle:60,1',
+            'bindings',
         ],
 
         'api' => [
@@ -44,16 +46,7 @@ class Kernel extends HttpKernel
             \Illuminate\Session\Middleware\StartSession::class, // <------ ADD THIS
         ],
 
-        'memberApi' => [
-            \App\Http\Middleware\EncryptCookies::class,          // <------- ADD THIS
-            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
-            \Illuminate\Session\Middleware\StartSession::class, // <------ ADD THIS
-            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            'throttle:60,1',
-            'bindings',
-        ],
-
-        'performerApi' => [
+        'SongApi' => [
             \App\Http\Middleware\EncryptCookies::class,          // <------- ADD THIS
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class, // <------ ADD THIS
@@ -88,5 +81,6 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'checkSongMemberStat' => \App\Http\Middleware\CheckSongMemberStat::class
     ];
 }

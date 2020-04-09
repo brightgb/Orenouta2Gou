@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
         $this->call(first_permission_registerSeed::class);
         $this->call(first_role_registerSeed::class);
         $this->call(first_admin_registerSeeder::class);
-        $this->call(first_users_registerSeed::class);
+        $this->call(first_song_users_registerSeed::class);
+        $this->call(first_manzai_users_registerSeed::class);
     }
 }

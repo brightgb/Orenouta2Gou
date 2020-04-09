@@ -1,9 +1,9 @@
 <?php
 
-/** 俺の歌を育てろ（管理）**/
+/** 管理画面 **/
 // ログイン
 Route::get('login', function() { return view('admin_auth.login'); })->name('admin.auth.login');
-Route::post('login', 'Auth\LoginController@login')->name('admin.auth.login');
+Route::post('login', 'Admin\Auth\LoginController@login')->name('admin.auth.login');
 
 Route::middleware('auth:admin')->group(function() {
 // トップ画面
@@ -20,8 +20,6 @@ Route::post('comment_delete', 'Admin\SongController@deleteComment')->name('admin
 // 歌唱曲の投稿
 Route::get('song_post', 'Admin\SongController@addSong')->name('admin.song.post');
 Route::post('song_post', 'Admin\SongController@addList')->name('admin.list.post');
-
-/* おまけ管理 */
 
 /* 管理者権限 */
 // お問い合わせ・要望
@@ -45,5 +43,5 @@ Route::post('account/update', 'Admin\ManagementController@updateAccount')->name(
 Route::post('account/delete', 'Admin\ManagementController@deleteAccount')->name('admin.account.delete');
 
 // ログアウト
-Route::get('logout', 'Auth\LoginController@logout')->name('admin.auth.logout');
+Route::get('logout', 'Admin\Auth\LoginController@logout')->name('admin.auth.logout');
 });

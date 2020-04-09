@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     /** 端末情報 */
     'DEVICE_TYPE' => [
         'ANDROID'      => 1,
@@ -80,10 +78,14 @@ return [
         'candy' => 60,
     ],
 
+    /** メールアドレス登録でゲットするポイント（SMSで新規登録した会員のみ）*/
+    'MAIL_AUTH_POINT' => [
+        'crea' => 50,
+    ],
+
     /** 登録時の特典で付与されるポイント */
     'REGIST_BENEFIT' => [
         'NORMAL_REGIST' => 280,
-        'TEL_AUTH'      => 330,
     ],
 
     /** クレジット認証でゲットするポイント */
@@ -106,11 +108,6 @@ return [
         'PERFORMER_NOTI' => 2,
         'ALL_NOTI'       => 3,
     ],
-    /* 
-    config('constKey.GENDER_NOTIFY.MEMBER_NOTI')    => '会員',
-        config('constKey.GENDER_NOTIFY.PERFORMER_NOTI') => '出演者',
-        config('constKey.GENDER_NOTIFY.ALL_NOTI') => '共通',
-    */
 
     /** 会員・出演者のパスワード暗号化用 */
     'PASSWORD_CRYPT_KEY' => '2018crea',
@@ -271,6 +268,7 @@ return [
         'PAY_AFFILIATE'           => 110,
         'CREDIT_AUTH'             => 111,
         'TEL_AUTH'                => 112,
+        'MAIL_AUTH'               => 113,
         'OMIKUJI'                 => 200,
         'INTRODUCER'              => 201,
         'INTRODUCED'              => 202,
@@ -303,17 +301,17 @@ return [
         'REPLY_PERFORMER'       => '4',
         'INFO_MEMBER'           => '5',
         'INFO_PERFORMER'        => '6',
-        'REPLY_MANNER'          => '7',
-        'APPOINTMENT_VOICE'     => '8',
-        'APPOINTMENT_TV'        => '9',
-        'INVITATION'            => '10',
-        'LOGIN'                 => '11',
-        'LOGOUT'                => '12',
-        'REMINDER'              => '13',
-        'PERFORMER_SOLICIT'     => '14',
-        'MAIL_MAGAZINE'         => '15',
-        'PERFORMER_WAIT_END'    => '16',
-        'INFO_ALL'              => '17',
+        'INFO_ALL'              => '7',
+        'REPLY_MANNER'          => '8',
+        'APPOINTMENT_VOICE'     => '9',
+        'APPOINTMENT_TV'        => '10',
+        'INVITATION'            => '11',
+        'LOGIN'                 => '12',
+        'LOGOUT'                => '13',
+        'REMINDER'              => '14',
+        'PERFORMER_SOLICIT'     => '15',
+        'MAIL_MAGAZINE'         => '16',
+        'PERFORMER_WAIT_END'    => '17',
         'MAIL_ADDRESS'          => '18',
         'MARKET'                => '19',
         'SETTLE'                => '20',

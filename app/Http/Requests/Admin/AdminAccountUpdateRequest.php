@@ -25,13 +25,14 @@ class AdminAccountUpdateRequest extends FormRequest
     {
         $validation = [
             'name'         => 'required|max:20|'.Rule::unique('admins')->ignore($this->data_id),
-            'userid'       => 'required|regex:/^[a-zA-Z0-9-]+$/|min:4|max:20|'.Rule::unique('admins')->ignore($this->data_id),
-            'password_org' => 'required|regex:/^[a-zA-Z0-9-]+$/|min:4|max:20',  // パスワード被りは可
+            'userid'       => 'required|regex:/^[a-zA-Z0-9]+$/|min:4|max:20|'.Rule::unique('admins')->ignore($this->data_id),
+            'password_org' => 'required|regex:/^[a-zA-Z0-9]+$/|min:4|max:20',  // パスワード被りは可
         ];
         return $validation;
     }
 
-    public function attributes() {
+    public function attributes()
+    {
         return [
             'name'         => 'アカウント名',
             'userid'       => 'ログインID',

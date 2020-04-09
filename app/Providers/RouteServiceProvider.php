@@ -23,8 +23,6 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-
         parent::boot();
     }
 
@@ -35,51 +33,47 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function map()
     {
-        $this->mapApiRoutes();
+        /** 歌部門 **/
+        $this->mapSongWebRoutes();
+        $this->mapSongApiRoutes();
 
-        $this->mapWebRoutes();
+        /** 漫才部門 **/
+        $this->mapManzaiWebRoutes();
+
+        /** 管理画面 **/
+        $this->mapAdminWebRoutes();
+
+        //$this->mapApiRoutes();
 
         //$this->mapAdminApiRoutes();
-
-        $this->mapAdminWebRoutes();
     }
 
-    /**
-     * Define the "web" routes for the application.
-     *
-     * These routes all receive session state, CSRF protection, etc.
-     *
-     * @return void
-     */
-    protected function mapWebRoutes()
+    // 歌部門
+    protected function mapSongWebRoutes()
     {
-        Route::middleware('web')
+        Route::prefix('song')
+             ->middleware('web')
              ->namespace($this->namespace)
-             ->group(base_path('routes/web.php'));
+             ->group(base_path('routes/song/web.php'));
     }
-
-    /**
-     * Define the "api" routes for the application.
-     *
-     * These routes are typically stateless.
-     *
-     * @return void
-     */
-    protected function mapApiRoutes()
+    protected function mapSongApiRoutes()
     {
-        Route::prefix('api')
-             ->middleware('api')
+        Route::prefix('song')
+             ->middleware('SongApi')
              ->namespace($this->namespace)
-             ->group(base_path('routes/api.php'));
+             ->group(base_path('routes/song/api.php'));
     }
 
-    /**
-     * Define the "web" routes for the application.
-     *
-     * These routes all receive session state, CSRF protection, etc.
-     *
-     * @return void
-     */
+    // 漫才部門
+    protected function mapManzaiWebRoutes()
+    {
+        Route::prefix('manzai')
+             ->middleware('web')
+             ->namespace($this->namespace)
+             ->group(base_path('routes/manzai/web.php'));
+    }
+
+    // 管理画面
     protected function mapAdminWebRoutes()
     {
         Route::prefix('admin')
@@ -88,18 +82,22 @@ class RouteServiceProvider extends ServiceProvider
              ->group(base_path('routes/admin_web.php'));
     }
 
-    /**
-     * Define the "api" routes for the application.
-     *
-     * These routes are typically stateless.
-     *
-     * @return void
-     */
-    /*protected function mapAdminApiRoutes()
+
+    /*
+    protected function mapApiRoutes()
+    {
+        Route::prefix('api')
+             ->middleware('api')
+             ->namespace($this->namespace)
+             ->group(base_path('routes/api.php'));
+    }
+
+    protected function mapAdminApiRoutes()
     {
         Route::prefix('admin/api')
              ->middleware('adminApi')
              ->namespace($this->namespace)
              ->group(base_path('routes/admin/api.php'));
-    }*/
+    }
+    */
 }

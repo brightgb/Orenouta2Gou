@@ -61,16 +61,18 @@ class Handler extends ExceptionHandler
      */
     public function unauthenticated($request, AuthenticationException $exception)
     {
-
         if ($request->expectsJson()) {
             return response()->json(['error' => 'Unauthenticated.'], 401);
         }
         if (in_array('admin', $exception->guards())) {
             return redirect()->guest(route('admin.auth.login'));
         }
-        /*if (in_array('performer', $exception->guards())) {
-            return redirect()->guest(route('performer::auth.login'));
+        if (in_array('song', $exception->guards())) {
+            return redirect()->guest(route('song.auth.login'));
         }
-        return redirect()->guest(route('member::auth.login'));*/
+        if (in_array('manzai', $exception->guards())) {
+            return redirect()->guest(route('manzai.auth.login'));
+        }
+        return abort(404);
     }
 }

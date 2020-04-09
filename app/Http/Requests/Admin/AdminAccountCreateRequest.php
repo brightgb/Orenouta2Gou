@@ -25,13 +25,14 @@ class AdminAccountCreateRequest extends FormRequest
     {
         $validation = [
             'name'         => 'required|max:20|unique:admins,name,'.$this->route('admin'),
-            'userid'       => 'required|regex:/^[a-zA-Z0-9-]+$/|min:4|max:20|unique:admins,userid,'.$this->route('admin'),
-            'password_org' => 'required|regex:/^[a-zA-Z0-9-]+$/|min:4|max:20'
+            'userid'       => 'required|regex:/^[a-zA-Z0-9]+$/|min:4|max:20|unique:admins,userid,'.$this->route('admin'),
+            'password_org' => 'required|regex:/^[a-zA-Z0-9]+$/|min:4|max:20'
         ];
         return $validation;
     }
 
-    public function attributes() {
+    public function attributes()
+    {
         return [
             'name'         => 'アカウント名',
             'userid'       => 'ログインID',

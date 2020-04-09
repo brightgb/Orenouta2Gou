@@ -35,8 +35,9 @@ class first_admin_registerSeeder extends Seeder
         }
 
         $count = 1;
-        for ($i=5; $i>=1; $i--) {
+        for ($i=10; $i>=1; $i--) {
             DB::table('admin_infos')->insert([
+                'notify_type' => mt_rand(1, 2),
                 'notify_date' => Carbon::now()->subDay($i),
                 'message'     => 'お知らせテスト'.$count,
                 'created_at'  => $now,

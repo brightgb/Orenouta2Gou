@@ -12,8 +12,8 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
-    <link rel="stylesheet" type="text/css" href="/css/mySong/header_menu.css">
-    <script src="/js/mySong/header.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/User/header_menu.css">
+    <script src="/js/User/header.js"></script>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,14 +25,7 @@
             background-color: silver;
         }
     </style>
-    @if (!empty($title))
-        <title>{{ $title }}</title>
-    @else
-        @php
-            $title = '俺の歌を育てろ';
-        @endphp
-        <title>{{ $title }}</title>
-    @endif
+    <title>{{ $title }}</title>
 </head>
 
 @yield('header')

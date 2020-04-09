@@ -1,7 +1,5 @@
 <?php
-
 return [
-
     //サイト種別
     'site' => [
         config('constKey.SITE.CREA')  => 'クレア',
@@ -157,6 +155,7 @@ return [
         config('constKey.MESSAGE_TYPE.REPLY_PERFORMER')       => '返信（出演者 -> 会員）',
         config('constKey.MESSAGE_TYPE.INFO_MEMBER')           => 'お知らせメール（管理 -> 会員）',
         config('constKey.MESSAGE_TYPE.INFO_PERFORMER')        => 'お知らせメール（管理 -> 出演者）',
+        config('constKey.MESSAGE_TYPE.INFO_ALL')              => 'お知らせメール（管理 -> 共通）',
         config('constKey.MESSAGE_TYPE.REPLY_MANNER')          => 'マナー返信メール',
         config('constKey.MESSAGE_TYPE.APPOINTMENT_VOICE')     => '待ち合わせメール（音声）',
         config('constKey.MESSAGE_TYPE.APPOINTMENT_TV')        => '待ち合わせメール（TV）',
@@ -167,7 +166,6 @@ return [
         config('constKey.MESSAGE_TYPE.PERFORMER_SOLICIT')     => '未認証出演者勧誘メール',
         config('constKey.MESSAGE_TYPE.MAIL_MAGAZINE')         => 'メールマガジン',
         config('constKey.MESSAGE_TYPE.PERFORMER_WAIT_END')    => '出演者待機終了メール',
-        config('constKey.MESSAGE_TYPE.INFO_ALL')              => 'お知らせメール（管理 -> 共通）',
         config('constKey.MESSAGE_TYPE.MAIL_ADDRESS')          => 'メールアドレス関連',
         config('constKey.MESSAGE_TYPE.MARKET')                => 'マーケット関連',
         config('constKey.MESSAGE_TYPE.SETTLE')                => '精算関連',
@@ -275,7 +273,7 @@ return [
 
     //おみくじ設定
     'user_type' => [
-        '1'  => '無料会員',
+        '1'  => '無料・マイレージ会員',
         '2'  => '有料会員',
         '10' => '出演者',
     ],
@@ -283,7 +281,7 @@ return [
     //退会申請状況
     'withdrawal_stat' => [
         config('constKey.WITHDRAWAL_STAT.UNRESEIVE')  => '申請中',
-        config('constKey.WITHDRAWAL_STAT.RESEIVE')    => '退会処理', //'退会', #17738: require change 退会 to 退会処理
+        config('constKey.WITHDRAWAL_STAT.RESEIVE')    => '退会処理済',
     ],
 
     //精算申請状態（performer_infos.monetize_request_stat）
@@ -616,7 +614,15 @@ return [
         '45' => '宮崎県',
         '46' => '鹿児島県',
         '47' => '沖縄県',
-        '48' => 'ﾋﾐﾂ'
+        '48' => '秘密',
+        '101' => '北海道・東北',
+        '102' => '関東',
+        '103' => '甲信越・北陸',
+        '104' => '東海',
+        '105' => '関西',
+        '106' => '中国・四国',
+        '107' => '九州・沖縄',
+        '108' => '海外・その他',
     ],
 
     'region' => [
@@ -963,6 +969,14 @@ return [
     ],
 
     'performer_profiles' => [
+        'age' => [
+            '10' => '10代',
+            '20' => '20代前半',
+            '25' => '20代後半',
+            '30' => '30代前半',
+            '35' => '30代後半',
+            '40' => '40代以上',
+        ],
         'job' => [
             '1'  => '学生',
             '2'  => 'フリーター',
@@ -994,7 +1008,7 @@ return [
             '3'  => '華道/茶道',
             '4'  => 'ペット',
             '5'  => '料理',
-            '6'  => '読書ﾞ',
+            '6'  => '読書',
             '7'  => '音楽',
             '8'  => 'アート',
             '9'  => 'ネット/PC',
