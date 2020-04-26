@@ -130,7 +130,7 @@ class SongController extends Controller
     {
         Song::create([
             'title'     => $request->input('title'),
-            'comment'   => nl2br($request->input('comment')),
+            'comment'   => $request->input('comment'),
             'file_name' => $request->input('file')
         ]);
         return redirect('/admin/song_post')->with('success', 'アップロードしました。');;

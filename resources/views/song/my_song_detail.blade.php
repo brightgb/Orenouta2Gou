@@ -30,16 +30,16 @@
             <div class="li" @if ($value['nice_flg'] == 0) id="{{ $value['id'] }}" data-val="{{ $value['member_id'] }}" @endif style="background-color: #FFFF99; border-radius: 10px; border: 1px solid #333333; padding: 5px 1%; margin: 20px 5%;">
                 <table>
                     <tr>
-                        <td style="width: 5%; vertical-align: middle;">
+                        <td style="width: 10%; vertical-align: middle;">
                             <img style="height: 30px; margin: 0px; cursor: pointer;"
                             @if ($value['nice_flg'] == 0) src="/storage/icon/before_nice1.png"
                             @else src="/storage/icon/after_nice1.png" @endif>
-                            <img style="height: 17px; margin: 0 -8px 0 -15px; cursor: pointer;"
+                            <img style="height: 17px; margin: 0 -20px 0 -10px; cursor: pointer;"
                             @if ($value['nice_flg'] == 0) src="/storage/icon/before_nice2.png"
                             @else src="/storage/icon/after_nice2.png" @endif>
                         </td>
                         <td>
-                            <div style="margin-left: 5%; text-align: left;">
+                            <div style="margin-left: 10%; text-align: left;">
                                 {!! $value['advice'] !!}
                             </div>
                         </td>

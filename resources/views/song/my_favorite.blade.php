@@ -42,7 +42,7 @@
                 <div style="text-align: left; width: 70%; display: table-cell;">
                     <span style="font-size: small;">追加日：{{ $item['created_at'] }}</span>
                 </div>
-                <div style="text-align: right; width: 25%; display: table-cell;" data-val="{{ $item['nickname'] }}">
+                <div style="text-align: right; width: 25%; display: table-cell;" data-val="{{ $item['member_id'] }}" data-name="{{ $item['nickname'] }}">
                     <button style="background-color: orange; width: 50px; cursor: pointer;">
                         解除
                     </button>
@@ -173,7 +173,8 @@ body {
 
 <script>
     $('button').click(function() {
-        var nickname = $(this).parent().attr('data-val');
+        var member_id = $(this).parent().attr('data-val');
+        var nickname = $(this).parent().attr('data-name');
         if (!confirm(nickname + ' さんを、お気に入りから外しますか？')) return;
             $.ajaxSetup({
                 headers: {
@@ -183,7 +184,7 @@ body {
             $.ajax({
                 type: "POST",
                 url: "/song/api/fav_remove",
-                data: {nickname : nickname},
+                data: {member_id : member_id},
             })
             .done(function(ret) {
                 // data-val を不正に打ち換えて送信

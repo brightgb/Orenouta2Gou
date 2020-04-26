@@ -89,6 +89,15 @@ return [
             'driver' => 'errorlog',
             'level' => 'debug',
         ],
-    ],
 
+        ########## バッチエラー ##########
+
+        // 歌い手ランクとアドバイザーランクを更新
+        'batch_song_user_rank_log' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/batch/song_user_rank/batch.log'),
+            'level' => 'info',
+            'days' => 7,
+        ],
+    ],
 ];

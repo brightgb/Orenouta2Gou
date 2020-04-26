@@ -76,7 +76,7 @@
                     </tr>
                     <tr>
                         <td class="detail_text">
-                            <span style="font-size: small;">コメント：{!! $item['comment'] !!}</span>
+                            <span style="font-size: small;">{!! $item['comment'] !!}</span>
                         </td>
                     </tr>
                 </table>

@@ -104,7 +104,7 @@ class IndexController extends Controller
     }
 
     /*
-     * 会員登録の情報送信（API）
+     * 会員登録の情報送信
      */
     public function registPost(SongUserCreateRequest $request)
     {
@@ -183,7 +183,7 @@ class IndexController extends Controller
     {
         SongUserQuestion::create([
             'member_id' => \Auth::user()->id,
-            'question'  => nl2br($request->input('question'))
+            'question'  => $request->input('question')
         ]);
         return redirect()->route('song.request.form')->with('success', '送信完了しました');
     }

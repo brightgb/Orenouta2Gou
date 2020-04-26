@@ -107,6 +107,7 @@ class AccountController extends Controller
         $array = [];
         foreach ($advice_list as $key => $value) {
             array_push($array, $value['id']);
+            $advice_list[$key]['advice'] = nl2br($value['advice']);
         }
         $last = !empty($array)? max($array): 0;
         $title = '投稿した歌唱曲詳細';
@@ -205,6 +206,7 @@ class AccountController extends Controller
         $lists = SongUserFavorite::leftjoin('song_users', 'song_user_favorites.target_id', 'song_users.id')
             ->leftjoin('song_user_actions', 'song_user_favorites.target_id', 'song_user_actions.id')
             ->selectRaw('
+                song_users.id AS member_id,
                 song_users.nickname,
                 song_user_actions.sing_song_cnt,
                 song_user_favorites.created_at AS create_date
@@ -248,19 +250,28 @@ class AccountController extends Controller
      */
     public function favoriteRemove(Request $request)
     {
-        $nickname = $request->input('nickname');
+        $member_id = $request->input('member_id');
         // 解除だけなら、退会した会員データでも取得可能（resign_flgを見ない）
-        $member = SongUser::where('nickname', $nickname)->first();
+        $member = SongUser::where('id', $member_id)->first();
         if (empty($member)) {
             $response['status'] = 'NG';
             return response()->json($response);
         }
         $favorite = SongUserFavorite::where('member_id', \Auth::user()->id)
-                                    ->where('target_id', $member->id)->first();
+                                    ->where('target_id', $member->id)->lockForUpdate()->first();
         if (empty($favorite)) {
             $response['status'] = 'NG';
             return response()->json($response);
         }
+        // 獲得お気に入り数を減らす
+        $target = SongUserAction::where('member_id', $member->id)->lockForUpdate()->first();
+        if (empty($target)) {
+            $response['status'] = 'NG';
+            return response()->json($response);
+        }
+        // 解除処理
+        $target->get_favorite_cnt -= 1;
+        $target->save();
         $favorite->delete();
     }
 

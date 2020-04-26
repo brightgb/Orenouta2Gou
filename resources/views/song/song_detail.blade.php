@@ -31,12 +31,30 @@
 {{-- スクロール部分 --}}
 @if (count($advice_list) == 0)
     <div style="padding-top: 100px; margin: 150px 0 70px 0; width: 100%; text-align: center; clear: both;">
+        @if ($errors->has('all_space'))
+            <div class="error_message" style="margin-bottom: 20px;">
+                {{ $errors->first('all_space') }}
+            </div>
+        @elseif ($errors->has('advice'))
+            <div class="error_message" style="margin-bottom: 20px;">
+                {{ $errors->first('advice') }}
+            </div>
+        @endif
         <div style="padding: 10px; margin: 0 1% 50px 2%; width: 90%; border: 1px solid #333333; border-radius: 10px; background-color: silver; display: inline-block; text-align: center;">
             まだ何も書き込まれていません
         </div>
     </div>
 @else
     <div style="padding-top: 70px; margin: 150px 0 100px 0; width: 100%; text-align: center; clear: both;">
+        @if ($errors->has('all_space'))
+            <div class="error_message" style="margin-top: 20px;">
+                    {{ $errors->first('all_space') }}
+            </div>
+        @elseif ($errors->has('advice'))
+            <div class="error_message" style="margin-top: 20px;">
+                {{ $errors->first('advice') }}
+            </div>
+        @endif
         <div id="list" style="width: 100%; margin-bottom: 30px; height: auto;">
         @foreach ($advice_list as $key => $value)
             <div class="li" style="background-color: #FFFF99; border-radius: 10px; border: 1px solid #333333; padding: 5px 1%; margin: 20px 5%; display: flex;">
@@ -56,7 +74,7 @@
         <p style="font-size: small;">最大３００文字<br>※ アドバイスは１曲につき、１回までです</p>
         {{ csrf_field() }}
         <input type="hidden" name="song_id" value="{{ $song->id }}">
-        <textarea name="advice" placeholder="アドバイス記入" maxlength="300" style="width: 100%; height: 100px; margin: -0.5em 0 0.5em 0;" required></textarea><br>
+        <textarea name="advice" maxlength="300" style="width: 100%; height: 100px; margin: -0.5em 0 0.5em 0;" required>{{ old('advice') }}</textarea><br>
         <button style="cursor: pointer; float: left; border-radius: 10px;" >
             決定
         </button>
@@ -115,6 +133,11 @@
         width: 100%;
         height: 120%;
         background-color: rgba(191, 191, 191, 0.75);
+    }
+    .error_message {
+        color: red;
+        font-weight: bold;
+        font-size: small;
     }
 </style>
 

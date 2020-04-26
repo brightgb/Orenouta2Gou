@@ -13,7 +13,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Commands\QueueWork::class,
+        Commands\SongUserRank::class
     ];
 
     /**
@@ -24,8 +24,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        //キューワーカを起動/再起動
-        $schedule->command('QueueWork')->everyFiveMinutes()->withoutOverlapping()->runInBackground();
+        // 歌い手ランクとアドバイザーランクを更新
+        $schedule->command('SongUserRank')->dailyAt('00:00')->withoutOverlapping()->runInBackground();
     }
 
     /**

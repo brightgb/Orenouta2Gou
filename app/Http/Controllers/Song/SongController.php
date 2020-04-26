@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Song;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Song\SendAdviceRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use App\Model\Song;
@@ -128,6 +129,7 @@ class SongController extends Controller
             if ($value['advice_cnt'] >= 1000) {
                 $lists['data'][$key]['advice_cnt'] = '999+';
             }
+            $lists['data'][$key]['comment'] = nl2br($value['comment']);
         }
 
         $data = new LengthAwarePaginator(
@@ -175,6 +177,7 @@ class SongController extends Controller
                 // 既にアドバイス済み
                 $no_advice_flg = false;
             }
+            $advice_list[$key]['advice'] = nl2br($value['advice']);
         }
         $title = '他の会員の歌唱曲詳細';
         return view('song.song_detail', compact('title', 'song', 'advice_list', 'fav_flg', 'no_advice_flg'));
@@ -198,7 +201,7 @@ class SongController extends Controller
             return response()->json($response);
         }
         $fav = SongUserFavorite::where('member_id', \Auth::user()->id)
-                               ->where('target_id', $member_id)->first();
+                               ->where('target_id', $member_id)->lockForUpdate()->first();
         // 重複登録のチェック
         if (!empty($fav) && $request->input('fav_to_on') == 1) {
             $response['status'] = 'NG';
@@ -211,23 +214,22 @@ class SongController extends Controller
         }
 
         ### 各テーブルの更新 ###
+        // song_user_actions
+        $action = SongUserAction::where('member_id', $member_id)
+                                ->lockForUpdate()->first();
+        if (empty($action)) {
+            $response['status'] = 'NG';
+            return response()->json($response);
+        }
         if ($request->input('fav_to_on')) {
             // song_user_favorites
             SongUserFavorite::create(['member_id' => \Auth::user()->id,
                                       'target_id' => $member_id]);
-            // song_user_actions
-            $action = SongUserAction::where('member_id', $member_id)
-                                    ->lockForUpdate()->first();
             $action->get_favorite_cnt += 1;
             $action->save();
         }
         if ($request->input('fav_to_off')) {
-            // song_user_favorites
-            SongUserFavorite::where('member_id', \Auth::user()->id)
-                            ->where('target_id', $member_id)->delete();
-            // song_user_actions
-            $action = SongUserAction::where('member_id', $member_id)
-                                    ->lockForUpdate()->first();
+            $fav->delete();
             $action->get_favorite_cnt -= 1;
             $action->save();
         }
@@ -239,7 +241,7 @@ class SongController extends Controller
     /*
      * アドバイス送信
      */
-    public function post(Request $request)
+    public function post(SendAdviceRequest $request)
     {
         $song_id = $request->input('song_id');
         // 自分の歌でないかチェック
@@ -265,7 +267,7 @@ class SongController extends Controller
         SongAdviceList::create([
             'song_id'   => $song_id,
             'member_id' => \Auth::user()->id,
-            'advice'    => nl2br($request->input('advice'))
+            'advice'    => $request->input('advice')
         ]);
         // song_user_actions
         $action1 = SongUserAction::where('member_id', \Auth::user()->id)

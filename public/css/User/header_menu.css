@@ -21,7 +21,7 @@
 .left .top_text {
     font-size: x-small;
     color: white;
-    position: relative; top: -17px;
+    position: absolute; top: 28px; left: 16px;
 }
 .right div {
     float: right;
@@ -37,7 +37,7 @@
     font-size: x-small;
     color: white;
     float: right;
-    position: relative; top: 4px; right: 92px;
+    position: absolute; top: 28px; right: 92px;
 }
 .hamburger {
     position: absolute;
