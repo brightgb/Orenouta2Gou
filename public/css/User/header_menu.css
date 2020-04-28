@@ -9,35 +9,50 @@
     left:0;
     z-index: 9999;
 }
+/* ホームアイコン */
 .left {
     float: left;
     padding-left: 10px;
     text-align: center;
+    height: 100%;
 }
-.left .top_icon {
+.left_top {
     height: 70%;
-    position: relative;
 }
-.left .top_text {
+.top_icon {
+    height: 100%;
+}
+.top_text {
     font-size: x-small;
     color: white;
-    position: absolute; top: 28px; left: 16px;
+    height: 30%;
 }
-.right div {
+/* 新着情報アイコン */
+.right {
+    height: 100%;
+}
+.right_info {
     float: right;
-    padding-right: 10px;
+    margin-right: 100px;
+    text-align: center;
+    height: 100%;
 }
-.right .top_icon {
-    height: 65%;
-    position: absolute;
-    top: 3%;
-    right: 100px;
+.right_info_icon {
+    height: 70%;
 }
-.right .top_text {
+.info_icon {
+    height: 100%;
+}
+.info_text {
     font-size: x-small;
     color: white;
+    height: 30%;
+}
+/* ハンバーガーメニュー */
+.right .hamburger {
     float: right;
-    position: absolute; top: 28px; right: 92px;
+    text-align: center;
+    margin-right: 10px;
 }
 .hamburger {
     position: absolute;
@@ -50,7 +65,7 @@
 }
 .hamburger__line {
     position: absolute;
-    left: 11px;
+    left: 8px;
     width: 25px;
     height: 2px;
     background-color: white;
@@ -67,7 +82,7 @@
 }
 .menu_text {
     color: white;
-    position: absolute; left: 9px; top: 25px;
+    height: 30%;
     font-size: x-small;
 }
 .black-bg {

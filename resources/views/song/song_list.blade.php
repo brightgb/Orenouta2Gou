@@ -6,7 +6,9 @@
 {{-- 固定部分 --}}
 <div class="absolute_part">
     {{ $data->links('layout.pagination.pagination') }}
-    <a href="{{ $url }}"><button class="back_search">検索条件に戻る</button></a>
+    @auth
+        <a href="{{ $url }}"><button class="back_search">検索条件に戻る</button></a>
+    @endauth
     <div class="cp_ipselect cp_sl01">
         <select onchange="location.href=value;">
             <option value="/song/song_list?sort=1" @if ($sort == 1) selected @endif>

@@ -12,19 +12,23 @@
         </iframe>
     </div>
     <span class="advice_line">
-        @if (!$fav_flg) {{-- お気に入り未登録 --}}
-            <img src="/storage/icon/fav_to_on.png" style="cursor: pointer; position: relative; top: -1px; height: 25px;" id="fav_to_on">
-        @else
-            <img src="/storage/icon/fav_to_off.png" style="cursor: pointer; position: relative; top: -1px; height: 25px;" id="fav_to_off">
-        @endif
+        @auth
+            @if (!$fav_flg) {{-- お気に入り未登録 --}}
+                <img src="/storage/icon/fav_to_on.png" style="cursor: pointer; position: relative; top: -1px; height: 25px;" id="fav_to_on">
+            @else
+                <img src="/storage/icon/fav_to_off.png" style="cursor: pointer; position: relative; top: -1px; height: 25px;" id="fav_to_off">
+            @endif
+        @endauth
         &nbsp;＜ コメント欄 ＞&nbsp;
-        @if ($no_advice_flg) {{-- 未アドバイス --}}
-            <a id="modal-open" style="cursor: pointer;">
-                <img src="/storage/icon/comment.png" style="height: 30px;">
-            </a>
-        @else
-            <img src="/storage/icon/other_comment.png" style="height: 30px;">
-        @endif
+        @auth
+            @if ($no_advice_flg) {{-- 未アドバイス --}}
+                <a id="modal-open" style="cursor: pointer;">
+                    <img src="/storage/icon/comment.png" style="height: 30px;">
+                </a>
+            @else
+                <img src="/storage/icon/other_comment.png" style="height: 30px;">
+            @endif
+        @endauth
     </span>
 </div>
 

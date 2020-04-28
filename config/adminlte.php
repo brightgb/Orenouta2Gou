@@ -26,9 +26,9 @@ return [
     |
     */
 
-    'logo' => '俺の歌を育てろ',
+    'logo' => '管理画面',
 
-    'logo_mini' => '俺歌',
+    'logo_mini' => '管理',
 
     /*
     |--------------------------------------------------------------------------
@@ -69,29 +69,6 @@ return [
     |
     */
 
-    /*'menu' => [
-        'MAIN NAVIGATION',
-        [
-            'text' => 'Blog',
-            'url' => 'admin/blog',
-        ],
-        [
-            'text' => 'Pages',
-            'url' => 'admin/pages',
-            'icon' => 'file'
-        ],
-        'ACCOUNT SETTINGS',
-        [
-            'text' => 'Profile',
-            'url' => 'admin/settings',
-            'icon' => 'user'
-        ],
-        [
-            'text' => 'Change Password',
-            'url' => 'admin/settings',
-            'icon' => 'lock'
-        ],
-    ],*/
     'menu' => [
         [
             'menu_id' => 1,
@@ -102,7 +79,7 @@ return [
         ],
         [
             'menu_id'  => 'A',
-            'text'     => '歌唱曲管理',
+            'text'     => '俺の歌を育てろ',
             'url'      => '',
             'icon'     => 'genderless',
             'guard'    => 'all_allow',
@@ -110,22 +87,43 @@ return [
             [
                 [
                     'menu_id' => 2,
-                    'text'    => '歌唱曲一覧',
-                    'url'     => '/admin/song_list',
+                    'text'    => '会員検索',
+                    'url'     => '/admin/orenouta/user_search',
                     'icon'    => 'genderless',
                     'guard'   => 'all_allow',
                 ],
                 [
                     'menu_id' => 3,
-                    'text'    => 'コメント一覧',
-                    'url'     => '/admin/comment_list',
+                    'text'    => '会員詳細',
+                    'url'     => '/admin/orenouta/user_detail',
                     'icon'    => 'genderless',
                     'guard'   => 'all_allow',
                 ],
                 [
                     'menu_id' => 4,
-                    'text'    => '歌唱曲の投稿',
-                    'url'     => '/admin/song_post',
+                    'text'    => '歌唱曲一覧',
+                    'url'     => '/admin/orenouta/song_list',
+                    'icon'    => 'genderless',
+                    'guard'   => 'all_allow',
+                ],
+                [
+                    'menu_id' => 5,
+                    'text'    => 'コメント一覧',
+                    'url'     => '/admin/orenouta/comment_list',
+                    'icon'    => 'genderless',
+                    'guard'   => 'all_allow',
+                ],
+                [
+                    'menu_id' => 6,
+                    'text'    => 'お問い合わせ・要望',
+                    'url'     => '/admin/orenouta/request_list',
+                    'icon'    => 'genderless',
+                    'guard'   => 'all_allow',
+                ],
+                [
+                    'menu_id' => 7,
+                    'text'    => '新着情報の登録',
+                    'url'     => '/admin/orenouta/infomation',
                     'icon'    => 'genderless',
                     'guard'   => 'all_allow',
                 ],
@@ -133,33 +131,13 @@ return [
         ],
         [
             'menu_id'  => 'B',
-            'text'     => 'おまけ管理',
+            'text'     => '俺の漫才を育てろ',
             'url'      => '',
             'icon'     => 'genderless',
             'guard'    => 'all_allow',
             'sub_menu' => 
             [
-                [
-                    'menu_id' => 5,
-                    'text'    => 'キャスターボード',
-                    'url'     => '/admin',
-                    'icon'    => 'genderless',
-                    'guard'   => 'all_allow',
-                ],
-                [
-                    'menu_id' => 6,
-                    'text'    => '輪ゴム飛ばし',
-                    'url'     => '/admin',
-                    'icon'    => 'genderless',
-                    'guard'   => 'all_allow',
-                ],
-                [
-                    'menu_id' => 7,
-                    'text'    => 'DJプレイ',
-                    'url'     => '/admin',
-                    'icon'    => 'genderless',
-                    'guard'   => 'all_allow',
-                ],
+                // サブメニュー
             ],
         ],
         [
@@ -172,20 +150,6 @@ return [
             [
                 [
                     'menu_id' => 8,
-                    'text'    => 'お問い合わせ・要望',
-                    'url'     => '/admin/request_list',
-                    'icon'    => 'genderless',
-                    'guard'   => 'all_allow',
-                ],
-                [
-                    'menu_id' => 9,
-                    'text'    => '新着情報の登録',
-                    'url'     => '/admin/infomation',
-                    'icon'    => 'genderless',
-                    'guard'   => 'all_allow',
-                ],
-                [
-                    'menu_id' => 10,
                     'text'    => 'アカウント管理',
                     'url'     => '/admin/account',
                     'icon'    => 'genderless',

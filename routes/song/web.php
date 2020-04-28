@@ -13,6 +13,14 @@ Route::get('/regist/success', 'Song\IndexController@registSuccess')->name('song.
 Route::get('/login', 'Song\Auth\LoginController@showLoginForm')->name('song.auth.login');
 Route::post('/login', 'Song\Auth\LoginController@login')->name('song.auth.login');
 
+// 他の会員が投稿した歌唱曲一覧
+Route::get('/song_search', 'Song\SongController@songSearchForm')->name('song.search.form');
+Route::post('/song_search', 'Song\SongController@songSearchPost')->name('song.search.post');
+Route::get('/song_list', 'Song\SongController@songList')->name('song.song_list');
+// 他の会員が投稿した歌唱曲詳細（未ログインは検索＆視聴まで）
+Route::get('/song_detail/{song_id}', 'Song\SongController@songDetail')->name('song.detail');
+
+
 /* ログイン後 */
 Route::middleware('auth:song')->group(function() {
 Route::middleware('checkSongMemberStat')->group(function() {
@@ -33,12 +41,7 @@ Route::get('/my_favorite', 'Song\AccountController@getMyFavorite')->name('accoun
 Route::get('/account/resign', 'Song\AccountController@resignForm')->name('song.resign.form');
 Route::post('/account/resign', 'Song\AccountController@resignComplete')->name('song.resign.post');
 
-// 他の会員が投稿した歌唱曲一覧
-Route::get('/song_search', 'Song\SongController@songSearchForm')->name('song.search.form');
-Route::post('/song_search', 'Song\SongController@songSearchPost')->name('song.search.post');
-Route::get('/song_list', 'Song\SongController@songList')->name('song.song_list');
-// 他の会員が投稿した歌唱曲詳細
-Route::get('/song_detail/{song_id}', 'Song\SongController@songDetail')->name('song.detail');
+// 他の会員が投稿した歌唱曲詳細（アドバイス送信）
 Route::post('/song_advice/post', 'Song\SongController@post')->name('song.post');
 
 // お問い合わせ・要望

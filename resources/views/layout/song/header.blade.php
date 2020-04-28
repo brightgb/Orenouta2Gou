@@ -1,17 +1,29 @@
 @section('header')
 <div class="top_menu">
     <div class="left">
-        <span><a href="/song"><img src="/storage/icon/home.png" class="top_icon"><br></a></span>
-        <span class="top_text">TOP</span>
+        <a href="/song">
+            <div class="left_top">
+                <img src="/storage/icon/home.png" class="top_icon">
+            </div>
+            <div class="top_text">TOP</div>
+        </a>
     </div>
     <div class="right">
-        <span><a href="/song/info"><img src="/storage/icon/info.png" class="top_icon"><br></a></span>
-        <span class="top_text">新着情報</span>
+        <a href="/song/info">
+            <div class="right_info">
+                <div class="right_info_icon">
+                    <img src="/storage/icon/info.png" class="info_icon">
+                </div>
+                <div class="info_text">新着情報</div>
+            </div>
+        </a>
         <div class="hamburger" id="js-hamburger">
-            <span class="hamburger__line hamburger__line--1"></span>
-            <span class="hamburger__line hamburger__line--2"></span>
-            <span class="hamburger__line hamburger__line--3"></span>
-            <span class="menu_text">MENU</span>
+            <div style="height: 70%; text-align: center;">
+                <span class="hamburger__line hamburger__line--1"></span>
+                <span class="hamburger__line hamburger__line--2"></span>
+                <span class="hamburger__line hamburger__line--3"></span>
+            </div>
+            <div class="menu_text">MENU</div>
         </div>
         <div class="black-bg" id="js-black-bg"></div>
     </div>
@@ -25,6 +37,12 @@
                         <img src="/storage/icon/about.png" height="20"
                              style="position: relative; top: 2px;">&nbsp;
                         俺の歌を育てろ とは？
+                    </a>
+                </li>
+                <li class="global-nav__item">
+                    <a href="/song/song_list">
+                        <img src="/storage/icon/other_song.png" height="20" style="position: relative; top: 2px;">&nbsp;
+                        他の会員が投稿した歌唱曲
                     </a>
                 </li>
                 <li class="global-nav__item">
@@ -43,13 +61,6 @@
                 </li>
             @endguest
             @auth  {{-- ログイン済み --}}
-                <li class="global-nav__item">
-                    <a href="/song/about_site">
-                        <img src="/storage/icon/about.png" height="20"
-                             style="position: relative; top: 2px;">&nbsp;
-                        俺の歌を育てろ とは？
-                    </a>
-                </li>
                 <li class="global-nav__item">
                     <a onclick="func1()">
                         <img src="/storage/icon/profile.png" height="20"

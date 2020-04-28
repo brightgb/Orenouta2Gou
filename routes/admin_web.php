@@ -9,19 +9,29 @@ Route::middleware('auth:admin')->group(function() {
 // トップ画面
 Route::get('/', function() { return view('admin.index'); })->name('index');
 
-/* 歌唱曲管理 */
+/* 俺の歌を育てろ */
+// 会員検索
+Route::get('/orenouta/user_search', 'Admin\SongUserController@index1')
+     ->name('admin.song.user.index1');
+Route::post('/orenouta/user_search', 'Admin\SongUserController@search')
+     ->name('admin.song.user.search');
+// 会員詳細
+Route::get('/orenouta/user_detail', 'Admin\SongUserController@index2')
+     ->name('admin.song.user.index2');
+Route::post('/orenouta/user_detail', 'Admin\SongUserController@detail')
+     ->name('admin.song.user.detail');
 // 歌唱曲一覧
-Route::get('song_list', 'Admin\SongController@index1')->name('admin.song.list.index');
-Route::post('song_list', 'Admin\SongController@getList')->name('admin.song.get.list');
+Route::get('/orenouta/song_list', 'Admin\SongUserController@index3')
+     ->name('admin.song.list.index');
+Route::post('/orenouta/song_list', 'Admin\SongUserController@getList')
+     ->name('admin.song.list.get');
 // コメント一覧
-Route::get('comment_list', 'Admin\SongController@index2')->name('admin.comment.index');
-Route::post('comment_list', 'Admin\SongController@getComment')->name('admin.get.comment');
-Route::post('comment_delete', 'Admin\SongController@deleteComment')->name('admin.delete.comment');
-// 歌唱曲の投稿
-Route::get('song_post', 'Admin\SongController@addSong')->name('admin.song.post');
-Route::post('song_post', 'Admin\SongController@addList')->name('admin.list.post');
-
-/* 管理者権限 */
+Route::get('/orenouta/comment_list', 'Admin\SongUserController@index4')
+     ->name('admin.song.comment.index');
+Route::post('/orenouta/comment_list', 'Admin\SongUserController@getComment')
+     ->name('admin.song.comment.get');
+Route::post('/orenouta/comment_delete', 'Admin\SongUserController@deleteComment')
+     ->name('admin.song.comment.delete');
 // お問い合わせ・要望
 Route::get('request_list', 'Admin\ManagementController@index1')->name('admin.request.list.index');
 Route::post('request_list', 'Admin\ManagementController@getList')->name('admin.request.get.list');
@@ -34,6 +44,12 @@ Route::get('infomation', 'Admin\ManagementController@index2')->name('admin.info.
 Route::post('infomation', 'Admin\ManagementController@getInfo')->name('admin.get.info');
 Route::post('add_info', 'Admin\ManagementController@addInfo')->name('admin.post.info');
 Route::post('delete_info', 'Admin\ManagementController@deleteInfo')->name('admin.delete.info');
+
+
+
+
+
+/* 管理者権限 */
 // パスワード変更
 Route::get('account', 'Admin\ManagementController@index3')->name('admin.account.index');
 Route::get('account/create', 'Admin\ManagementController@createAccount')->name('admin.account.create');

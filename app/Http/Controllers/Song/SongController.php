@@ -22,6 +22,11 @@ class SongController extends Controller
      */
     public function songSearchForm()
     {
+        // 未ログイン
+        if (!\Auth::check()) {
+            return redirect('/song/song_list');
+        }
+
         $search_data = Input::all();
         if (!empty($search_data)) {
             session()->put('song_search_data', $search_data);
@@ -49,6 +54,58 @@ class SongController extends Controller
      */
     public function songList()
     {
+        // 未ログイン
+        if (!\Auth::check()) {
+            $lists = Song::leftjoin('song_users', 'songs.member_id', 'song_users.id')
+                    ->selectRaw('
+                        songs.id AS song_id,
+                        songs.title AS song_title,
+                        songs.comment,
+                        songs.advice_cnt,
+                        songs.created_at AS create_date,
+                        song_users.nickname,
+                        NULL AS fav_flg
+                    ')->where('song_users.resign_flg', 0);
+            // １：投稿の最新順　２：投稿の古い順　３：アドバイスの多い順　４：アドバイスの少ない順
+            $sort = Input::get('sort', 1);
+            if ($sort == 1) {
+                $lists = $lists->orderBy('songs.created_at', 'desc')->paginate(10)->toArray();
+            } elseif ($sort == 2) {
+                $lists = $lists->orderBy('songs.created_at', 'asc')->paginate(10)->toArray();
+            } elseif ($sort == 3) {
+                $lists = $lists->orderBy('songs.advice_cnt', 'desc')->paginate(10)->toArray();
+            } elseif ($sort == 4) {
+                $lists = $lists->orderBy('songs.advice_cnt', 'asc')->paginate(10)->toArray();
+            } else {
+                return abort(404);
+            }
+
+            foreach ($lists['data'] as $key => $value) {
+                $lists['data'][$key]['created_at'] = Carbon::parse($value['create_date'])
+                                                           ->format('Y/m/d H:i');
+                if (Carbon::parse($value['create_date']) >= Carbon::now()->subDay(7)) {
+                    $lists['data'][$key]['new_flg'] = true;
+                } else {
+                    $lists['data'][$key]['new_flg'] = false;
+                }
+                if ($value['advice_cnt'] >= 1000) {
+                    $lists['data'][$key]['advice_cnt'] = '999+';
+                }
+                $lists['data'][$key]['comment'] = nl2br($value['comment']);
+            }
+
+            $data = new LengthAwarePaginator(
+                $lists['data'],
+                $lists['total'],
+                $lists['per_page'],
+                request()->input('page', 1),
+                !empty(Input::get('sort'))? array('path' => request()->url().'?sort='.Input::get('sort')): array('path' => request()->url())
+            );
+            $url = Null;
+            $title = '他の会員の歌唱曲一覧';
+            return view('song.song_list', compact('title', 'data', 'sort', 'url'));
+        }
+
         $lists = Song::leftjoin('song_users', 'songs.member_id', 'song_users.id')
                 ->leftjoin('song_advice_lists', function($join) {
                     $join->on('songs.id', '=', 'song_advice_lists.song_id');
@@ -144,7 +201,7 @@ class SongController extends Controller
         $url = "/song/song_search?favorite_flg=".$favorite_flg."&new_flg=".$new_flg."&no_advice_flg=".$no_advice_flg."&nickname=".$nickname."&song_title=".$song_title;
 
         $title = '他の会員の歌唱曲一覧';
-        return view('song.song_list', compact('title', 'data', 'sort', 'request', 'url'));
+        return view('song.song_list', compact('title', 'data', 'sort', 'url'));
     }
 
     /*
@@ -152,32 +209,51 @@ class SongController extends Controller
      */
     public function songDetail($song_id)
     {
-       // 自分の歌でないかチェック
-        $song = Song::findOrFail($song_id);
-        if ($song->member_id == \Auth::user()->id) {
-            return redirect('/song/account/my_song_detail/'.$song->id);
-        }
-        // 退会した会員でないかチェック
-        $user = SongUser::leftjoin('song_user_favorites', function($join) {
-                        $join->on('song_users.id', '=', 'song_user_favorites.target_id');
-                        $join->where('song_user_favorites.member_id', '=', \Auth::user()->id);
-                    })
-                    ->selectRaw('song_user_favorites.id AS fav_flg')
-                    ->where('song_users.id', $song->member_id)
-                    ->where('song_users.resign_flg', 0)
-                    ->firstOrFail();
-        $fav_flg = !empty($user->fav_flg)? true: false;
-        // データ取得
-        $advice_list = SongAdviceList::where('song_id', $song->id)
-                                     ->orderBy('created_at', 'desc')
-                                     ->get()->toArray();
-        $no_advice_flg = true;
-        foreach ($advice_list as $key => $value) {
-            if ($value['member_id'] == \Auth::user()->id) {
-                // 既にアドバイス済み
-                $no_advice_flg = false;
+        // 未ログイン
+        if (!\Auth::check()) {
+            $song = Song::findOrFail($song_id);
+            // 退会した会員でないかチェック
+            $user = SongUser::where('song_users.id', $song->member_id)
+                            ->where('song_users.resign_flg', 0)
+                            ->firstOrFail();
+            // データ取得
+            $advice_list = SongAdviceList::where('song_id', $song->id)
+                                         ->orderBy('created_at', 'desc')
+                                         ->get()->toArray();
+            foreach ($advice_list as $key => $value) {
+                $advice_list[$key]['advice'] = nl2br($value['advice']);
             }
-            $advice_list[$key]['advice'] = nl2br($value['advice']);
+            $fav_flg = $no_advice_flg = false;
+        }
+        // ログイン
+        else {
+           // 自分の歌でないかチェック
+            $song = Song::findOrFail($song_id);
+            if ($song->member_id == \Auth::user()->id) {
+                return redirect('/song/account/my_song_detail/'.$song->id);
+            }
+            // 退会した会員でないかチェック
+            $user = SongUser::leftjoin('song_user_favorites', function($join) {
+                            $join->on('song_users.id', '=', 'song_user_favorites.target_id');
+                            $join->where('song_user_favorites.member_id', '=', \Auth::user()->id);
+                        })
+                        ->selectRaw('song_user_favorites.id AS fav_flg')
+                        ->where('song_users.id', $song->member_id)
+                        ->where('song_users.resign_flg', 0)
+                        ->firstOrFail();
+            $fav_flg = !empty($user->fav_flg)? true: false;
+            // データ取得
+            $advice_list = SongAdviceList::where('song_id', $song->id)
+                                         ->orderBy('created_at', 'desc')
+                                         ->get()->toArray();
+            $no_advice_flg = true;
+            foreach ($advice_list as $key => $value) {
+                if ($value['member_id'] == \Auth::user()->id) {
+                    // 既にアドバイス済み
+                    $no_advice_flg = false;
+                }
+                $advice_list[$key]['advice'] = nl2br($value['advice']);
+            }
         }
         $title = '他の会員の歌唱曲詳細';
         return view('song.song_detail', compact('title', 'song', 'advice_list', 'fav_flg', 'no_advice_flg'));
