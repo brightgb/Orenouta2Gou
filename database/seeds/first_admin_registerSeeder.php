@@ -19,8 +19,8 @@ class first_admin_registerSeeder extends Seeder
         $obj = new OpenSslCryptor('bf-cbc');
 
         $names = ['広重', '森野'];
-        $user_ids = ['brightgb', 'morino'];
-        $passwords = ['supadesu21', 'testpass'];
+        $user_ids = ['brightgb', 'imai2gou'];
+        $passwords = ['supadesu21', 'imai2gou'];
         for ($i=0; $i<=1; $i++) {
             DB::table('admins')->insert([
                 'name'         => $names[$i],

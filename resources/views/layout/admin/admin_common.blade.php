@@ -8,15 +8,18 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" href="{{ asset('vendor/adminlte/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('adminlte/bootstrap/css/bootstrap.min.css') }}">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('adminlte/font-awesome/css/font-awesome.min.css') }}">
     <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="{{ asset('adminlte/Ionicons/css/ionicons.min.css') }}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{ asset('vendor/adminlte/dist/css/AdminLTE.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('adminlte/css/AdminLTE.min.css') }}">
     <!-- AdminLTE Skin -->
-    <link rel="stylesheet" href="{{ asset('vendor/adminlte/dist/css/skins/skin-'.config('adminlte.skin', 'blue').'.min.css') }}">
+    <link rel="stylesheet" href="/adminlte/css/skins/skin-{{ config('adminlte.skin', 'blue') }}.min.css">
+    <link rel="stylesheet" href="{{ asset('adminlte/plugins/jQueryUI/jquery-ui.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('adminlte/plugins/css/select2.min.css') }}">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 
     @yield('css')
 
@@ -61,11 +64,18 @@
 <script src="{{ asset('js/lib/underscore-min.js') }}"></script>
 <script src="{{ asset('js/admin/moment.js') }}"></script>
 <!-- jQuery 2.1.4 -->
-<script src="{{ asset('vendor/adminlte/plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>
+<script src="{{ asset('adminlte/plugins/jQuery/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ asset('adminlte/plugins/jQuery/jquery.slimscroll.min.js') }}"></script>
+<script src="{{ asset('adminlte/plugins/jQueryUI/jquery-ui.min.js') }}"></script>
+<script src="{{ asset('adminlte/plugins/jQuery/select2.full.min.js') }}" defer></script>
 <!-- Bootstrap 3.3.5 -->
-<script src="{{ asset('vendor/adminlte/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('adminlte/bootstrap/js/bootstrap.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('vendor/adminlte/dist/js/app.min.js') }}"></script>
+
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="{{ asset('adminlte/plugins/datepicker/moment.min.js') }}"></script>
+<script src="{{ asset('adminlte/plugins/datepicker/bootstrap-datetimepicker.min.js') }}"></script>
 
 @yield('js')
 

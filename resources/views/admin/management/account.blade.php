@@ -79,7 +79,7 @@
 <script>
     $('.sidebar-menu li').removeClass('active');
     $('#C').addClass('active');
-    $('#10').addClass('active');
+    $('#8').addClass('active');
 
     function check() {
         if (window.confirm('削除してよろしいですか？')) {

@@ -71,6 +71,7 @@ class IndexController extends Controller
                           ->orderBy('notify_date', 'desc')->paginate(10)->toArray();
         foreach ($infos['data'] as $key => $value) {
             $infos['data'][$key]['notify_date'] = Carbon::parse($value['notify_date'])->format('Y/m/d H:i');
+            $infos['data'][$key]['message'] = nl2br($value['message']);
         }
         $data = new LengthAwarePaginator(
             $infos['data'], $infos['total'], $infos['per_page'],

@@ -90,7 +90,7 @@ class CreateSongUsersTables extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('member_id')->default(0);
             $table->text('question')->nullable();  // 内容
-            $table->integer('status')->default(0);  // ０：未対応 , １：対応(予定 or 済) , ２：却下
+            $table->integer('status')->default(0);  // ０：未対応, １：対応中, ２：対応完了, ３：却下
             $table->datetime('created_at')->nullable();
             $table->datetime('updated_at')->nullable();
             $table->index(['member_id'], 'idx_1');

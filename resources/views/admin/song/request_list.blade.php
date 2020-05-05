@@ -4,24 +4,24 @@
 @section('content_header', 'お問い合わせ・要望')
 
 @section('content')
-<div id="request">
+<div id="song_request">
     <div class="search_aria" v-cloak>
-            {{ csrf_field() }}
-            <table id="serch_form1" border="1">
-                <tr>
-                    <th style="width: 100px; text-align: center;">ステータス</th>
-                    <td style="width: 150px;">
-                        <select v-model="status" style="width: 130px;">
-                            <option v-for="(label, id) in statusOptions" :value="id">
-                                @{{ label }}
-                            </option>
-                        </select>
-                    </td>
-                </tr>
-            </table>
-            <div>
-                <button class="btn" @click="onClick(1)">検索</button>
-            </div>
+        {{ csrf_field() }}
+        <table id="serch_form1" border="1">
+            <tr>
+                <th style="width: 100px; text-align: center;">ステータス</th>
+                <td style="width: 150px;">
+                    <select v-model="status" style="width: 130px;">
+                        <option v-for="(label, id) in statusOptions" :value="id">
+                            @{{ label }}
+                        </option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <div>
+            <button class="btn" @click="onClick(1)">検索</button>
+        </div>
     </div>
 
     <div class="result_aria" v-if="success" v-cloak>
@@ -31,44 +31,66 @@
         <div>
             <table id="serch_form2" style="width: 100%;">
                 <tr style="height: 30px;">
-                    <th style="text-align: center; width: 60%;">内容</th>
-                    <th style="text-align: center; width: 20%;">投稿日時</th>
+                    <th style="text-align: center; width: 20%;">
+                        質問者
+                    </th>
+                    <th style="text-align: center; width: 40%;">
+                        内容
+                    </th>
+                    <th style="text-align: center; width: 20%;">
+                        投稿日時
+                    </th>
+                    <th v-if="response.status == 2" style="text-align: center; width: 20%;">
+                        対応終了
+                    </th>
                     <th v-if="response.status == 0" style="text-align: center; width: 10%;">
-                        対応済み
+                        対応中
                     </th>
                     <th v-if="response.status == 0" style="text-align: center; width: 10%;">
                         却下
                     </th>
-                    <th v-if="response.status == 1" style="text-align: center; width: 20%;">
+                    <th v-if="response.status == 1" style="text-align: center; width: 10%;">
+                        対応完了
+                    </th>
+                    <th v-if="response.status == 1" style="text-align: center; width: 10%;">
+                        棄却
+                    </th>
+                    <th v-if="response.status == 3" style="text-align: center; width: 10%;">
                         復帰
                     </th>
-                    <th v-if="response.status == 2" style="text-align: center; width: 10%;">
-                        復帰
-                    </th>
-                    <th v-if="response.status == 2" style="text-align: center; width: 10%;">
+                    <th v-if="response.status == 3" style="text-align: center; width: 10%;">
                         削除
                     </th>
                 </tr>
                 <tr v-for="row in response.data" v-if="row.id > 0" style="text-align: center; height: 50px;">
+                    <td>
+                        @{{ row.nickname }}
+                    </td>
                     <td>
                         <span v-html="row.question"></span>
                     </td>
                     <td>
                         @{{ row.created_at }}
                     </td>
+                    <td v-if="row.status == 2">
+                        @{{ row.updated_at }}
+                    </td>
                     <td v-if="row.status == 0">
-                        <button @click="acceptRequest(row.id)" class="accept">対応済み</button>
+                        <button @click="acceptRequest(row.id)" class="accept">対応中</button>
                     </td>
                     <td v-if="row.status == 0">
                         <button @click="rejectRequest(row.id)" class="reject">却下</button>
                     </td>
                     <td v-if="row.status == 1">
+                        <button @click="completeRequest(row.id)" class="complete">対応完了</button>
+                    </td>
+                    <td v-if="row.status == 1">
+                        <button @click="backRequest(row.id)" class="back">棄却</button>
+                    </td>
+                    <td v-if="row.status == 3">
                         <button @click="backRequest(row.id)" class="back">復帰</button>
                     </td>
-                    <td v-if="row.status == 2">
-                        <button @click="backRequest(row.id)" class="back">復帰</button>
-                    </td>
-                    <td v-if="row.status == 2">
+                    <td v-if="row.status == 3">
                         <button @click="deleteRequest(row.id)" class="delete">削除</button>
                     </td>
                 </tr>
@@ -102,15 +124,8 @@
         color: #ffffff;
         font-size: large;
     }
-    .accept {
-        width: 100px;
-        height: 30px;
-        border-radius: 10px;
-        background-color: orange;
-        color: black;
-    }
-    .reject, .back, .delete {
-        width: 50px;
+    .accept, .reject, .back, .delete, .complete {
+        padding: 0 5px;
         height: 30px;
         border-radius: 10px;
         background-color: orange;
@@ -125,31 +140,31 @@
 @section('js')
 <script>
     $('.sidebar-menu li').removeClass('active');
-    $('#C').addClass('active');
-    $('#8').addClass('active');
+    $('#A').addClass('active');
+    $('#6').addClass('active');
 
     // Vue.js
     Vue.prototype.$http = axios;
     new Vue({
-        el: '#request',
+        el: '#song_request',
         data: {
             success: false,
             status: 0,
             statusOptions: {
                  0: '未対応',
-                 1: '対応済み',
-                 2: '却下'
+                 1: '対応中',
+                 2: '対応完了',
+                 3: '却下'
             },
             response: {},
-            error: {},
+            errors: {},
             currentPage: 1,
         },
         methods: {
-            initParams: function() {},
             onClick: function(page) {
                 const params = {status: this.status};
                 let self = this;
-                axios.post("/admin/request_list?page="+page, params)
+                axios.post("/admin/orenouta/request_list?page="+page, params)
                     .then( function(res) {
                         self.success = true;
                         self.response = res.data;
@@ -166,11 +181,11 @@
                 }
             },
             acceptRequest: function(id) {
-                if (confirm("「対応済み」に移動しますか？")) {
+                if (confirm("「対応中」に移動しますか？")) {
                     const params = {data_id: id};
                     var page = this.response.current_page;
                     let self = this;
-                    axios.post('/admin/request/accept', params)
+                    axios.post('/admin/orenouta/request/accept', params)
                         .then( function(res) {
                             self.onClick(page);
                         })
@@ -186,7 +201,23 @@
                     const params = {data_id: id};
                     var page = this.response.current_page;
                     let self = this;
-                    axios.post('/admin/request/reject', params)
+                    axios.post('/admin/orenouta/request/reject', params)
+                        .then( function(res) {
+                            self.onClick(page);
+                        })
+                        .catch( function(error) {
+                            console.log(error);
+                        });
+                } else {
+                    return true;
+                }
+            },
+            completeRequest: function(id) {
+                if (confirm("「対応完了」に移動しますか？")) {
+                    const params = {data_id: id};
+                    var page = this.response.current_page;
+                    let self = this;
+                    axios.post('/admin/orenouta/request/complete', params)
                         .then( function(res) {
                             self.onClick(page);
                         })
@@ -202,7 +233,7 @@
                     const params = {data_id: id};
                     var page = this.response.current_page;
                     let self = this;
-                    axios.post('/admin/request/back', params)
+                    axios.post('/admin/orenouta/request/back', params)
                         .then( function(res) {
                             self.onClick(page);
                         })
@@ -218,7 +249,7 @@
                     const params = {data_id: id};
                     var page = this.response.current_page;
                     let self = this;
-                    axios.post('/admin/request/delete', params)
+                    axios.post('/admin/orenouta/request/delete', params)
                         .then( function(res) {
                             self.onClick(page);
                         })
@@ -231,7 +262,7 @@
             },
         },
         mounted: function() {
-            this.initParams();
+            this.onClick(1);
         },
         computed: {
             pages() {

@@ -42,10 +42,7 @@ class RouteServiceProvider extends ServiceProvider
 
         /** 管理画面 **/
         $this->mapAdminWebRoutes();
-
-        //$this->mapApiRoutes();
-
-        //$this->mapAdminApiRoutes();
+        $this->mapAdminApiRoutes();
     }
 
     // 歌部門
@@ -80,6 +77,13 @@ class RouteServiceProvider extends ServiceProvider
              ->middleware('web')
              ->namespace($this->namespace)
              ->group(base_path('routes/admin_web.php'));
+    }
+    protected function mapAdminApiRoutes()
+    {
+        Route::prefix('admin')
+             ->middleware('adminApi')
+             ->namespace($this->namespace)
+             ->group(base_path('routes/admin_api.php'));
     }
 
 

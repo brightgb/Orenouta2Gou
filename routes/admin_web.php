@@ -1,6 +1,6 @@
 <?php
 
-/** 管理画面 **/
+/*** 管理画面 ***/
 // ログイン
 Route::get('login', function() { return view('admin_auth.login'); })->name('admin.auth.login');
 Route::post('login', 'Admin\Auth\LoginController@login')->name('admin.auth.login');
@@ -9,41 +9,53 @@ Route::middleware('auth:admin')->group(function() {
 // トップ画面
 Route::get('/', function() { return view('admin.index'); })->name('index');
 
-/* 俺の歌を育てろ */
+/****************************** 俺の歌を育てろ ******************************/
 // 会員検索
 Route::get('/orenouta/user_search', 'Admin\SongUserController@index1')
      ->name('admin.song.user.index1');
 Route::post('/orenouta/user_search', 'Admin\SongUserController@search')
      ->name('admin.song.user.search');
 // 会員詳細
-Route::get('/orenouta/user_detail', 'Admin\SongUserController@index2')
-     ->name('admin.song.user.index2');
-Route::post('/orenouta/user_detail', 'Admin\SongUserController@detail')
+Route::get('/orenouta/user_detail', 'Admin\SongUserController@detail')
      ->name('admin.song.user.detail');
+Route::post('/orenouta/user_update', 'Admin\SongUserController@update')
+     ->name('admin.song.user.update');
 // 歌唱曲一覧
-Route::get('/orenouta/song_list', 'Admin\SongUserController@index3')
+Route::get('/orenouta/song_list', 'Admin\SongUserController@index2')
      ->name('admin.song.list.index');
 Route::post('/orenouta/song_list', 'Admin\SongUserController@getList')
      ->name('admin.song.list.get');
-// コメント一覧
-Route::get('/orenouta/comment_list', 'Admin\SongUserController@index4')
+// アドバイス一覧
+Route::get('/orenouta/comment_list', 'Admin\SongUserController@index3')
      ->name('admin.song.comment.index');
 Route::post('/orenouta/comment_list', 'Admin\SongUserController@getComment')
      ->name('admin.song.comment.get');
 Route::post('/orenouta/comment_delete', 'Admin\SongUserController@deleteComment')
      ->name('admin.song.comment.delete');
 // お問い合わせ・要望
-Route::get('request_list', 'Admin\ManagementController@index1')->name('admin.request.list.index');
-Route::post('request_list', 'Admin\ManagementController@getList')->name('admin.request.get.list');
-Route::post('request/accept', 'Admin\ManagementController@accept')->name('admin.request.accept');
-Route::post('request/reject', 'Admin\ManagementController@reject')->name('admin.request.reject');
-Route::post('request/back', 'Admin\ManagementController@back')->name('admin.request.back');
-Route::post('request/delete', 'Admin\ManagementController@delete')->name('admin.request.delete');
+Route::get('/orenouta/request_list', 'Admin\SongManagementController@index1')
+     ->name('admin.song.request.index');
+Route::post('/orenouta/request_list', 'Admin\SongManagementController@getList')
+     ->name('admin.song.request.get');
+Route::post('/orenouta/request/accept', 'Admin\SongManagementController@accept')
+     ->name('admin.song.request.accept');
+Route::post('/orenouta/request/reject', 'Admin\SongManagementController@reject')
+     ->name('admin.song.request.reject');
+Route::post('/orenouta/request/complete', 'Admin\SongManagementController@complete')
+     ->name('admin.song.request.complete');
+Route::post('/orenouta/request/back', 'Admin\SongManagementController@back')
+     ->name('admin.song.request.back');
+Route::post('/orenouta/request/delete', 'Admin\SongManagementController@delete')
+     ->name('admin.song.request.delete');
 // 新着情報
-Route::get('infomation', 'Admin\ManagementController@index2')->name('admin.info.index');
-Route::post('infomation', 'Admin\ManagementController@getInfo')->name('admin.get.info');
-Route::post('add_info', 'Admin\ManagementController@addInfo')->name('admin.post.info');
-Route::post('delete_info', 'Admin\ManagementController@deleteInfo')->name('admin.delete.info');
+Route::get('/orenouta/infomation', 'Admin\SongManagementController@index2')
+     ->name('admin.song.info.index');
+Route::post('/orenouta/infomation', 'Admin\SongManagementController@getInfo')
+     ->name('admin.song.info.get');
+Route::post('/orenouta/add_info', 'Admin\SongManagementController@addInfo')
+     ->name('admin.song.info.post');
+Route::post('/orenouta/delete_info', 'Admin\SongManagementController@deleteInfo')
+     ->name('admin.song.info.delete');
 
 
 

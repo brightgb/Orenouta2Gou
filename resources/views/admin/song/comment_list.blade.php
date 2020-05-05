@@ -1,27 +1,31 @@
 @extends('layout.admin.admin_common')
 
-@section('title', 'コメント一覧')
-@section('content_header', 'コメント一覧')
+@section('title', 'アドバイス一覧')
+@section('content_header', 'アドバイス一覧')
 
 @section('content')
-<div id="comment">
+<div id="song_comment">
     <div class="search_aria" v-cloak>
-            {{ csrf_field() }}
-            <table id="serch_form1" border="1">
-                <tr>
-                    <th style="width: 75px; text-align: center;">曲番号</th>
-                    <td>
-                        <input type="text" v-model="song_id" size="10">
-                    </td>
-                    <th style="width: 75px; text-align: center;">曲名</th>
-                    <td>
-                        <input type="text" v-model="title" size="30">
-                    </td>
-                </tr>
-            </table>
-            <div>
-                <button class="btn" @click="onClick(1)">検索</button>
-            </div>
+        {{ csrf_field() }}
+        <table id="serch_form1" border="1">
+            <tr>
+                <th style="width: 100px; text-align: center;">曲番号</th>
+                <td style="width: 100px;">
+                    <input type="text" v-model="song_id" size="10">
+                </td>
+                <th style="width: 100px; text-align: center;">曲名</th>
+                <td style="width: 200px;">
+                    <input type="text" v-model="song_title" style="width: 200px;">
+                </td>
+            </tr>
+        </table>
+        <div>
+            <button class="btn" @click="onClick(1)">検索</button>
+        </div>
+    </div>
+
+    <div style="margin-top: 10px;" v-if="errors.msg" v-cloak>
+        <font color="red"><strong><center>@{{ errors.msg }}</center></strong></font>
     </div>
 
     <div class="result_aria" v-if="success" v-cloak>
@@ -30,7 +34,7 @@
                 @include('layout.admin.vue_pagenation')
             </div>
             <div style="text-align: center; width: 30%; display: inline-block; margin: 20px 0;">
-                <button class="audio" @click="win_open(response.data.file)" v-if="response.data.file != undefined">
+                <button class="audio" @click="win_open(response.data.file)" v-if="response.data.file">
                     視 聴 す る
                 </button>
             </div>
@@ -38,11 +42,16 @@
         <div>
             <table id="serch_form2" style="width: 100%;">
                 <tr style="height: 30px;">
-                    <th style="text-align: center; width: 70%;">内容</th>
-                    <th style="text-align: center; width: 20%;">投稿日時</th>
+                    <th style="text-align: center; width: 20%;">アドバイザー</th>
+                    <th style="text-align: center; width: 30%;">内容</th>
+                    <th style="text-align: center; width: 20%;">送信日時</th>
+                    <th style="text-align: center; width: 20%;">いいね認定</th>
                     <th style="text-align: center; width: 10%;">削除</th>
                 </tr>
-                <tr v-for="row in response.data" v-if="row.advice_id > 0" style="text-align: center; height: 50px;">
+                <tr v-for="row in response.data" v-if="row.song_id" style="text-align: center; height: 50px;">
+                    <td>
+                        @{{ row.nickname }}
+                    </td>
                     <td>
                         <span v-html="row.advice"></span>
                     </td>
@@ -50,10 +59,13 @@
                         @{{ row.created_at }}
                     </td>
                     <td>
-                        <button @click="deleteComment(row.advice_id, row.id)" class="delete">削除</button>
+                        <span v-if="row.nice_flg"><strong>〇</strong></span>
+                    </td>
+                    <td>
+                        <button @click="deleteComment(row.song_id, row.member_id, row.advice_id)" class="delete">削除</button>
                     </td>
                 </tr>
-                <tr v-else style="display: none;"></tr>
+                <tr v-else></tr>
             </table>
         </div>
     </div>
@@ -108,20 +120,20 @@
 <script>
     $('.sidebar-menu li').removeClass('active');
     $('#A').addClass('active');
-    $('#3').addClass('active');
+    $('#5').addClass('active');
 
     // Vue.js
-    var song_id = "<?php echo $id ?>";
-    var title = "<?php echo $title ?>";
+    const song_id = "<?php echo $song_id; ?>";
+    const song_title = "<?php echo $song_title; ?>";
     Vue.prototype.$http = axios;
     new Vue({
-        el: '#comment',
+        el: '#song_comment',
         data: {
             success: false,
             song_id: '',
-            title: '',
+            song_title: '',
             response: {},
-            error: {},
+            errors: {msg: ''},
             currentPage: 1,
         },
         methods: {
@@ -129,20 +141,26 @@
                 if (song_id) {
                     this.song_id = song_id;
                 }
-                if (title) {
-                    this.title = title;
+                if (song_title) {
+                    this.song_title = song_title;
                 }
             },
             onClick: function(page) {
+                this.errors.msg = '';
+                if (!this.song_id && !this.song_title) {
+                    this.errors.msg = '曲番号 または 曲名を指定してください。';
+                    return;
+                }
                 const params = {song_id: this.song_id,
-                                  title: this.title};
+                             song_title: this.song_title};
+                this.success = false;
                 let self = this;
-                axios.post("/admin/comment_list?page="+page, params)
+                axios.post("/admin/orenouta/comment_list?page="+page, params)
                     .then( function(res) {
                         self.success = true;
                         self.response = res.data;
-                        self.song_id = res.data.data.id;
-                        self.title = res.data.data.title;
+                        self.song_id = res.data.data.song_id;
+                        self.song_title = res.data.data.song_title;
                     })
                     .catch( function(error) {
                         console.log(error);
@@ -154,17 +172,19 @@
                     this.onClick(page);
                 }
             },
-            deleteComment: function(list_id, song_id) {
+            deleteComment: function(song_id, member_id, advice_id) {
                 if (confirm("削除してよろしいですか？")) {
-                    const params = {delete_id: list_id,
-                                      song_id: song_id};
+                    const params = {song_id: song_id,
+                                  member_id: member_id,
+                                  advice_id: advice_id};
                     var page = this.response.current_page;
                     let self = this;
-                    axios.post('/admin/comment_delete', params)
+                    axios.post('/admin/orenouta/comment_delete', params)
                         .then( function(res) {
                             self.onClick(page);
                         })
                         .catch( function(error) {
+                            alert('パラメータが不正です。')
                             console.log(error);
                         });
                 } else {

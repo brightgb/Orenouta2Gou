@@ -9,7 +9,7 @@
         <p><strong><center>{{ session('success') }}</center></strong></p>
     </div>
     @endif
-<div id="infomation">
+<div id="song_infomation">
     <div class="search_aria" v-cloak>
         {{ csrf_field() }}
         <table id="serch_form1" border="1">
@@ -21,12 +21,12 @@
                             @{{ label }}
                         </option>
                     </select>年
-                    <select v-model="month" id="js-changeMonth" style="width: 50px; height: 30px; margin-left: 10px;">
+                    <select v-model="month" id="js-changeMonth" @change="formSetDay()" style="width: 50px; height: 30px; margin-left: 10px;">
                         <option v-for="(label, id) in monthOptions" :value="id">
                             @{{ label }}
                         </option>
                     </select>月
-                    <select v-model="day" id="js-changeDay" style="width: 50px; height: 30px; margin-left: 10px;">
+                    <select v-model="day" style="width: 50px; height: 30px; margin-left: 10px;">
                         <option v-for="(label, id) in dayOptions" :value="id">
                             @{{ label }}
                         </option>
@@ -70,7 +70,6 @@
                     @{{ row.notify_date }}
                 </td>
                 <td>
-                    {{-- HTMLタグを反映させる --}}
                     <span v-html="row.message"></span>
                 </td>
                 <td>
@@ -120,8 +119,8 @@
 @section('js')
 <script>
     $('.sidebar-menu li').removeClass('active');
-    $('#C').addClass('active');
-    $('#9').addClass('active');
+    $('#A').addClass('active');
+    $('#7').addClass('active');
 
     var yearOptions = {
         @foreach($years as $key => $value)
@@ -133,11 +132,7 @@
             {{ $key }} : "{{$value}}",
         @endforeach
     };
-    var dayOptions = {
-        @foreach($days as $key => $value)
-            {{ $key }} : "{{$value}}",
-        @endforeach
-    };
+    var dayOptions = {};  // formSetDay() で定義
     var hourOptions = {
         @foreach($hours as $key => $value)
             {{ $key }} : "{{$value}}",
@@ -150,11 +145,11 @@
     };
     Vue.prototype.$http = axios;
     new Vue({
-        el: '#infomation',
+        el: '#song_infomation',
         data: {
             year: moment().format('YYYY'),
-            month: moment().format('MM'),
-            day: moment().format('DD'),
+            month: moment().format('M'),
+            day: moment().format('D'),
             hour: moment().startOf('day').format('H'),
             min: moment().startOf('day').format('m'),
             message: '',
@@ -164,13 +159,13 @@
             hourOptions,
             minOptions,
             response: {},
-            error: {},
+            errors: {},
             currentPage: 1
         },
         methods: {
             onClick: function(page) {
                 let self = this;
-                axios.post("/admin/infomation?page="+page)
+                axios.post("/admin/orenouta/infomation?page="+page)
                     .then( function(res) {
                         self.response = res.data;
                     })
@@ -196,9 +191,9 @@
                                          min: this.min,
                                      message: this.message};
                         let self = this;
-                        axios.post("/admin/add_info", params)
+                        axios.post("/admin/orenouta/add_info", params)
                             .then( function(res) {
-                                location.href = "/admin/infomation?result=success";
+                                location.href = "/admin/orenouta/infomation?result=success";
                             })
                             .catch( function(error) {
                                 console.log(error);
@@ -213,9 +208,9 @@
                     const params = {delete_id: id};
                     var page = this.response.current_page;
                     let self = this;
-                    axios.post('/admin/delete_info', params)
+                    axios.post('/admin/orenouta/delete_info', params)
                         .then( function(res) {
-                            location.href = "/admin/infomation?result=delete";
+                            location.href = "/admin/orenouta/infomation?result=delete";
                         })
                         .catch( function(error) {
                             console.log(error);
@@ -224,8 +219,28 @@
                     return true;
                 }
             },
+            // 自動で月末日を取得
+            formSetDay: function() {
+                var lastday = this.formSetLastDay($('#js-changeYear').val(), $('#js-changeMonth').val());
+                this.dayOptions = {};
+                for (var i = 1; i <= lastday; i++) {
+                    if (i < 10) {
+                        this.dayOptions[i] = '0' + i;
+                    } else {
+                        this.dayOptions[i] = i;
+                    }
+                }
+            },
+            formSetLastDay: function(year, month) {
+                var lastday = new Array('', 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+                if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+                    lastday[2] = 29;
+                }
+                return lastday[month];
+            }
         },
         mounted: function() {
+            this.formSetDay();
             this.onClick(1);
         },
         computed: {
@@ -237,41 +252,6 @@
                 return _.range(start, end)
             },
         },
-    });
-
-    // 自動で月末日を取得
-    function formSetDay() {
-        var lastday = formSetLastDay($('#js-changeYear').val(), $('#js-changeMonth').val());
-        var option = '';
-        for (var i = 1; i <= lastday; i++) {
-            if (i == $('#js-changeDay').val()) {
-                if (i < 10) {
-                    option += '<option value="' + i + '" selected>' + '0' + i + '</option>\n';
-                } else {
-                    option += '<option value="' + i + '" selected>' + i + '</option>\n';
-                }
-            } else {
-                if (i < 10) {
-                    option += '<option value="' + i + '">' + '0' + i + '</option>\n';
-                } else {
-                    option += '<option value="' + i + '">' + i + '</option>\n';
-                }
-            }
-        }
-        $('#js-changeDay').html(option);
-    }
-    function formSetLastDay(year, month) {
-        var lastday = new Array('', 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
-        if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
-            lastday[2] = 29;
-        }
-        return lastday[month];
-    }
-    $(document).ready(function() {
-        formSetDay();
-    });
-    $('#js-changeYear, #js-changeMonth').change(function() {
-        formSetDay();
     });
 </script>
 @stop
